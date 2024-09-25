@@ -47,33 +47,48 @@ const Page = () => {
     <div>
       {/* Hero Section */}
       <div className="relative w-full h-[320px] mt-8" id="home">
-        <div className="absolute inset-0 z-0">
-          <Image
-            className="block w-full h-full object-cover"
-            alt="Hero image"
-            loading="lazy"
-            src="/assets/images/hero.webp"
-            width={400}
-            height={400}
-          />
-        </div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-          <div className="bg-white bg-opacity-50 rounded-lg p-8">
-            <h1 className="text-2xl md:text-5xl font-bold text-green mb-4">
-              مجموعه تشریفاتی شاتو دو ورسای
-            </h1>
-            <p className="text-lg mb-4 text-gold bg-green opacity-70 font-bold rounded-xl p-1 hover:opacity-90">
-              لاکچری ترین باغ تالار تهران
-            </p>
-            <button
-              className="bg-green bg-opacity-80 hover:bg-opacity-90 text-white py-2 px-4 rounded-lg mt-4"
-              onClick={handleButtonClick2}
-            >
-              دریافت قیمت و رزرو زمان بازدید
-            </button>
-          </div>
-        </div>
-      </div>
+  {/* Preload the hero image for faster LCP */}
+  <link 
+    rel="preload" 
+    href="/assets/images/hero.webp" 
+    as="image" 
+    type="image/webp" 
+    media="(min-width: 400px)"
+  />
+
+  <div className="absolute inset-0 z-0">
+    <Image
+      className="block w-full h-full object-cover"
+      alt="Hero image"
+      // Removed lazy loading to ensure faster LCP
+      src="/assets/images/hero.webp"
+      width={800} // Updated width and height to actual size if needed
+      height={400} // Adjust as per your requirements
+      decoding="auto" // or remove it entirely if unnecessary
+      srcSet="/assets/images/hero-320.webp 320w, 
+              /assets/images/hero-640.webp 640w, 
+              /assets/images/hero-1280.webp 1280w"
+      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" // Adjust sizes based on your layout
+    />
+  </div>
+
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+    <div className="bg-white bg-opacity-50 rounded-lg p-8">
+      <h1 className="text-2xl md:text-5xl font-bold text-green mb-4">
+        مجموعه تشریفاتی شاتو دو ورسای
+      </h1>
+      <p className="text-lg mb-4 text-gold bg-green opacity-70 font-bold rounded-xl p-1 hover:opacity-90">
+        لاکچری ترین باغ تالار تهران
+      </p>
+      <button
+        className="bg-green bg-opacity-80 hover:bg-opacity-90 text-white py-2 px-4 rounded-lg mt-4"
+        onClick={handleButtonClick2}
+      >
+        دریافت قیمت و رزرو زمان بازدید
+      </button>
+    </div>
+  </div>
+</div>
 
       {/* Services Section */}
       <section className="py-10" id="services">
