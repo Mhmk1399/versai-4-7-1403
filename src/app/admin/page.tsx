@@ -9,7 +9,6 @@ const AdminPage = () => {
 
   // Fetch the existing data for each component
   
-
   const renderActiveForm = () => {
     switch (activeForm) {
       case 'files':
