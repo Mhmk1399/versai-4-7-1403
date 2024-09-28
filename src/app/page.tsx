@@ -3,23 +3,29 @@
 import Image from "next/image";
 import Link from "next/link";
 import { sectionsData, optionsData } from "../../lib/data";
-import { useState, useEffect } from "react";
-import { FaPhoneAlt, FaInstagram, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
+import { useState } from "react";
+import {
+  FaPhoneAlt,
+  FaInstagram,
+  FaTelegramPlane,
+  FaWhatsapp,
+} from "react-icons/fa";
+import { useEffect } from "react";
 
 interface ImageData {
   type: "bad" | "normal" | "good";
   url: string;
-  category: string;
+  category: string; // Add category to the image data structure
 }
 
-const Page = () => {
+const Page = ({ category }: { category: string[] }) => {
+  const handleButtonClick = () => {
+    window.location.href = "/galery";
+  };
+  const handleButtonClick2 = () => {
+    window.location.href = "/menue";
+  };
   const [image, setImage] = useState<ImageData[]>([]);
-  const [category, setCategory] = useState<string[]>([]); // Manage category state locally
-
-  useEffect(() => {
-    // Fetch category data here if needed or set manually
-    setCategory(["category1", "category2"]); // Replace with actual category fetching logic
-  }, []);
 
   useEffect(() => {
     async function fetchImages() {
@@ -34,61 +40,37 @@ const Page = () => {
 
     fetchImages();
   }, [category]); // Re-run when category changes
-
-  const handleButtonClick = () => {
-    window.location.href = "/galery";
-  };
-
-  const handleButtonClick2 = () => {
-    window.location.href = "/menue";
-  };
+  console.log(image);
 
   return (
     <div>
       {/* Hero Section */}
       <div className="relative w-full h-[320px] mt-8" id="home">
-  {/* Preload the hero image for faster LCP */}
-  <link 
-    rel="preload" 
-    href="/assets/images/hero.webp" 
-    as="image" 
-    type="image/webp" 
-    media="(min-width: 400px)"
-  />
-
-  <div className="absolute inset-0 z-0">
-    <Image
-      className="block w-full h-full object-cover"
-      alt="Hero image"
-      // Removed lazy loading to ensure faster LCP
-      src="/assets/images/hero.webp"
-      width={800} // Updated width and height to actual size if needed
-      height={400} // Adjust as per your requirements
-      decoding="auto" // or remove it entirely if unnecessary
-      srcSet="/assets/images/hero-320.webp 320w, 
-              /assets/images/hero-640.webp 640w, 
-              /assets/images/hero-1280.webp 1280w"
-      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" // Adjust sizes based on your layout
-    />
-  </div>
-
-  <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-    <div className="bg-white bg-opacity-50 rounded-lg p-8">
-      <h1 className="text-2xl md:text-5xl font-bold text-green mb-4">
-        مجموعه تشریفاتی شاتو دو ورسای
-      </h1>
-      <p className="text-lg mb-4 text-gold bg-green opacity-70 font-bold rounded-xl p-1 hover:opacity-90">
-        لاکچری ترین باغ تالار تهران
-      </p>
-      <button
-        className="bg-green bg-opacity-80 hover:bg-opacity-90 text-white py-2 px-4 rounded-lg mt-4"
-        onClick={handleButtonClick2}
-      >
-        دریافت قیمت و رزرو زمان بازدید
-      </button>
-    </div>
-  </div>
-</div>
+        <div className="absolute inset-0 z-0">
+          <Image
+            className="block w-full h-full object-cover"
+            alt="Hero image"
+            loading="lazy"
+            src="/assets/images/hero.webp"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
+          <div className="bg-white bg-opacity-50 rounded-lg p-8">
+            <h1 className="text-2xl md:text-5xl font-bold text-green mb-4">
+              مجموعه تشریفاتی شاتو دو ورسای
+            </h1>
+            <p className="text-lg mb-4 text-gold bg-green opacity-70 font-bold rounded-xl p-1 hover:opacity-90">لاکچری ترین باغ تالار تهران</p>
+            <button
+              className="bg-green bg-opacity-80 hover:bg-opacity-90 text-white py-2 px-4 rounded-lg mt-4"
+              onClick={handleButtonClick2}
+            >
+              دریافت قیمت و رزرو زمان بازدید
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Services Section */}
       <section className="py-10" id="services">
@@ -105,18 +87,18 @@ const Page = () => {
               return (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-md sm:px-4 overflow-hidden grid grid-rows-1 justify-center text-center p-2"
+                  className="bg-white rounded-lg shadow-md height-box p-2 sm:px-4 overflow-hidden grid grid-rows-1 justify-center text-center"
                 >
                   {matchingImage && (
                     <Image
-                      className="rounded-lg mt-5 mx-auto shadow-green shadow-md"
+                      className="rounded-lg mt-5 mx-auto shadow-green shadow-lg"
                       width={400}
                       height={400}
                       src={matchingImage.url}
                       alt={section.title}
                     />
                   )}
-                  <div className="p-6 text-center flex flex-col justify-center items-center">
+                  <div className="p-3 text-center flex flex-col justify-center items-center">
                     <h3 className="text-xl font-bold text-black mb-2" dir="rtl">
                       {section.title}
                     </h3>
@@ -136,7 +118,6 @@ const Page = () => {
           </div>
         </div>
       </section>
-
       {/* Wedding Night Section */}
       <div
         className="rounded-lg bg-cover bg-center shadow-lg overflow-hidden min-h-full"
@@ -173,18 +154,18 @@ const Page = () => {
               return (
                 <div
                   key={i}
-                  className="bg-white rounded-lg shadow-md sm:px-4 overflow-hidden grid grid-rows-1 justify-center text-center p-2"
+                  className="bg-white rounded-lg shadow-md height-box p-2 sm:px-4 overflow-hidden grid grid-rows-1 justify-center text-center"
                 >
                   {matchingImage2 && (
                     <Image
-                      className="rounded-lg mt-5 mx-auto shadow-green shadow-md"
+                      className="rounded-lg mt-5 mx-auto shadow-green shadow-lg"
                       width={400}
                       height={400}
                       src={matchingImage2.url}
                       alt={option.title}
                     />
                   )}
-                  <div className="p-6 text-center flex flex-col justify-center items-center ">
+                  <div className="p-3 text-center flex flex-col justify-center items-center">
                     <h3 className="text-xl font-bold text-black mb-2" dir="rtl">
                       {option.title}
                     </h3>
@@ -275,5 +256,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default Page;
