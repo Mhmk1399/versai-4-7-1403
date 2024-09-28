@@ -69,7 +69,7 @@ const page = () => {
             ></div>
             <Image
               className="relative w-40"
-              src="/logoversai.png"
+              src="/logo.webp"
               alt=""
               width={4000}
               height={4000}
@@ -128,7 +128,7 @@ const page = () => {
             ></div>
             <Image
               className="relative w-40"
-              src="/logoversai.png"
+              src="/logo.webp"
               alt=""
               width={4000}
               height={4000}
@@ -184,7 +184,7 @@ const page = () => {
             ></div>
             <Image
               className="relative w-40"
-              src="/logoversai.png"
+              src="/logo.webp"
               alt=""
               width={4000}
               height={4000}
@@ -241,7 +241,7 @@ const page = () => {
             ></div>
             <Image
               className="relative w-40"
-              src="/logoversai.png"
+              src="/logo.webp"
               alt=""
               width={4000}
               height={4000}
@@ -298,7 +298,7 @@ const page = () => {
             ></div>
             <Image
               className="relative w-40"
-              src="/logoversai.png"
+              src="/logo.webp"
               alt=""
               width={4000}
               height={4000}
