@@ -1,16 +1,20 @@
+"use client";
 import Image from "next/image";
+import { useEffect } from "react";
 
-
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    document.title = " درباره ما";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "باغ تالار ورسای در جنوب غرب تهران یکی از لوکس‌ترین و مجلل‌ترین باغ تالارهای تهران به شمار می آید."
+      );
+    }
+  }, []);
   return (
     <>
-      <head>
-        <title>درباره ما</title>
-        <meta
-          name="description"
-          content="باغ تالار ورسای در جنوب غرب تهران یکی از لوکس‌ترین و مجلل‌ترین باغ تالارهای تهران به شمار می آید."
-        />
-      </head>
       <div>
         <section className="py-10 bg-[#e8e8e5]" id="aboutus">
           <div className="container mx-auto px-4">
@@ -86,4 +90,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

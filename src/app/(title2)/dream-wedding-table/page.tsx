@@ -1,17 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    document.title = " ایده‌های جالب برای یه سفره عقد خاص و تازه";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "سفره عقد یه قسمت خیلی مهم و جدا نشدنی از مراسم عقده که با طراحی و ذیزاین مناسب، می‌تونه مراسم رو به یه تجربه فوق‌العاده تبدیل کنه."
+      );
+    }
+  }, []);
   return (
     <>
-      <head>
-        <title>ایده‌های جالب برای یه سفره عقد خاص و تازه</title>
-        <meta
-          name="description"
-          content="سفره عقد یه قسمت خیلی مهم و جدا نشدنی از مراسم عقده که با طراحی و ذیزاین مناسب، می‌تونه مراسم رو به یه تجربه فوق‌العاده تبدیل کنه."
-        />
-      </head>
       <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
@@ -67,17 +71,17 @@ const page = () => {
                 باحال داریم که می‌تونه به سفره عقدت یه جلوه خاص و جذاب بده:
               </span>
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white my-auto rounded-lg text-center">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
                 <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
                   ۱۰ ترفند ساده برای طراحی سفره عقد در باغ تالار که چشم‌گیر باشه
                 </h2>
                 <ol
                   id="contentDiscription"
-                  className="text-regular mx-auto mt-2 text-gray-700 mt-5 "
+                  className="text-regular mx-auto text-gray-700 mt-5 "
                 >
                   <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
                     سفره عقد شیک و مدرن در باغ تالار
@@ -188,7 +192,7 @@ const page = () => {
                     </span>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
@@ -392,4 +396,4 @@ const page = () => {
     </>
   );
 };
-export default page;
+export default Page;

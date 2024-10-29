@@ -1,16 +1,21 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    document.title = "چطور یک عروسی لاکچری و به‌صرفه داشته باشیم؟";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "شب عروسی یکی از مهم‌ترین شب‌های زندگی هر فردی است و همه ما دوست داریم این شب به بهترین شکل ممکن و به یادماندنی برگزار شود. اما چطور می‌توانیم یک عروسی لاکچری و در عین حال به‌صرفه داشته باشیم؟"
+      );
+    }
+  }, []);
   return (
     <>
-      <head>
-        <title> چطور یک عروسی لاکچری و به‌صرفه داشته باشیم؟</title>
-        <meta
-          name="description"
-          content="شب عروسی یکی از مهم‌ترین شب‌های زندگی هر فردی است و همه ما دوست داریم این شب به بهترین شکل ممکن و به یادماندنی برگزار شود. اما چطور می‌توانیم یک عروسی لاکچری و در عین حال به‌صرفه داشته باشیم؟"
-        />
-      </head>
       <div className="bg-white grid mx-auto grid-cols-1" dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
@@ -178,4 +183,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

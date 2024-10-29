@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const data = [
   {
@@ -241,6 +243,16 @@ const data = [
 ];
 
 const Gallery = () => {
+  useEffect(() => {
+    document.title = "گالری شاتو دو ورسای";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "شما در این دو سالن به ظرفیت 1200 نفر میتوانید تمام دیزاین های روز دنیا را پیاده سازی کنید و بدون دقدقه به فکر پرشکوه برگذار شدن مراسم بهترین شب زنندگی خودتون باشید"
+      );
+    }
+  }, []);
   const handleButtonClick = () => {
     window.location.href = "/menue";
   };
@@ -249,13 +261,6 @@ const Gallery = () => {
 
   return (
     <>
-      <head>
-        <title> گالری شاتو دو ورسای</title>
-        <meta
-          name="description"
-          content="شما در این دو سالن به ظرفیت 1200 نفر میتوانید تمام دیزاین های روز دنیا را پیاده سازی کنید و بدون دقدقه به فکر پرشکوه برگذار شدن مراسم بهترین شب زنندگی خودتون باشید"
-        />
-      </head>
       <div className="p-5 sm:p-8 mt-4">
         {categories.map((category) => (
           <div key={category} className="mb-8 h-full	">

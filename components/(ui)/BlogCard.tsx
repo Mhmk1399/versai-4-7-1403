@@ -19,7 +19,7 @@ const BlogCard = () => {
             <span className="block opacity-75 -mb-1">Outdoor</span>
             <div className="flex justify-between">
               <span className="block font-semibold text-xl">Monstera</span>
-              <span className="block bg-white rounded-full text-teal-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$45.00</span>
+              <span className=" bg-white rounded-full text-teal-500 text-xs font-bold px-3 py-2 leading-none flex items-center">$45.00</span>
             </div>
           </div>
         </div>

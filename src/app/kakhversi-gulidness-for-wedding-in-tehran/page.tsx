@@ -1,16 +1,21 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    document.title = "راهنمای انتخاب بهترین تالار تهران";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "اگر شما هم درگیر انتخاب تالار و یا باغ تالار برای برگزاری بهترین شب زندگیتون هستید قطعاً این مقاله می‌تونه بهتون کمک زیادی بکنه"
+      );
+    }
+  }, []);
   return (
     <>
-      <head>
-        <title>راهنمای انتخاب بهترین تالار تهران</title>
-        <meta
-          name="description"
-          content="اگر شما هم درگیر انتخاب تالار و یا باغ تالار برای برگزاری بهترین شب زندگیتون هستید قطعاً این مقاله می‌تونه بهتون کمک زیادی بکنه"
-        />
-      </head>
       <div className="bg-white grid mx-auto grid-cols-1" dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
@@ -172,4 +177,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

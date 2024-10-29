@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const handleButtonClick = () => {
   window.location.href = "/kakhversi-gulidness-for-wedding-in-tehran";
@@ -17,20 +18,23 @@ const handleButtonClick5 = () => {
   window.location.href = "/how-to-have-a-good-wedding-ceremony";
 };
 
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    document.title = "وبلاگ شاتو دو ورسای";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "باغ تالار شاتو دو ورسای با الهام از شکوه و زیبایی کاخ ورسای فرانسه طراحی شده است."
+      );
+    }
+  }, []);
   return (
-    <div>
-      <head>
-        <title> وبلاگ شاتو دو ورسای</title>
-        <meta
-          name="description"
-          content="باغ تالار شاتو دو ورسای با الهام از شکوه و زیبایی کاخ ورسای فرانسه طراحی شده است. "
-        />
-      </head>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4">
       {/* راهنمای  انتخاب بهترین تالار در تهران */}
 
       <div
-        className="p-1 flex flex-wrap items-center justify-center"
+        className="p-1 flex flex-col items-center justify-center hover:scale-95 transition-transform duration-300"
         onClick={handleButtonClick}
       >
         <div className="flex-shrink-0 m-6 relative overflow-hidden bg-green rounded-lg max-w-xs shadow-lg">
@@ -318,4 +322,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -1,18 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    document.title = "تالار ورسای انتخابی عالی برای عروسی های فرانسوی";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        " مراسم عروسی یکی از مهم‌ترین و به‌یادماندنی‌ترین روزهای زندگی هر فرد است. انتخاب یک تالار عروسی مناسب در تهران می‌تواند تأثیر بزرگی بر کیفیت و شکوه این مراسم داشته باشد."
+      );
+    }
+  }, []);
   return (
     <>
-      <head>
-        <title>باغ تالار ورسای:انتخابی عالی برای مراسم های فرانسوی</title>
-        <meta
-          name="description"
-          content=" مراسم عروسی یکی از مهم‌ترین و به‌یادماندنی‌ترین روزهای زندگی هر فرد است.
-انتخاب یک تالار عروسی مناسب در تهران می‌تواند تأثیر بزرگی بر کیفیت و شکوه این مراسم داشته باشد."
-        />
-      </head>
       <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
@@ -367,4 +370,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

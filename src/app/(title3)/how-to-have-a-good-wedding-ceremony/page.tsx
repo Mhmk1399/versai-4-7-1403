@@ -1,17 +1,21 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
+  useEffect(() => {
+    document.title = " 10 نکته برای داشتن یک مراسم عقد لوکس";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        "برای اینکه یه مراسم عقد لوکس و شیک داشته باشین که همه انگشت به دهن بمونن، باید چندتا نکته رو حواستون باشه. اینجا یه سری ویژگی‌های یه مراسم عقد لوکس رو براتون آوردیم:"
+      );
+    }
+  }, []);
   return (
     <>
-      <head>
-        <title>10 نکته برای داشتن یک مراسم عقد لوکس</title>
-        <meta
-          name="description"
-          content="برای اینکه یه مراسم عقد لوکس و شیک داشته باشین که همه انگشت به دهن بمونن، باید چندتا نکته رو حواستون باشه. اینجا یه سری ویژگی‌های یه مراسم عقد لوکس رو براتون آوردیم:"
-        />
-      </head>
       <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
@@ -357,4 +361,4 @@ const page = () => {
     </>
   );
 };
-export default page;
+export default Page;

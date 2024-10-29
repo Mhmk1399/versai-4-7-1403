@@ -8,19 +8,31 @@
   color: #fff;
 }
 
-
-
 .links {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
-  margin-top: 20px;
   margin-right: 15px;
 }
 
 .links a {
-  color: #fff;
+  color: #f5f0f0;
   text-decoration: none;
+  font-size: small
+}
+@media screen and (min-width: 768px) {
+  .links a {
+    background-color: #0a3c3b; 
+    font-size: medium;
+    padding: 10px;
+  }
+  
+}
+.links a:hover {
+  color: #d3b43d;
+  transition: all  0.4s;
+  font-weight: bolder;
+  transform: scale(.97);
 }
 
 .toggler {
@@ -35,7 +47,7 @@
     flex-direction: row;
     width: 100%;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     background-color: #0a3c3b;
     padding: 10px;
