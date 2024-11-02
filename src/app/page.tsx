@@ -19,7 +19,7 @@ interface ImageData {
   category: string; // Add category to the image data structure
 }
 
-const Page = ({ category }: { category: string }) => {
+const Page = () => {
   const handleButtonClick = () => {
     window.location.href = "/galery";
   };
