@@ -47,7 +47,7 @@ const Page = () => {
     <div>
       {/* Hero Section */}
       <div className="container mx-auto p-4">
-        <div className="relative w-full h-screen px-4 md:mt-10" id="home">
+        <div className="relative w-full h-screen px-4 md:mt-10 mt-8" id="home">
           {/* Background Image with Framer Motion */}
           <motion.div
             className="absolute inset-0 z-0 "
