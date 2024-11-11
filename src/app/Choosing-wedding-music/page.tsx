@@ -57,7 +57,7 @@ const Page = () => {
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1.5  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
                     چگونه موزیک عروسی را انتخاب کنیم?
                   </span>
 
@@ -89,16 +89,16 @@ const Page = () => {
                     <br />
                     <span>
                       موزیک انتخابی شما باید با نوع رقص‌های مختلف همخوانی داشته
-                      باشد. برای رقص‌های دو نفره و تانگو، آهنگ "حس از خدا رسیدن"
-                      از اندی گزینه‌ای عالی است. همچنین، برای رقص‌های دسته جمعی،
-                      آهنگ‌های شاد از ابی مانند "شاد شدم" می‌توانند مهمانان را
-                      به رقص دعوت کنند.
+                      باشد. برای رقص‌های دو نفره و تانگو، آهنگ کی بهتر از تو از
+                      عارف بسیار مناسب است. همچنین، برای رقص‌های دسته جمعی،
+                      آهنگ‌های شاد از ابی مانند سلامتیت می‌توانند مهمانان را به
+                      رقص دعوت کنند.
                     </span>
                   </li>
                   <br />
                   <br />
                   <span>
-                    <strong>ابی - "سلامتیت"</strong>
+                    <strong>ابی -سلامتیت</strong>
                   </span>
                   <div className="flex-col justify-items-center my-3">
                     <iframe
@@ -115,7 +115,7 @@ const Page = () => {
 
                     <br />
                     <span>
-                      <strong>عارف - "کی بهتر از تو"</strong>
+                      <strong>عارف - کی بهتر از تو</strong>
                     </span>
                     <br />
                     <br />
