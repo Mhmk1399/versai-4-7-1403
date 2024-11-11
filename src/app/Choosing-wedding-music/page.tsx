@@ -57,7 +57,7 @@ const Page = () => {
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1.5  to-Cyan-950 rounded-full">
                     چگونه موزیک عروسی را انتخاب کنیم?
                   </span>
 
