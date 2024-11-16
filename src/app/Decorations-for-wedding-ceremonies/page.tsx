@@ -184,6 +184,7 @@ const Page = () => {
                       افزودن عناصر شخصی مانند عکس‌های شما و همسرتان یا
                       یادگاری‌های خاص می‌تواند فضای مراسم را ویژه‌تر کند.
                     </span>
+                    <br />
 
                     <Link href="/menue">
                       <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
@@ -200,6 +201,7 @@ const Page = () => {
                   حالا با ما تماس بگیرید و لحظاتی فراموش‌نشدنی را برای خود رقم
                   بزنید.
                 </span>
+                <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
                   <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
