@@ -217,6 +217,7 @@ const Page = () => {
                     <span>2 - پذیرایی با دسرهای مخصوص</span>
                     <br />
                     <span>3 - تیم حرفه‌ای برای سرویس‌دهی به مهمانان</span>
+                    <br />
                     <Link href="/menue">
                       <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
