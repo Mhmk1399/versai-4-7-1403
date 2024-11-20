@@ -16,10 +16,7 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div
-        className="bg-white max-w-8xl mx-auto grid grid-cols-1 h-auto p-4 sm:p-6 lg:p-8"
-        dir="rtl"
-      >
+      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
@@ -28,13 +25,13 @@ const Page = () => {
                 width={4000}
                 height={4000}
                 alt="چگونه تالار عروسی مناسب انتخاب کنیم"
-                className="rounded-lg shadow-lg w-full h-auto object-cover sm:max-h-[600px] lg:max-h-[800px]"
+                className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
               <h1
+                className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
-                className="text-xl sm:text-2xl lg:text-3xl font-bold mx-auto h1-blog-header"
               >
                 چگونه تالار عروسی مناسب انتخاب کنیم؟ تجربه‌ای رؤیایی در شاتو دو
                 ورسای
