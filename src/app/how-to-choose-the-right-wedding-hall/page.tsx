@@ -17,7 +17,7 @@ const Page = () => {
   return (
     <>
       <div
-        className="bg-white  mx-auto grid grid-cols-1 h-auto p-4 sm:p-6 lg:p-8"
+        className="bg-white max-w-8xl mx-auto grid grid-cols-1 h-auto p-4 sm:p-6 lg:p-8"
         dir="rtl"
       >
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
