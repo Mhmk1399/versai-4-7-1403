@@ -19,13 +19,13 @@ const Page = () => {
       <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
               <Image
                 src="/assets/images/VAG_2082.webp"
                 width={4000}
                 height={4000}
                 alt="چگونه تالار عروسی مناسب انتخاب کنیم"
-                className="rounded-lg shadow-lg w-full h-full"
+                className="rounded-lg shadow-lg w-[60%] h-full"
               />
             </div>
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
@@ -42,7 +42,7 @@ const Page = () => {
                 </span>
                 <br />
               </p>
-              <p>
+              <p className="p-2">
                 یکی از مهم‌ترین تصمیماتی که عروس و داماد باید برای عروسی خود
                 بگیرند، انتخاب تالار عروسی است. این تصمیم تأثیر زیادی بر زیبایی
                 و کیفیت مراسم عروسی دارد. اگر شما هم در حال برنامه‌ریزی برای روز
@@ -77,7 +77,7 @@ const Page = () => {
                       عروسی
                     </span>
                     <br />
-                    <span>
+                    <span className="p-2">
                       یکی از اولین مسائلی که باید در نظر بگیرید، ظرفیت تالار
                       است. تعداد مهمانانی که به عروسی شما دعوت می‌شوند، تعیین
                       می‌کند که چه تالاری برای شما مناسب است. تالار شاتو دو
@@ -95,13 +95,13 @@ const Page = () => {
                     <br />
                     <span>3 - ایجاد راحتی برای مهمانان بدون احساس شلوغی</span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
                     <Image
                       src="/assets/images/salon3.webp"
                       width={2000}
                       height={2000}
                       alt="چگونه تالار عروسی مناسب انتخاب کنیم"
-                      className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
+                      className="rounded-lg shadow-lg w-[70%] lg:max-h-[900px] mx-auto"
                     />
                   </div>
 
@@ -110,7 +110,7 @@ const Page = () => {
                       ۲. دکوراسیون تالار: ایجاد حس شکوه و زیبایی در مراسم شما
                     </span>
                     <br />
-                    <span>
+                    <span className="p-2">
                       یکی دیگر از نکات مهم در انتخاب تالار عروسی، دکوراسیون
                       داخلی آن است. دکوراسیون باید با سلیقه شما و تم عروسی‌تان
                       همخوانی داشته باشد. شاتو دو ورسای با دکوراسیون‌های کلاسیک
@@ -128,13 +128,13 @@ const Page = () => {
                       3 - امکان سفارشی‌سازی دکوراسیون بر اساس سلیقه شما
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
                     <Image
                       src="/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall (3).webp"
                       width={2000}
                       height={2000}
                       alt=" ویژگی‌های سفره عقد"
-                      className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
+                      className="rounded-lg shadow-lg w-[70%] lg:max-h-[900px] mx-auto"
                     />
                   </div>
 
@@ -143,7 +143,7 @@ const Page = () => {
                       ۳. امکانات رفاهی تالار: ایجاد راحتی و آسایش برای مهمانان
                     </span>
                     <br />
-                    <span>
+                    <span className="p-2">
                       یک تالار عروسی مناسب باید از امکانات رفاهی کاملی برخوردار
                       باشد. امکاناتی مانند پارکینگ، تهویه مطبوع، سرویس بهداشتی و
                       دسترسی آسان به بخش‌های مختلف از جمله نکات کلیدی هستند که
@@ -160,13 +160,13 @@ const Page = () => {
                     <br />
                     <span>3 - دسترسی آسان به بخش‌های مختلف تالار</span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
                     <Image
                       src="/assets/images/Parking-with-a-capacity-of-600-cars-in-the-garden-of-the-Chateau-de-Versailles-luxury-hall (2).webp"
                       width={4000}
                       height={4000}
                       alt=" ویژگی‌های امکانات رفاهی:"
-                      className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
+                      className="rounded-lg shadow-lg w-[70%] lg:max-h-[900px] mx-auto"
                     />
                   </div>
                   <li className="text-regular  mb-3">
@@ -174,7 +174,7 @@ const Page = () => {
                       ۴. کیفیت خدمات پذیرایی: یکی از عوامل مهم در انتخاب تالار
                     </span>
                     <br />
-                    <span>
+                    <span className="p-2">
                       پذیرایی از مهمانان بخش مهمی از هر مراسم عروسی است. کیفیت
                       غذا، نوشیدنی‌ها و سرویس‌دهی تأثیر زیادی بر تجربه مهمانان
                       شما خواهد داشت. شاتو دو ورسای با ارائه منوی‌های لوکس و
@@ -190,13 +190,13 @@ const Page = () => {
                     <br />
                     <span>3 - تیم حرفه‌ای برای سرویس‌دهی به مهمانان</span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
                     <Image
                       src="/assets/images/food4.webp"
                       width={4000}
                       height={4000}
                       alt=" ویژگی‌های نورپردازی"
-                      className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
+                      className="rounded-lg shadow-lg w-[70%] lg:max-h-[900px] mx-auto"
                     />
                   </div>
 
@@ -204,7 +204,7 @@ const Page = () => {
                     <p className="font-bold ml-2 text-xl">
                       ۵. نورپردازی حرفه‌ای: خلق لحظاتی خاص و به‌یادماندنی
                     </p>
-                    <span>
+                    <span className="p-2">
                       نورپردازی یکی از عناصری است که می‌تواند فضا و حال‌وهوای
                       مراسم شما را به کلی تغییر دهد. شاتو دو ورسای با نورپردازی
                       حرفه‌ای و هماهنگ با تم عروسی، فضایی رمانتیک و زیبا برای
@@ -228,20 +228,20 @@ const Page = () => {
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
                     <Image
                       src="/assets/images/Fireworks-next-to-the-dance-stage-from-above-the-garden-of-the-luxury-hall-of-Chateau-de-Versailles.webp"
                       width={4000}
                       height={4000}
                       alt=" ویژگی‌های نورپردازی"
-                      className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
+                      className="rounded-lg shadow-lg w-[70%] lg:max-h-[900px] mx-auto"
                     />
                   </div>
                   <li className="text-regular  mb-3">
                     <p className="font-bold ml-2 text-xl">
                       ۶. موقعیت مکانی و دسترسی آسان: راحتی برای مهمانان شما
                     </p>
-                    <span>
+                    <span className="p-2">
                       موقعیت مکانی تالار یکی از عواملی است که می‌تواند بر حضور
                       مهمانان و راحتی آنها تأثیر بگذارد. شاتو دو ورسای با دسترسی
                       مناسب و موقعیت مکانی خوب، انتخابی عالی برای مهمانان شما
@@ -257,20 +257,20 @@ const Page = () => {
                     <br />
                     <span>3 - موقعیت جغرافیایی مطلوب و زیبا</span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
                     <Image
                       src="/assets/images/The-view-of-the-English-garden-at-night-the-most-luxurious-photography-location-of-the-Tehran-Hall-of-Chateau-de-Versailles.webp"
                       width={4000}
                       height={4000}
                       alt="ویژگی‌های موقعیت مکانی"
-                      className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
+                      className="rounded-lg shadow-lg w-[70%] lg:max-h-[900px] mx-auto"
                     />
                   </div>
                   <li className="text-regular  mb-3">
                     <p className="font-bold ml-2 text-xl">
                       ۷. فضای باز و باغ برای برگزاری مراسم در فضای آزاد
                     </p>
-                    <span>
+                    <span className="p-2">
                       اگر علاقه‌مند به برگزاری مراسم در فضای باز هستید، شاتو دو
                       ورسای با باغ‌های زیبا و فضای باز منحصر به فرد خود، انتخابی
                       عالی است. فضای باز این مجموعه به شما امکان می‌دهد که
@@ -285,20 +285,20 @@ const Page = () => {
                     <br />
                     <span>3 - نورپردازی و دکوراسیون سفارشی برای فضای باز</span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
                     <Image
                       src="/assets/images/S__00479.webp"
                       width={4000}
                       height={4000}
                       alt="ویژگی‌های فضای باز"
-                      className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
+                      className="rounded-lg shadow-lg w-[70%] lg:max-h-[900px] mx-auto"
                     />
                   </div>
                 </ol>
                 <h3 className="font-bold text-2xl my-2">نتیجه‌گیری</h3>
 
-                <span>
-                  انتخاب تالار عروسی مناسب یکی از مهم‌ترین مراحل در برنامه‌ریزی
+                <span className="p-2">
+                انتخاب تالار عروسی مناسب یکی از مهم‌ترین مراحل در برنامه‌ریزی
                   مراسم شما است. شاتو دو ورسای با ارائه تمامی امکانات و خدمات
                   لوکس، فضایی ایده‌آل برای برگزاری مراسم عروسی شما فراهم می‌کند.
                   از دکوراسیون و نورپردازی گرفته تا پذیرایی و خدمات حرفه‌ای، همه
