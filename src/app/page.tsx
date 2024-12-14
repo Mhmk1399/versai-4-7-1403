@@ -59,8 +59,8 @@ const Page = () => {
               className=" w-full h-full rounded-2xl object-cover"
               alt="Hero image"
               loading="lazy"
-              src="/assets/images/hero.webp"
-              width={1000}
+              src="/assets/images/heroPage.webp"
+              width={4000}
               height={500}
             />
           </motion.div>
@@ -68,19 +68,19 @@ const Page = () => {
           {/* Text Content with Framer Motion for Fade-in Effect */}
           <div className="absolute inset-0  flex flex-col items-center justify-center text-center text-white px-4 sm:px-8">
             <motion.div
-              className="bg-white bg-opacity-60 rounded-xl p-6 md:p-10 shadow-xl backdrop-blur-xl"
+              className="bg-green bg-opacity-50 rounded-2xl p-6 md:p-10 shadow-xl backdrop-blur-md"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <h1 className="text-3xl md:text-5xl font-bold text-green mb-4">
+              <h1 className="text-3xl md:text-5xl font-bold text-white mb-8">
                 مجموعه تشریفاتی شاتو دو ورسای
               </h1>
-              <p className="text-base md:text-xl font-bold text-gold bg-green bg-opacity-80 rounded-lg p-2 mb-6 md:mb-8 hover:bg-opacity-90 transition duration-300">
+              <p className="text-base md:text-xl font-bold text-gold  bg-opacity-80 rounded-lg p-2 mb-6 md:mb-8 hover:bg-opacity-90 transition duration-300">
                 لاکچری ترین باغ تالار تهران
               </p>
               <motion.button
-                className="bg-green text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out hover:bg-gold"
+                className=" text-white text-xl font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out hover:bg-gold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleButtonClick}
@@ -130,10 +130,7 @@ const Page = () => {
                     />
                   )}
                   <div className="mt-6 flex flex-col justify-center items-center">
-                    <h3
-                      className="text-xl font-bold text-gold mb-2"
-                      dir="rtl"
-                    >
+                    <h3 className="text-xl font-bold text-gold mb-2" dir="rtl">
                       {section.title}
                     </h3>
                     <p className="text-gray-700 text-sm sm:text-base mb-4">
