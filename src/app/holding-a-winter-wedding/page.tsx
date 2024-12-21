@@ -89,7 +89,7 @@ const Page = () => {
                       src="/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall (3).webp"
                       width={2000}
                       height={2000}
-                      alt=" بهترین فصل برگزاری مراسم عروسی"
+                      alt=" برگزاری عروسی زمستانی"
                       className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
                     />
                   </div>
@@ -123,7 +123,7 @@ const Page = () => {
                       src="/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall_79_6_optimizednew.webp"
                       width={2000}
                       height={2000}
-                      alt="بهترین فصل برگزاری مراسم عروسی "
+                      alt="برگزاری عروسی زمستانی "
                       className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
                     />
                   </div>
@@ -182,7 +182,7 @@ const Page = () => {
                       src="/assets/images/winter.webp"
                       width={4000}
                       height={4000}
-                      alt="  تزیین سفره عقد"
+                      alt="  برگزاری عروسی زمستانی"
                       className="rounded-lg shadow-lg lg:max-h-[900px] mx-auto"
                     />
                   </div>
