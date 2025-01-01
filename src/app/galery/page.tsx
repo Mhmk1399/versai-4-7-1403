@@ -6,6 +6,18 @@ import { useEffect } from "react";
 const data = [
   {
     category: "سالن های مجلل و لاکچری شاتو دو ورسای",
+    href: "/assets/images/mojalal1.webp",
+    alt: "View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall1",
+  },
+
+  {
+    category: "سالن های مجلل و لاکچری شاتو دو ورسای",
+    href: "/assets/images/mojalal3.webp",
+    alt: "View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall1",
+  },
+
+  {
+    category: "سالن های مجلل و لاکچری شاتو دو ورسای",
     href: "/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall (2).webp",
     alt: "View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall1",
   },
@@ -65,6 +77,26 @@ const data = [
     description:
       "شما در این دو سالن به ظرفیت 1200 نفر میتوانید تمام دیزاین های روز دنیا را پیاده سازی کنید و بدون دقدقه به فکر پرشکوه برگذار شدن مراسم بهترین شب زنندگی خودتون باشید شما میتوانید انواع گل های فصل و روز را برای دیزاین های مختلف مثل روستیک و یا لاکچری برای تزئینات سالن خود انتخاب کنید ،استفاده از ظروف کریستالی و سازه های فلزی میتواند شکوه چشم گیری را به سالن مراسم شما بیافزیاید همچنین وجود دو سالن بزرگ به شما این اجازه را میدهد که سالن صرف شام را کاملا مجزا از سالن برگذاری مراسم دیزاین کنید که راحتی دو چندانی را به مهمانان شما میبخشد",
   },
+  {
+    category: "خدمات و پذیرایی با منوی بین‌المللی",
+    href: "/assets/images/food11.webp",
+    alt: "پذیرایی",
+  },
+  {
+    category: "خدمات و پذیرایی با منوی بین‌المللی",
+    href: "/assets/images/food2.webp",
+    alt: "پذیرایی",
+  },
+  {
+    category: "خدمات و پذیرایی با منوی بین‌المللی",
+    href: "/assets/images/food3.webp",
+    alt: "پذیرایی",
+  },
+  {
+    category: "خدمات و پذیرایی با منوی بین‌المللی",
+    href: "/assets/images/food44.webp",
+    alt: "پذیرایی",
+  },
 
   {
     category: "خدمات و پذیرایی با منوی بین‌المللی",
@@ -98,6 +130,16 @@ const data = [
       "مجموعه تشریفاتی شاتو دو ورسای تنها باغ تالار واقعا در غرب تهران می باشد که برای پخت تمام غذا ها از اشپزخانه کاملا صنعتی برای بهداشت بیشتر استفاده میکند آشپز های بین المللی ورسای توانایی سرو انواع غذا های ایتالیایی،ایرانی،چینو دریایی را برای شما فراهم آوردند که انواع این غذا ها را میتوانید در بین منو خدمات مشاهده کنید  نکته قابل توجه در خدمات پذیرایی مجموعه شاتو دو ورسای پذیرایی به صورت allyou can eat می باشد که به این معنی که هر مقدار که مهمانان شما میل داشته باشند میتوانند از ابمیوه های فصل و دیگر خدمات پذیرایی مثل فینگر فود ها استفاده کنند",
   },
 
+  {
+    category: "نورپردازی و استیج رقص روی آب",
+    href: "/assets/images/stage1.webp",
+    alt: "stage1",
+  },
+  {
+    category: "نورپردازی و استیج رقص روی آب",
+    href: "/assets/images/stage2.webp",
+    alt: "stage1",
+  },
   {
     category: "نورپردازی و استیج رقص روی آب",
     href: "/assets/images/Modern-lighting-from-the-garden-of-the-luxury-hall-of-Chateau-de-Versailles.webp",
@@ -150,6 +192,16 @@ const data = [
 
   {
     category: "تجهیزات صوتی و گروه موسیقی حرفه‌ای",
+    href: "/assets/images/music1.webp",
+    alt: "The-mens-live-music-band-of-the-luxury-hall-of-Chateau-de-Versailles",
+  },
+  {
+    category: "تجهیزات صوتی و گروه موسیقی حرفه‌ای",
+    href: "/assets/images/music2.webp",
+    alt: "The-mens-live-music-band-of-the-luxury-hall-of-Chateau-de-Versailles",
+  },
+  {
+    category: "تجهیزات صوتی و گروه موسیقی حرفه‌ای",
     href: "/assets/images/The-live-music-band-of-the-ladies-of-the-luxury-hall-of-Chateau-de-Versailles.webp",
     alt: "The-live-music-band-of-the-ladies-of-the-luxury-hall-of-Chateau-de-Versailles",
     description:
@@ -193,6 +245,17 @@ const data = [
 
   {
     category: "طراحی الهام‌گرفته از کاخ ورسای فرانسه",
+    href: "/assets/images/france1.webp",
+    alt: "Lobby-of-the-most-luxurious-garden-of-Tehran-Hall-of-Chateau-de-Versailles-complex",
+  },
+  {
+    category: "طراحی الهام‌گرفته از کاخ ورسای فرانسه",
+    href: "/assets/images/france2.webp",
+    alt: "Lobby-of-the-most-luxurious-garden-of-Tehran-Hall-of-Chateau-de-Versailles-complex",
+  },
+
+  {
+    category: "طراحی الهام‌گرفته از کاخ ورسای فرانسه",
     href: "/assets/images/Lobby-of-the-most-luxurious-garden-of-Tehran-Hall-of-Chateau-de-Versailles-complex.webp",
     alt: "Lobby-of-the-most-luxurious-garden-of-Tehran-Hall-of-Chateau-de-Versailles-complex",
   },
@@ -220,6 +283,11 @@ const data = [
     alt: "The-space-of-the-church-the-photography-location-of-the-garden-of-the-Chateau-de-Versailles-hall",
     description:
       "یکی از بزرگترین امتیازات مجموعه شاتو دو ورسای داشتن یک شهرک سینمایی با 12 لوکیشن عکاسی مختلف میباشد در کنار سالن و محل برگذاری مراسم عروسی شما این لوکیشن عکاسی  در کنار محل برگذاری مراسم عروسی شما میتواند یک حجم زیادی از استرس روز عروسیتون و گیر کردن داخل ترافیک و نرسیدن به کار ها را حل کنه  و به با کیفیت برگذار شدن مراسم عروسی شما به شدت کمک میکنه",
+  },
+  {
+    category: "فضای سبز و باغ عکاسی",
+    href: "/assets/images/grarden1.webp",
+    alt: "The-green-space-of-the-photography-location-from-the-45-degree-view-of-the-garden-of-the-Chateau-de-Versailles-hall-ezgif.com-jpg-to-webp-converter",
   },
   {
     category: "فضای سبز و باغ عکاسی",
@@ -277,9 +345,9 @@ const Gallery = () => {
                       <Image
                         alt={item.alt}
                         src={item.href}
-                        width={400}
+                        width={1000}
                         // loading="lazy"
-                        height={400}
+                        height={800}
                         className="w-full sm:grid sm:grid-rows-2 object-cover shrink-0 my-2 rounded-lg lg:w-full lg:rounded-lg snap-center sm:h-64 sm:my-1"
                       />
                     </Link>
