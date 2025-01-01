@@ -56,10 +56,18 @@ const Page = () => {
             transition={{ duration: 1.2 }}
           >
             <Image
-              className=" w-full h-full rounded-2xl object-cover"
+              className=" w-full h-full rounded-2xl object-cover hidden md:block"
               alt="Hero image"
               loading="lazy"
               src="/assets/images/heroPage.webp"
+              width={4000}
+              height={500}
+            />
+            <Image
+              className=" w-full h-full rounded-2xl object-cover md:hidden block"
+              alt="Hero image"
+              loading="lazy"
+              src="/assets/images/heroPhone.webp"
               width={4000}
               height={500}
             />
