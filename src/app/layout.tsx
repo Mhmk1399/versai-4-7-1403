@@ -56,6 +56,11 @@ export default function RootLayout({
           content="-2YgenFOh4xq185ypA7qdCTwnq6t2EFX8nh2qC9QpDQ"
         />
         <link rel="canonical" href="https://kakhversai/" />
+        <link
+          rel="icon"
+          href="/assets/images/faviicon.png"
+          type="image/x-icon"
+        />
 
         <title>{metadata.title?.toString() || ""}</title>
         <meta
