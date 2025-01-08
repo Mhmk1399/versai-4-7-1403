@@ -54,7 +54,7 @@ const Page = () => {
               className=" w-full h-full rounded-2xl object-cover hidden md:block"
               alt="Hero image"
               loading="lazy"
-              src="/assets/images/heroPage.webp"
+              src="/assets/images/bloog12.webp"
               width={4000}
               height={500}
             />
