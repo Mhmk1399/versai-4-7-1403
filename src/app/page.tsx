@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 
 
 import { useEffect } from "react";
+import { Loader } from "../../components/(ui)/loader";
 
 interface ImageData {
   type: "bad" | "normal" | "good";
@@ -15,6 +16,7 @@ interface ImageData {
 }
 
 const Page = () => {
+  
   const handleButtonClick = () => {
     window.location.href = "/galery";
   };
@@ -22,7 +24,7 @@ const Page = () => {
     window.location.href = "/menue";
   };
   const [image, setImage] = useState<ImageData[]>([]);
-
+  const [loader, setLoader] = useState(true);
   useEffect(() => {
     async function fetchImages() {
       try {
@@ -38,6 +40,19 @@ const Page = () => {
   }, []); // Re-run when category changes
   console.log(image);
 
+  
+  useEffect(() => {
+   setTimeout(() => {
+      setLoader(false);
+    }, 5000);
+  }, []);
+  if (loader) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader/>
+      </div>
+    );
+  }
   return (
     <div className="bg-white/10">
       {/* Hero Section */}

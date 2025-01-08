@@ -114,7 +114,7 @@ const Page = () => {
   };
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-gradient-to-r from-purple-500 to-pink-500 p-8">
-      <div className="bg-gradient-to-tl from-gold to-white rounded-lg shadow-lg p-4 flex justify-around items-center flex-wrap gap-4 mx-auto mb-4 text-center text-green">
+      <div className=" rounded-lg  p-4 flex justify-around items-center flex-wrap gap-4 mx-auto mb-4 text-center text-green">
         <h1 className="text-2xl font-bold  text-green text-center mx-auto ">
           منوی غذا ها و خدمات شاتو دو ورسای
         </h1>
@@ -127,7 +127,7 @@ const Page = () => {
       </div>
       {/* Shrinkable Container for Menu Photos */}
       <div className="w-full max-w-4xl mb-8">
-        <div className="bg-white rounded-lg shadow-lg p-4 flex justify-around items-center flex-wrap gap-4">
+        <div className="bg-white/10 rounded-lg p-4 flex justify-around items-center flex-wrap gap-4">
           <div
             className="rounded-lg shadow-md transition duration-200 hover:scale-105 cursor-pointer flex flex-col justify-center"
             style={{
@@ -221,7 +221,7 @@ const Page = () => {
               height: "300px",
             }}
             onClick={() => handleImageClick("/gold-dishserve")}
-          >
+            >
             <div className="text-2xl text-center text-yellow-500 mt-6 bg-transparent w-fit mx-auto rounded-full px-2 py-1 bg-opacity-85 ">
               دیس پرس طلایی
             </div>
@@ -245,8 +245,8 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="bg-gold rounded-lg shadow-xl py-4 px-12 flex justify-around items-center flex-wrap shadow-gold/50 gap-4 mx-auto mb-8 text-center text-green">
-        <h1 className="text-2xl font-bold text-white text-center mx-auto ">
+      <div className=" py-4 px-12 flex justify-around items-center flex-wrap shadow-gold/50 gap-4 mx-auto mb-8 text-center text-green">
+        <h1 className="text-2xl font-bold text-green text-center mx-auto ">
           your satisfaction guaranteed
         </h1>
       </div>
@@ -258,7 +258,7 @@ const Page = () => {
         <form onSubmit={handleSubmit} className="space-y-6 ">
           {/* Name */}
           <div className="mt-8">
-            <label className="block text-xl font-bold text-gold mb-4">
+            <label className="block text-xl font-bold text-black mb-4">
               نام و نام خانوادگی
             </label>
             <input
@@ -272,7 +272,7 @@ const Page = () => {
 
           {/* Phone Number */}
           <div>
-            <label className="block text-xl font-bold text-gold mb-4">
+            <label className="block text-xl font-bold text-black mb-4">
               شماره تماس
             </label>
             <input
@@ -286,7 +286,7 @@ const Page = () => {
 
           {/* Guests */}
           <div>
-            <label className="block text-xl font-bold text-gold mb-4">
+            <label className="block text-xl font-bold text-black mb-4">
               تعداد مهمان‌ها
             </label>
             <input
@@ -300,7 +300,7 @@ const Page = () => {
 
           {/* Wedding Date */}
           <div className="flex flex-col justify-center items-center">
-            <label className="block text-xl font-bold text-gold mb-4">
+            <label className="block text-xl font-bold text-black mb-4">
               تاریخ عروسی
             </label>
             <Calendar
@@ -316,7 +316,7 @@ const Page = () => {
 
           {/* Reserved Date */}
           <div className="flex flex-col justify-center items-center">
-            <label className="block text-xl font-bold text-gold mb-4">
+            <label className="block text-xl font-bold text-black mb-4">
               تاریخ رزرو بازدید
             </label>
             <Calendar
@@ -332,7 +332,7 @@ const Page = () => {
 
           {/* Menu Selection */}
           <div dir="rtl">
-            <label className="block text-xl font-bold text-gold mb-4">
+            <label className="block text-xl font-bold text-black mb-4">
               منو
             </label>
             <select
@@ -368,7 +368,7 @@ const Page = () => {
           <div>
             <button
               type="submit"
-              className="w-full bg-gradient-to-t from-gold t0-white mb-3 text-white py-3 rounded-md text-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="w-full bg-[#344e41] mb-3 text-white py-3 rounded-md text-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
             >
               ارسال فرم
             </button>

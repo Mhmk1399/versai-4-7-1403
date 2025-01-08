@@ -145,3 +145,28 @@ a {
 .height-box{
   height: 545px;
 }
+/* loader css */
+.logoWrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+.glowRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #ffffff00, #ffffff80, #ffffff00);
+  animation: spin 3s linear infinite, glow 2s ease-in-out infinite;
+}
+

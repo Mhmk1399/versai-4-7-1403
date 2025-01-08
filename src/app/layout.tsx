@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next/types";
 import "./globals.css";
 import NavBar from "../../components/NavaBar";

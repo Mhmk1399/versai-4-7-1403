@@ -1,0 +1,51 @@
+.logoWrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+  }
+  
+  .logo {
+    position: relative;
+    z-index: 2;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .glowRing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #ffffff00, #ffffff80, #ffffff00);
+    animation: spin 3s linear infinite, glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.05);
+    }
+  }
+  
+  @keyframes spin {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+  @keyframes glow {
+    0%, 100% {
+      filter: brightness(1) blur(5px);
+    }
+    50% {
+      filter: brightness(1.5) blur(10px);
+    }
+  }
+  
