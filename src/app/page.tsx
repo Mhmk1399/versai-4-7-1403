@@ -5,12 +5,7 @@ import { sectionsData, optionsData } from "../../lib/data";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import {
-  FaPhoneAlt,
-  FaInstagram,
-  FaTelegramPlane,
-  FaWhatsapp,
-} from "react-icons/fa";
+
 import { useEffect } from "react";
 
 interface ImageData {
@@ -44,10 +39,10 @@ const Page = () => {
   console.log(image);
 
   return (
-    <div>
+    <div className="bg-white/10">
       {/* Hero Section */}
-      <div className="container mx-auto p-4">
-        <div className="relative w-full h-screen px-4 md:mt-10 mt-8" id="home">
+      <div className="container mx-auto p-4 ">
+        <div className="relative w-full h-screen px-4" id="home">
           {/* Background Image with Framer Motion */}
           <motion.div
             className="absolute inset-0 z-0 "
@@ -76,19 +71,19 @@ const Page = () => {
           {/* Text Content with Framer Motion for Fade-in Effect */}
           <div className="absolute inset-0  flex flex-col items-center justify-center text-center text-white px-4 sm:px-8">
             <motion.div
-              className="bg-green bg-opacity-50 rounded-2xl p-6 md:p-10 shadow-xl backdrop-blur-md"
+              className="bg-white border-2 border-gray-200 bg-opacity-50 rounded-2xl p-6 md:p-10 shadow-xl backdrop-blur-md"
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <h1 className="text-3xl md:text-5xl font-bold text-white mb-8">
+              <h1 className="text-2xl md:text-5xl font-bold border-b-2 pb-3 border-gold text-white mb-2">
                 مجموعه تشریفاتی شاتو دو ورسای
               </h1>
-              <p className="text-base md:text-xl font-bold text-gold  bg-opacity-80 rounded-lg p-2 mb-6 md:mb-8 hover:bg-opacity-90 transition duration-300">
-                لاکچری ترین باغ تالار تهران
+              <p  className="text-white/80 text-xs md:text-lg my-2">
+                رویای یک شب فرانسوی در تهران
               </p>
               <motion.button
-                className=" text-white text-xl font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out hover:bg-gold"
+                className=" text-white text-xs font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out hover:bg-green"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleButtonClick}
@@ -102,7 +97,7 @@ const Page = () => {
 
       {/* Services Section */}
 
-      <section className="py-10 bg-gray-50" id="services">
+      <section className="py-10 bg-white/10" id="services">
         <div className="container mx-auto px-4">
           <motion.h2
             className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12 text-center"
@@ -122,7 +117,7 @@ const Page = () => {
               return (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-lg shadow-lg p-4 sm:p-6 overflow-hidden flex flex-col items-center text-center"
+                  className="bg-white/10 rounded-lg p-4 sm:p-6 overflow-hidden flex flex-col items-center text-center"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -175,7 +170,7 @@ const Page = () => {
         </div>
 
         {/* Text Box with Background Overlay */}
-        <div className="relative lg:ml-[-50px] mt-2 lg:mt-0 bg-white bg-opacity-30 backdrop-blur-md flex flex-col justify-center items-center text-center p-8 lg:p-10 rounded-2xl lg:z-10 lg:w-1/2">
+        <div className="relative lg:ml-[-50px] mt-2 lg:mt-0 bg-white/10 bg-opacity-30 backdrop-blur-md flex flex-col justify-center items-center text-center p-8 lg:p-10 rounded-2xl lg:z-10 lg:w-1/2">
           <h3 className="text-3xl md:text-4xl font-semibold text-gold">
             شب عروسی
           </h3>
@@ -205,11 +200,11 @@ const Page = () => {
               return (
                 <div
                   key={i}
-                  className="bg-white rounded-lg shadow-md height-box p-2 sm:px-4 overflow-hidden grid grid-rows-1 justify-center text-center"
+                  className="bg-white/10 rounded-lg height-box p-8 sm:px-4 overflow-hidden grid grid-rows-1 justify-center text-center"
                 >
                   {matchingImage2 && (
                     <Image
-                      className="rounded-lg mt-5 mx-auto shadow-green shadow-lg"
+                      className="rounded-lg mx-auto"
                       width={400}
                       height={400}
                       src={matchingImage2.url}
@@ -238,7 +233,7 @@ const Page = () => {
       </section>
 
       {/* Contact Information Section */}
-      <div className="bg-white rounded-lg shadow-md p-8 text-center my-4">
+      <div className="bg-transparent rounded-lg p-8 text-center my-4">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           موقعیت مکانی و دسترسی آسان
         </h2>
@@ -259,51 +254,7 @@ const Page = () => {
       </div>
 
       {/* Contact Methods Section */}
-      <div className="bg-white rounded-lg shadow-md p-8 text-center my-4">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-          راه های ارتباطی
-        </h2>
-        <p className="text-gray-500 my-4">
-          برای ارتباط با ما می‌توانید از یکی از روش‌های زیر استفاده کنید
-        </p>
-        <div className="flex justify-center gap-6 mt-5">
-          <a
-            id="call-butom-icon"
-            href="tel:+989123314145"
-            className="text-gray-600 hover:text-gold"
-            aria-label="Call us"
-          >
-            <FaPhoneAlt size={24} />
-          </a>
-          <a
-            href="https://www.instagram.com/chateau.de.versailles?igsh=dWh1ajNsdnQ1ajF2"
-            className="text-gray-600 hover:text-pink-500"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <FaInstagram size={24} />
-          </a>
-          <a
-            href="https://t.me/ALIASHEGHHOSEINI"
-            className="text-gray-600 hover:text-blue-400"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Telegram"
-          >
-            <FaTelegramPlane size={24} />
-          </a>
-          <a
-            href="https://wa.me/+989123381070"
-            className="text-gray-600 hover:text-lime-500"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-          >
-            <FaWhatsapp size={24} />
-          </a>
-        </div>
-      </div>
+     
     </div>
   );
 };
