@@ -86,14 +86,14 @@ export default function RootLayout({
         {/* Bottom buttons */}
         <div className="fixed bottom-2 right-5 flex flex-row space-y-4">
           <Link href="/menue">
-            <button className="bg-gradient-to-l from-green to-black text-white py-1 px-6 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+            <button className="bg-gradient-to-l hover:bg-green bg-white/10  backdrop-blur-xl text-gold py-2 font-bold px-6 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
               درخواست قیمت
             </button>
           </Link>
         </div>
         <div className="fixed bottom-2 left-5 flex flex-row space-y-4">
           <Link href="tel:+989123314145" id="call-buttom-fixed-botom">
-            <button className="bg-gradient-to-l from-green to-black text-white py-1 px-4 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+            <button className="bg-gradient-to-l hover:bg-green bg-white/10  backdrop-blur-xl text-gold py-2 font-bold px-6 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
               تماس با شاتو دو ورسای
             </button>
           </Link>
