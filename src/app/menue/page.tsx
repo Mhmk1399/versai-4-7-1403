@@ -16,7 +16,7 @@ interface FoodItem {
   icon: string;
   name: string;
   videoUrl: string;
-  description: string;
+  description: JSX.Element;
 }
 
 const Page = () => {
@@ -64,43 +64,110 @@ const Page = () => {
       foods: [
         {
           icon: "🍖",
-          name: "کباب سلطانی",
+          name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="space-y-2 flex text-right">
+              <li>جوجه کباب بدون استخوان 50%</li>
+              <li>کباب لقمه زعفرانی 50%</li>
+              <li>برنج سفید 50%</li>
+              <li>خورشت فسنجان 30%</li>
+              <li>خورشت قیمه نثار 30%</li>
+              <li>خورشت قرمه سبزی 30%</li>
+              <li>ته چین 100%</li>
+              <li>سوپ قارچ و شیر</li>
+              <li>سوپ قارچ و جو</li>
+              <li>بره شکم پر 1 رأس</li>
+              <li>شیر ماهی 1 عدد</li>
+              <li>بوقلمون درسته شکم پر 1 رأس</li>
+              <li className="text-sm italic">(به ازای هر 100 نفر)</li>
+            </ul>
+          ),
         },
         {
           icon: "🍗",
-          name: "جوجه زعفرانی",
+          name: "خوراک ها",
           videoUrl: "/videos/vip/joojeh.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>خوراک زبان %20</li>
+              <li>چیکن استراگانوف %20</li>
+              <li>خوراک دلمه %20</li>
+              <li>خوراک ژیگو %20</li>
+              <li>بیف استراگانوف %20</li>
+            </ul>
+          ),
         },
         {
           icon: "🥘",
-          name: "باقالی پلو",
+          name: "سالاد ها",
           videoUrl: "/videos/vip/baghali.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>سالاد سزار %20</li>
+              <li>سالاد قفقازی %20</li>
+              <li>سالاد فصل %20</li>
+              <li>سالاد روس %20</li>
+              <li>سالاد کاردینال %20</li>
+            </ul>
+          ),
         },
         {
           icon: "🍚",
-          name: "زرشک پلو",
+          name: "کنار غذاها",
           videoUrl: "/videos/vip/zereshk.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>زیتون پرورده</li>
+              <li>ترشی بندری</li>
+              <li>ترشی هفت بیجار</li>
+              <li>ترشی مکزیکی</li>
+              <li>ترشی لبنانی</li>
+            </ul>
+          ),
         },
         {
           icon: "🥗",
-          name: "سالاد فصل",
+          name: "انواع دسر",
           videoUrl: "/videos/vip/salad.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ژله بستنی</li>
+              <li>شارلوت</li>
+              <li>کرم کارامل</li>
+              <li>کیک بستنی</li>
+              <li>پلمبیر به صورت تک نفره</li>
+            </ul>
+          ),
         },
         {
           icon: "🍲",
-          name: "سوپ مجلسی",
+          name: "نوشیدنی گرم",
           videoUrl: "/videos/vip/soup.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چای و نسکافه</li>
+              <li>نوشیدنی سرد : آب میوه در 5 طعم نا محدود</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍲",
+          name: "میان وعده",
+          videoUrl: "/videos/vip/soup.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>فینگر فود</li>
+              <li>پاچینی</li>
+              <li>زاتای گوشت و مرغ</li>
+              <li>کراکت مرغ</li>
+              <li>اسپرینگ رول</li>
+              <li>کراکف سوخاری</li>
+              <li>رول مارگاریتا و شیرینی تر و خشک با بهترین کیفیت</li>
+              <li>پذیرایی نامحدود</li>
+              <li>میوه فصل ، لوکس و دستچین حداقل 5 طعم با بهترین کیفیت</li>
+            </ul>
+          ),
         },
       ],
     },
@@ -108,22 +175,130 @@ const Page = () => {
       foods: [
         {
           icon: "🍖",
-          name: "کباب سلطانی",
+          name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>جوجه کباب بدون استخوان 40%</li>
+              <li>کباب لقمه زعفرانی 40%</li>
+              <li>مرصع چلو %10</li>
+              <li>شیرین چلو %10</li>
+              <li>زرشک پلو با مرغ %30</li>
+              <li>برنج سفید 40%</li>
+              <li>خورشت فسنجان 30%</li>
+              <li>خورشت قیمه نثار 30%</li>
+              <li>ته چین 100%</li>
+              <li>سوپ قارچ و شیر</li>
+              <li>سوپ قارچ و جو</li>
+              <li>بره شکم پر 1 رأس</li>
+              <li>شیر ماهی 1 عدد</li>
+              <li>بوقلمون درسته شکم پر 1 رأس</li>
+              <li className="text-sm italic">(به ازای هر 100 نفر)</li>
+            </ul>
+          ),
         },
         {
           icon: "🍗",
-          name: "جوجه زعفرانی",
+          name: "خوراک ها",
           videoUrl: "/videos/vip/joojeh.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>خوراک زبان %25</li>
+              <li>چیکن استراگانوف %25</li>
+              <li>خوراک دلمه %25</li>
+              <li>خوراک ژیگو %25</li>
+            </ul>
+          ),
         },
         {
           icon: "🥘",
-          name: "باقالی پلو",
+          name: "سالاد ها",
           videoUrl: "/videos/vip/baghali.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>سالاد سزار %25</li>
+              <li>سالاد قفقازی %25</li>
+              <li>سالاد فصل %25</li>
+              <li>سالاد روس %25</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥘",
+          name: "کنار غذاها",
+          videoUrl: "/videos/vip/baghali.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>زیتون پرورده</li>
+              <li>ترشی بندری</li>
+              <li>ترشی هفت بیجار</li>
+              <li>ترشی مکزیکی</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "انواع دسر",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ژله بستنی</li>
+              <li>شارلوت</li>
+              <li>کرم کارامل</li>
+              <li>کیک بستنی</li>
+              <li>پلمبیر به صورت تک نفره</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی همراه با غذا",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>انواع نوشابه</li>
+              <li>دوغ</li>
+              <li>دلستر و آب معدنی</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی گرم",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چای و نسکافه</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی سرد",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li> آب میوه در 5 طعم نا محدود</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍲",
+          name: "میان وعده",
+          videoUrl: "/videos/vip/soup.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>فینگر فود</li>
+              <li>پاچینی</li>
+              <li>زاتای گوشت و مرغ</li>
+              <li>کراکت مرغ</li>
+              <li>اسپرینگ رول</li>
+              <li>کراکف سوخاری</li>
+              <li>رول مارگاریتا و شیرینی تر و خشک با بهترین کیفیت</li>
+              <li>پذیرایی نامحدود</li>
+              <li>میوه فصل ، لوکس و دستچین حداقل 5 طعم با بهترین کیفیت</li>
+            </ul>
+          ),
         },
       ],
     },
@@ -131,22 +306,124 @@ const Page = () => {
       foods: [
         {
           icon: "🍖",
-          name: "کباب سلطانی",
+          name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+              <li>جوجه کباب بدون استخوان 30%</li>
+              <li>کباب لقمه زعفرانی 30%</li>
+              <li>مرصع پلو %10</li>
+              <li>شیرین پلو %10</li>
+              <li>زرشک پلو با مرغ %30</li>
+              <li>برنج سفید 40%</li>
+              <li>خورشت فسنجان 30%</li>
+              <li>ته چین 100%</li>
+              <li>سوپ قارچ و جو</li>
+              <li>شیر ماهی 1 عدد</li>
+              <li className="text-sm italic">(به ازای هر 100 نفر)</li>
+            </ul>
+          ),
         },
         {
           icon: "🍗",
-          name: "جوجه زعفرانی",
+          name: "خوراک ها",
           videoUrl: "/videos/vip/joojeh.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>خوراک زبان %30</li>
+              <li>چیکن استراگانوف %30</li>
+              <li>خوراک دلمه %30</li>
+            </ul>
+          ),
         },
         {
           icon: "🥘",
-          name: "باقالی پلو",
+          name: "سالاد ها",
           videoUrl: "/videos/vip/baghali.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغ گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>سالاد سزار %30</li>
+              <li>سالاد قفقازی %30</li>
+              <li>سالاد فصل %40</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍚",
+          name: "کنار غذاها",
+          videoUrl: "/videos/vip/zereshk.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>زیتون پرورده</li>
+              <li>ترشی بندری</li>
+              <li>ترشی هفت بیجار</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "انواع دسر",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ژله بستنی</li>
+              <li>شارلوت</li>
+              <li>کرم کارامل</li>
+              <li>کیک بستنی</li>
+              <li>پلمبیر</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی همراه با غذا",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>انواع نوشابه</li>
+              <li>دوغ</li>
+              <li>دلستر و آب معدنی</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی گرم",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چای و نسکافه</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی سرد",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li> آب میوه در 5 طعم نا محدود</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍲",
+          name: "میان وعده",
+          videoUrl: "/videos/vip/soup.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>فینگر فود</li>
+              <li>پاچینی</li>
+              <li>زاتای گوشت و مرغ</li>
+              <li>کراکت مرغ</li>
+              <li>اسپرینگ رول</li>
+              <li>کراکف سوخاری</li>
+              <li>رول مارگاریتا و شیرینی تر و خشک با بهترین کیفیت</li>
+              <li>پذیرایی نامحدود</li>
+              <li>میوه فصل ، لوکس و دستچین حداقل 5 طعم با بهترین کیفیت</li>
+            </ul>
+          ),
         },
       ],
     },
@@ -154,22 +431,114 @@ const Page = () => {
       foods: [
         {
           icon: "🍖",
-          name: "کباب سلطانی",
+          name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+              <li>جوجه کباب بدون استخوان 40%</li>
+              <li>زرشک پلو با مرغ %30</li>
+              <li>برنج سفید 20%</li>
+              <li>ته چین 100%</li>
+            </ul>
+          ),
         },
         {
           icon: "🍗",
-          name: "جوجه زعفرانی",
+          name: "خوراک ها",
           videoUrl: "/videos/vip/joojeh.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چیکن استراگانوف %40</li>
+              <li>خوراک دلمه %40</li>
+            </ul>
+          ),
         },
         {
           icon: "🥘",
-          name: "باقالی پلو",
+          name: "سالاد ها",
           videoUrl: "/videos/vip/baghali.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغو گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>سالاد سزار %40</li>
+              <li>سالاد فصل %40</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍚",
+          name: "کنار غذاها",
+          videoUrl: "/videos/vip/zereshk.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>زیتون پرورده</li>
+              <li>ترشی بندری</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "انواع دسر",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ژله بستنی</li>
+              <li>شارلوت</li>
+              <li>کرم کارامل</li>
+              <li>کیک بستنی</li>
+              <li>پلمبیر</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی همراه با غذا",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>انواع نوشابه</li>
+              <li>دوغ</li>
+              <li>دلستر و آب معدنی</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی گرم",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چای و نسکافه</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی سرد",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li> آب میوه در 5 طعم نا محدود</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍲",
+          name: "میان وعده",
+          videoUrl: "/videos/vip/soup.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>فینگر فود</li>
+              <li>پاچینی</li>
+              <li>زاتای گوشت و مرغ</li>
+              <li>کراکت مرغ</li>
+              <li>اسپرینگ رول</li>
+              <li>کراکف سوخاری</li>
+              <li>رول مارگاریتا و شیرینی تر و خشک با بهترین کیفیت</li>
+              <li>پذیرایی نامحدود</li>
+              <li>میوه فصل ، لوکس و دستچین حداقل 5 طعم با بهترین کیفیت</li>
+            </ul>
+          ),
         },
       ],
     },
@@ -177,22 +546,94 @@ const Page = () => {
       foods: [
         {
           icon: "🍖",
-          name: "کباب سلطانی",
+          name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+              <li>جوجه کباب بدون استخوان 50%</li>
+              <li>کباب لقمه زعفرانی 50%</li>
+              <li>زرشک پلو با مرغ %50</li>
+            </ul>
+          ),
         },
         {
           icon: "🍗",
-          name: "جوجه زعفرانی",
+          name: "پیش غذا",
           videoUrl: "/videos/vip/joojeh.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ته چین مرغ</li>
+              <li>سالاد سزار</li>
+              <li>سوپ قارچ و شیر</li>
+              <li>ماست (بورانی ، خیار ، بادمجان ، موسیر و ... انتخابی)</li>
+            </ul>
+          ),
+        },
+
+        {
+          icon: "🥗",
+          name: "انواع دسر",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ژله بستنی</li>
+              <li>شارلوت</li>
+              <li>کرم کارامل</li>
+              <li>کیک بستنی</li>
+              <li>پلمبیر</li>
+            </ul>
+          ),
         },
         {
-          icon: "🥘",
-          name: "باقالی پلو",
-          videoUrl: "/videos/vip/baghali.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغو گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          icon: "🥗",
+          name: "نوشیدنی همراه با غذا",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>انواع نوشابه</li>
+              <li>دوغ</li>
+              <li>دلستر و آب معدنی</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی گرم",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چای و نسکافه</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی سرد",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li> آب میوه در 5 طعم نا محدود</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍲",
+          name: "میان وعده",
+          videoUrl: "/videos/vip/soup.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>فینگر فود</li>
+              <li>پاچینی</li>
+              <li>زاتای گوشت و مرغ</li>
+              <li>کراکت مرغ</li>
+              <li>اسپرینگ رول</li>
+              <li>کراکف سوخاری</li>
+              <li>رول مارگاریتا و شیرینی تر و خشک با بهترین کیفیت</li>
+              <li>پذیرایی نامحدود</li>
+              <li>میوه فصل ، لوکس و دستچین حداقل 5 طعم با بهترین کیفیت</li>
+            </ul>
+          ),
         },
       ],
     },
@@ -200,22 +641,89 @@ const Page = () => {
       foods: [
         {
           icon: "🍖",
-          name: "کباب سلطانی",
+          name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+              <li>جوجه کباب بدون استخوان 50%</li>
+              <li>کباب لقمه زعفرانی</li>
+            </ul>
+          ),
         },
         {
           icon: "🍗",
-          name: "جوجه زعفرانی",
+          name: "پیش غذا",
           videoUrl: "/videos/vip/joojeh.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>سالاد سزار</li>
+            </ul>
+          ),
+        },
+
+        {
+          icon: "🥗",
+          name: "انواع دسر",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ژله بستنی</li>
+              <li>شارلوت</li>
+              <li>کرم کارامل</li>
+              <li>کیک بستنی</li>
+              <li>پلمبیر</li>
+            </ul>
+          ),
         },
         {
-          icon: "🥘",
-          name: "باقالی پلو",
-          videoUrl: "/videos/vip/baghali.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغ گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          icon: "🥗",
+          name: "نوشیدنی همراه با غذا",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>انواع نوشابه</li>
+              <li>دلستر و آب معدنی</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی گرم",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چای و نسکافه</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی سرد",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li> آب میوه در 5 طعم نا محدود</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍲",
+          name: "میان وعده",
+          videoUrl: "/videos/vip/soup.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>فینگر فود</li>
+              <li>پاچینی</li>
+              <li>زاتای گوشت و مرغ</li>
+              <li>کراکت مرغ</li>
+              <li>اسپرینگ رول</li>
+              <li>کراکف سوخاری</li>
+              <li>رول مارگاریتا و شیرینی تر و خشک با بهترین کیفیت</li>
+              <li>پذیرایی نامحدود</li>
+              <li>میوه فصل ، لوکس و دستچین حداقل 5 طعم با بهترین کیفیت</li>
+            </ul>
+          ),
         },
       ],
     },
@@ -223,22 +731,88 @@ const Page = () => {
       foods: [
         {
           icon: "🍖",
-          name: "کباب سلطانی",
+          name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغوب گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+              <li>جوجه کباب بدون استخوان 50%</li>
+            </ul>
+          ),
         },
         {
           icon: "🍗",
-          name: "جوجه زعفرانی",
+          name: "پیش غذا",
           videoUrl: "/videos/vip/joojeh.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>سالاد سزار</li>
+            </ul>
+          ),
+        },
+
+        {
+          icon: "🥗",
+          name: "انواع دسر",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>ژله بستنی</li>
+              <li>شارلوت</li>
+              <li>کرم کارامل</li>
+              <li>کیک بستنی</li>
+              <li>پلمبیر</li>
+            </ul>
+          ),
         },
         {
-          icon: "🥘",
-          name: "باقالی پلو",
-          videoUrl: "/videos/vip/baghali.mp4",
-          description:
-            "کباب سلطانی با گوشت مرغ گوسفندی، زعفران ایرانی و برنج اعلای ایرانی",
+          icon: "🥗",
+          name: "نوشیدنی همراه با غذا",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>انواع نوشابه</li>
+              <li>دلستر و آب معدنی</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی گرم",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>چای و نسکافه</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🥗",
+          name: "نوشیدنی سرد",
+          videoUrl: "/videos/vip/salad.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li> آب میوه در 5 طعم نا محدود</li>
+            </ul>
+          ),
+        },
+        {
+          icon: "🍲",
+          name: "میان وعده",
+          videoUrl: "/videos/vip/soup.mp4",
+          description: (
+            <ul className="  space-y-2 text-right">
+              <li>فینگر فود</li>
+              <li>پاچینی</li>
+              <li>زاتای گوشت و مرغ</li>
+              <li>کراکت مرغ</li>
+              <li>اسپرینگ رول</li>
+              <li>کراکف سوخاری</li>
+              <li>رول مارگاریتا و شیرینی تر و خشک با بهترین کیفیت</li>
+              <li>پذیرایی نامحدود</li>
+              <li>میوه فصل ، لوکس و دستچین حداقل 5 طعم با بهترین کیفیت</li>
+            </ul>
+          ),
         },
       ],
     },
@@ -417,11 +991,11 @@ const Page = () => {
                           animate={{ opacity: 1 }}
                           className="absolute inset-0 bg-black/60 flex items-center justify-center p-6"
                         >
-                          <div className="text-center">
+                          <div className="text-center items-center">
                             <h3 className="text-2xl font-bold text-white mb-4">
                               {selectedFood.name}
                             </h3>
-                            <p className="text-lg text-white/90">
+                            <p className="text-xs text-white/90">
                               {selectedFood.description}
                             </p>
                           </div>
