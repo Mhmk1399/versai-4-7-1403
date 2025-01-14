@@ -12,6 +12,18 @@ import Banner4 from "../../../public/assets/images/134.webp";
 import Banner5 from "../../../public/assets/images/135.webp";
 import Banner6 from "../../../public/assets/images/136.webp";
 import Banner7 from "../../../public/assets/images/137.webp";
+
+import Food from "../../../public/food.svg";
+import Dessert from "../../../public/dessert.svg";
+import Pish from "../../../public/pishGhaza.svg";
+import Khorak from "../../../public/khorak.svg";
+import Salad from "../../../public/salad.svg";
+import SideDish from "../../../public/sideDish.svg";
+import Drink from "../../../public/drink.svg";
+import WarmDrink from "../../../public/warmDrink.svg";
+import Snack from "../../../public/snack.svg";
+import ColdDrink from "../../../public/coldDrink.svg";
+
 interface FoodItem {
   icon: string;
   name: string;
@@ -45,9 +57,7 @@ const Page = () => {
   } | null>(null);
   const [menue, setMenue] = useState("");
   const [message, setMessage] = useState("");
-  const [selectedBanner, setSelectedBanner] = useState("");
   const [selectedFood, setSelectedFood] = useState<FoodItem>();
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [expandedBanner, setExpandedBanner] = useState<number | null>(null);
 
   const Banners = [
@@ -63,12 +73,12 @@ const Page = () => {
     "پکیج VIP": {
       foods: [
         {
-          icon: "🍖",
+          icon: Food,
           name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="space-y-2 flex text-right">
-              <li>جوجه کباب بدون استخوان 50%</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">جوجه کباب بدون استخوان 50%</li>
               <li>کباب لقمه زعفرانی 50%</li>
               <li>برنج سفید 50%</li>
               <li>خورشت فسنجان 30%</li>
@@ -80,17 +90,17 @@ const Page = () => {
               <li>بره شکم پر 1 رأس</li>
               <li>شیر ماهی 1 عدد</li>
               <li>بوقلمون درسته شکم پر 1 رأس</li>
-              <li className="text-sm italic">(به ازای هر 100 نفر)</li>
+              <li className="text-xs italic">(به ازای هر 100 نفر)</li>
             </ul>
           ),
         },
         {
-          icon: "🍗",
+          icon: Khorak,
           name: "خوراک ها",
-          videoUrl: "/videos/vip/joojeh.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>خوراک زبان %20</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">خوراک زبان %20</li>
               <li>چیکن استراگانوف %20</li>
               <li>خوراک دلمه %20</li>
               <li>خوراک ژیگو %20</li>
@@ -99,12 +109,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥘",
+          icon: Salad,
           name: "سالاد ها",
-          videoUrl: "/videos/vip/baghali.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>سالاد سزار %20</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">سالاد سزار %20</li>
               <li>سالاد قفقازی %20</li>
               <li>سالاد فصل %20</li>
               <li>سالاد روس %20</li>
@@ -113,12 +123,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🍚",
+          icon: SideDish,
           name: "کنار غذاها",
-          videoUrl: "/videos/vip/zereshk.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>زیتون پرورده</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">زیتون پرورده</li>
               <li>ترشی بندری</li>
               <li>ترشی هفت بیجار</li>
               <li>ترشی مکزیکی</li>
@@ -127,12 +137,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Dessert,
           name: "انواع دسر",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ژله بستنی</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ژله بستنی</li>
               <li>شارلوت</li>
               <li>کرم کارامل</li>
               <li>کیک بستنی</li>
@@ -141,23 +151,23 @@ const Page = () => {
           ),
         },
         {
-          icon: "🍲",
+          icon: WarmDrink,
           name: "نوشیدنی گرم",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>چای و نسکافه</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">چای و نسکافه</li>
               <li>نوشیدنی سرد : آب میوه در 5 طعم نا محدود</li>
             </ul>
           ),
         },
         {
-          icon: "🍲",
+          icon: Snack,
           name: "میان وعده",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>فینگر فود</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">فینگر فود</li>
               <li>پاچینی</li>
               <li>زاتای گوشت و مرغ</li>
               <li>کراکت مرغ</li>
@@ -174,12 +184,12 @@ const Page = () => {
     "پکیج طلایی": {
       foods: [
         {
-          icon: "🍖",
+          icon: Food,
           name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>جوجه کباب بدون استخوان 40%</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">جوجه کباب بدون استخوان 40%</li>
               <li>کباب لقمه زعفرانی 40%</li>
               <li>مرصع چلو %10</li>
               <li>شیرین چلو %10</li>
@@ -198,12 +208,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🍗",
+          icon: Khorak,
           name: "خوراک ها",
-          videoUrl: "/videos/vip/joojeh.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>خوراک زبان %25</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">خوراک زبان %25</li>
               <li>چیکن استراگانوف %25</li>
               <li>خوراک دلمه %25</li>
               <li>خوراک ژیگو %25</li>
@@ -211,12 +221,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥘",
+          icon: Salad,
           name: "سالاد ها",
-          videoUrl: "/videos/vip/baghali.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>سالاد سزار %25</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">سالاد سزار %25</li>
               <li>سالاد قفقازی %25</li>
               <li>سالاد فصل %25</li>
               <li>سالاد روس %25</li>
@@ -224,12 +234,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥘",
+          icon: SideDish,
           name: "کنار غذاها",
-          videoUrl: "/videos/vip/baghali.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>زیتون پرورده</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">زیتون پرورده</li>
               <li>ترشی بندری</li>
               <li>ترشی هفت بیجار</li>
               <li>ترشی مکزیکی</li>
@@ -237,12 +247,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Dessert,
           name: "انواع دسر",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ژله بستنی</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ژله بستنی</li>
               <li>شارلوت</li>
               <li>کرم کارامل</li>
               <li>کیک بستنی</li>
@@ -251,44 +261,44 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Drink,
           name: "نوشیدنی همراه با غذا",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>انواع نوشابه</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">انواع نوشابه</li>
               <li>دوغ</li>
               <li>دلستر و آب معدنی</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: WarmDrink,
           name: "نوشیدنی گرم",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>چای و نسکافه</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: ColdDrink,
           name: "نوشیدنی سرد",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li> آب میوه در 5 طعم نا محدود</li>
             </ul>
           ),
         },
         {
-          icon: "🍲",
+          icon: Snack,
           name: "میان وعده",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>فینگر فود</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">فینگر فود</li>
               <li>پاچینی</li>
               <li>زاتای گوشت و مرغ</li>
               <li>کراکت مرغ</li>
@@ -305,12 +315,12 @@ const Page = () => {
     "پکیج نقره‌ای": {
       foods: [
         {
-          icon: "🍖",
+          icon: Food,
           name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">باقالی پلو با گوشت بره و ماهیچه %50</li>
               <li>جوجه کباب بدون استخوان 30%</li>
               <li>کباب لقمه زعفرانی 30%</li>
               <li>مرصع پلو %10</li>
@@ -326,48 +336,48 @@ const Page = () => {
           ),
         },
         {
-          icon: "🍗",
+          icon: Khorak,
           name: "خوراک ها",
-          videoUrl: "/videos/vip/joojeh.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>خوراک زبان %30</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">خوراک زبان %30</li>
               <li>چیکن استراگانوف %30</li>
               <li>خوراک دلمه %30</li>
             </ul>
           ),
         },
         {
-          icon: "🥘",
+          icon: Salad,
           name: "سالاد ها",
-          videoUrl: "/videos/vip/baghali.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>سالاد سزار %30</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">سالاد سزار %30</li>
               <li>سالاد قفقازی %30</li>
               <li>سالاد فصل %40</li>
             </ul>
           ),
         },
         {
-          icon: "🍚",
+          icon: SideDish,
           name: "کنار غذاها",
-          videoUrl: "/videos/vip/zereshk.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>زیتون پرورده</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">زیتون پرورده</li>
               <li>ترشی بندری</li>
               <li>ترشی هفت بیجار</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: Dessert,
           name: "انواع دسر",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ژله بستنی</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ژله بستنی</li>
               <li>شارلوت</li>
               <li>کرم کارامل</li>
               <li>کیک بستنی</li>
@@ -376,44 +386,44 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Drink,
           name: "نوشیدنی همراه با غذا",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>انواع نوشابه</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">انواع نوشابه</li>
               <li>دوغ</li>
               <li>دلستر و آب معدنی</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: WarmDrink,
           name: "نوشیدنی گرم",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>چای و نسکافه</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: ColdDrink,
           name: "نوشیدنی سرد",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li> آب میوه در 5 طعم نا محدود</li>
             </ul>
           ),
         },
         {
-          icon: "🍲",
+          icon: Snack,
           name: "میان وعده",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>فینگر فود</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">فینگر فود</li>
               <li>پاچینی</li>
               <li>زاتای گوشت و مرغ</li>
               <li>کراکت مرغ</li>
@@ -430,12 +440,12 @@ const Page = () => {
     "پکیج برنزی": {
       foods: [
         {
-          icon: "🍖",
+          icon: Food,
           name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">باقالی پلو با گوشت بره و ماهیچه %50</li>
               <li>جوجه کباب بدون استخوان 40%</li>
               <li>زرشک پلو با مرغ %30</li>
               <li>برنج سفید 20%</li>
@@ -444,45 +454,45 @@ const Page = () => {
           ),
         },
         {
-          icon: "🍗",
+          icon: Khorak,
           name: "خوراک ها",
-          videoUrl: "/videos/vip/joojeh.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>چیکن استراگانوف %40</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">چیکن استراگانوف %40</li>
               <li>خوراک دلمه %40</li>
             </ul>
           ),
         },
         {
-          icon: "🥘",
+          icon: Salad,
           name: "سالاد ها",
-          videoUrl: "/videos/vip/baghali.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>سالاد سزار %40</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">سالاد سزار %40</li>
               <li>سالاد فصل %40</li>
             </ul>
           ),
         },
         {
-          icon: "🍚",
+          icon: SideDish,
           name: "کنار غذاها",
-          videoUrl: "/videos/vip/zereshk.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>زیتون پرورده</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">زیتون پرورده</li>
               <li>ترشی بندری</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: Dessert,
           name: "انواع دسر",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ژله بستنی</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ژله بستنی</li>
               <li>شارلوت</li>
               <li>کرم کارامل</li>
               <li>کیک بستنی</li>
@@ -491,44 +501,44 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Drink,
           name: "نوشیدنی همراه با غذا",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>انواع نوشابه</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">انواع نوشابه</li>
               <li>دوغ</li>
               <li>دلستر و آب معدنی</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: WarmDrink,
           name: "نوشیدنی گرم",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>چای و نسکافه</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: ColdDrink,
           name: "نوشیدنی سرد",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li> آب میوه در 5 طعم نا محدود</li>
             </ul>
           ),
         },
         {
-          icon: "🍲",
+          icon: Snack,
           name: "میان وعده",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>فینگر فود</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">فینگر فود</li>
               <li>پاچینی</li>
               <li>زاتای گوشت و مرغ</li>
               <li>کراکت مرغ</li>
@@ -545,12 +555,12 @@ const Page = () => {
     "سرویس مجلل": {
       foods: [
         {
-          icon: "🍖",
+          icon: Food,
           name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">باقالی پلو با گوشت بره و ماهیچه %50</li>
               <li>جوجه کباب بدون استخوان 50%</li>
               <li>کباب لقمه زعفرانی 50%</li>
               <li>زرشک پلو با مرغ %50</li>
@@ -558,12 +568,12 @@ const Page = () => {
           ),
         },
         {
-          icon: "🍗",
+          icon: Pish,
           name: "پیش غذا",
-          videoUrl: "/videos/vip/joojeh.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ته چین مرغ</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ته چین مرغ</li>
               <li>سالاد سزار</li>
               <li>سوپ قارچ و شیر</li>
               <li>ماست (بورانی ، خیار ، بادمجان ، موسیر و ... انتخابی)</li>
@@ -572,12 +582,12 @@ const Page = () => {
         },
 
         {
-          icon: "🥗",
+          icon: Dessert,
           name: "انواع دسر",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ژله بستنی</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ژله بستنی</li>
               <li>شارلوت</li>
               <li>کرم کارامل</li>
               <li>کیک بستنی</li>
@@ -586,44 +596,44 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Drink,
           name: "نوشیدنی همراه با غذا",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>انواع نوشابه</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">انواع نوشابه</li>
               <li>دوغ</li>
               <li>دلستر و آب معدنی</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: WarmDrink,
           name: "نوشیدنی گرم",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>چای و نسکافه</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: ColdDrink,
           name: "نوشیدنی سرد",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li> آب میوه در 5 طعم نا محدود</li>
             </ul>
           ),
         },
         {
-          icon: "🍲",
+          icon: Snack,
           name: "میان وعده",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>فینگر فود</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">فینگر فود</li>
               <li>پاچینی</li>
               <li>زاتای گوشت و مرغ</li>
               <li>کراکت مرغ</li>
@@ -640,35 +650,35 @@ const Page = () => {
     "سرویس ویژه": {
       foods: [
         {
-          icon: "🍖",
+          icon: Food,
           name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">باقالی پلو با گوشت بره و ماهیچه %50</li>
               <li>جوجه کباب بدون استخوان 50%</li>
               <li>کباب لقمه زعفرانی</li>
             </ul>
           ),
         },
         {
-          icon: "🍗",
+          icon: Pish,
           name: "پیش غذا",
-          videoUrl: "/videos/vip/joojeh.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>سالاد سزار</li>
             </ul>
           ),
         },
 
         {
-          icon: "🥗",
+          icon: Dessert,
           name: "انواع دسر",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ژله بستنی</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ژله بستنی</li>
               <li>شارلوت</li>
               <li>کرم کارامل</li>
               <li>کیک بستنی</li>
@@ -677,43 +687,43 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Drink,
           name: "نوشیدنی همراه با غذا",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>انواع نوشابه</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">انواع نوشابه</li>
               <li>دلستر و آب معدنی</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: WarmDrink,
           name: "نوشیدنی گرم",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>چای و نسکافه</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: ColdDrink,
           name: "نوشیدنی سرد",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li> آب میوه در 5 طعم نا محدود</li>
             </ul>
           ),
         },
         {
-          icon: "🍲",
+          icon: Snack,
           name: "میان وعده",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>فینگر فود</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">فینگر فود</li>
               <li>پاچینی</li>
               <li>زاتای گوشت و مرغ</li>
               <li>کراکت مرغ</li>
@@ -730,34 +740,34 @@ const Page = () => {
     "سرویس کلاسیک": {
       foods: [
         {
-          icon: "🍖",
+          icon: Food,
           name: "غذای اصلی",
           videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>باقالی پلو با گوشت بره و ماهیچه %50</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">باقالی پلو با گوشت بره و ماهیچه %50</li>
               <li>جوجه کباب بدون استخوان 50%</li>
             </ul>
           ),
         },
         {
-          icon: "🍗",
+          icon: Pish,
           name: "پیش غذا",
-          videoUrl: "/videos/vip/joojeh.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>سالاد سزار</li>
             </ul>
           ),
         },
 
         {
-          icon: "🥗",
+          icon: Dessert,
           name: "انواع دسر",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>ژله بستنی</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">ژله بستنی</li>
               <li>شارلوت</li>
               <li>کرم کارامل</li>
               <li>کیک بستنی</li>
@@ -766,43 +776,43 @@ const Page = () => {
           ),
         },
         {
-          icon: "🥗",
+          icon: Drink,
           name: "نوشیدنی همراه با غذا",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>انواع نوشابه</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">انواع نوشابه</li>
               <li>دلستر و آب معدنی</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: WarmDrink,
           name: "نوشیدنی گرم",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li>چای و نسکافه</li>
             </ul>
           ),
         },
         {
-          icon: "🥗",
+          icon: ColdDrink,
           name: "نوشیدنی سرد",
-          videoUrl: "/videos/vip/salad.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
               <li> آب میوه در 5 طعم نا محدود</li>
             </ul>
           ),
         },
         {
-          icon: "🍲",
+          icon: Snack,
           name: "میان وعده",
-          videoUrl: "/videos/vip/soup.mp4",
+          videoUrl: "/assets/images/testi.mp4",
           description: (
-            <ul className="  space-y-2 text-right">
-              <li>فینگر فود</li>
+            <ul className="space-y-2 grid grid-cols-3 gap-1 border border-gray-500 lg:gap-4 text-center bg-white/20 backdrop-blur-md lg:p-4 p-2 rounded-lg">
+              <li className="mt-2">فینگر فود</li>
               <li>پاچینی</li>
               <li>زاتای گوشت و مرغ</li>
               <li>کراکت مرغ</li>
@@ -962,7 +972,12 @@ const Page = () => {
                             : "bg-gray-50"
                         }`}
                       >
-                        <span className="text-4xl">{food.icon}</span>
+                        <Image
+                          src={food.icon}
+                          alt="Food Icon"
+                          width={40}
+                          height={40}
+                        />
                         <span className="text-base font-medium text-gray-700">
                           {food.name}
                         </span>
@@ -971,7 +986,7 @@ const Page = () => {
                   </div>
 
                   {/* Video Player */}
-                  <div className="relative bg-black/50 rounded-lg overflow-hidden min-h-[300px]">
+                  <div className="relative bg-black/50 rounded-2xl overflow-hidden min-h-[300px]">
                     {selectedFood ? (
                       <div className="relative w-full h-full">
                         <video
@@ -992,10 +1007,10 @@ const Page = () => {
                           className="absolute inset-0 bg-black/60 flex items-center justify-center p-6"
                         >
                           <div className="text-center items-center">
-                            <h3 className="text-2xl font-bold text-white mb-4">
+                            <h3 className="text-xl border-b lg:pb-3 pb-1 border-white lg:text-2xl font-bold text-white mb-4">
                               {selectedFood.name}
                             </h3>
-                            <p className="text-xs text-white/90">
+                            <p className="lg:text-sm text-xs font-medium text-white/90">
                               {selectedFood.description}
                             </p>
                           </div>
@@ -1003,7 +1018,7 @@ const Page = () => {
                       </div>
                     ) : (
                       <div className="flex items-center justify-center h-full text-white">
-                        یک غذا را برای مشاهده ویدیو انتخاب کنید
+                        یک آیتم را برای مشاهده ویدیو انتخاب کنید
                       </div>
                     )}
                   </div>
@@ -1013,45 +1028,6 @@ const Page = () => {
           ))}{" "}
         </div>
       </div>
-      {/* Modal Component */}
-
-      {/* Shrinkable Container for Menu Photos */}
-      {/* <div className="w-full max-w-4xl mb-8">
-        <div className="bg-white/10 rounded-lg p-4 flex justify-around items-center flex-wrap gap-4">
-          <div
-            className="rounded-lg shadow-md transition duration-200 hover:scale-105 cursor-pointer flex flex-col justify-center"
-            style={{
-              backgroundImage: `url(${vip.src})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              width: "300px",
-              height: "300px",
-            }}
-            onClick={() => handleImageClick("/vip-self")}
-          >
-            <div className="text-4xl text-center text-violet-800 bg-transparent w-fit mx-auto rounded-full px-2 py-1 bg-opacity-85 ">
-              vip سلف
-            </div>
-          </div>
-          <div
-            className="rounded-lg shadow-md transition duration-200 hover:scale-105 cursor-pointer flex flex-col justify-center relative overflow-hidden"
-            style={{
-              width: "300px",
-              height: "300px",
-            }}
-            onClick={() => handleImageClick("/gold-self")}
-          >
-            <video
-              autoPlay
-              loop
-              muted
-              className="absolute inset-0 w-full h-full object-cover"
-              src="/assets/images/menu/gold-self-ezgif.com-video-to-gif-converter.gif.mp4"
-            />
-            {/* <div className="text-4xl text-center text-yellow-600 bg-transparent w-fit mx-auto rounded-full px-2 py-1 bg-opacity-85 relative z-10">
-              سلف طلایی
-            </div> */}
 
       <div className=" py-4 px-12 flex justify-around items-center flex-wrap shadow-gold/50 gap-4 mx-auto mb-8 text-center text-green">
         <h1 className="text-2xl font-bold text-green text-center mx-auto ">
