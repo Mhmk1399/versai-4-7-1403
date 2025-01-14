@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import Link from "next/link";
 import { EdgeStoreProvider } from "../../lib/edgestore";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const dynamic = "force-dynamic";
 
@@ -102,6 +103,7 @@ export default function RootLayout({
 
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
