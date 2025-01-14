@@ -6,7 +6,7 @@ import gold from "../../../public/assets/images/gold.jpg.jpg";
 import silver from "../../../public/assets/images/silver.jpg";
 import vip from "../../../public/assets/images/vip.jpg";
 import bronze from "../../../public/assets/images/bronz.jpg";
-import goldDish from "../../../public/assets/images/golddish.jpg";
+import goldDish from "../../../public/assets/images/menu/Golddicpors.jpg";
 const Page = () => {
   useEffect(() => {
     document.title = "منوی تالار شاتو دو ورسای";
@@ -145,20 +145,23 @@ const Page = () => {
             </div>
           </div>
           <div
-            className="rounded-lg shadow-md transition duration-200 hover:scale-105 cursor-pointer flex flex-col justify-center"
+            className="rounded-lg shadow-md transition duration-200 hover:scale-105 cursor-pointer flex flex-col justify-center relative overflow-hidden"
             style={{
-              backgroundImage: `url(${gold.src})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
               width: "300px",
               height: "300px",
             }}
             onClick={() => handleImageClick("/gold-self")}
           >
-            <div className="text-4xl text-center text-yellow-600  bg-transparent w-fit mx-auto rounded-full px-2 py-1 bg-opacity-85">
+            <video
+              autoPlay
+              loop
+              muted
+              className="absolute inset-0 w-full h-full object-cover"
+              src="/assets/images/menu/gold-self-ezgif.com-video-to-gif-converter.gif.mp4"
+            />
+            {/* <div className="text-4xl text-center text-yellow-600 bg-transparent w-fit mx-auto rounded-full px-2 py-1 bg-opacity-85 relative z-10">
               سلف طلایی
-            </div>
+            </div> */}
           </div>
 
           <div
@@ -221,7 +224,7 @@ const Page = () => {
               height: "300px",
             }}
             onClick={() => handleImageClick("/gold-dishserve")}
-            >
+          >
             <div className="text-2xl text-center text-yellow-500 mt-6 bg-transparent w-fit mx-auto rounded-full px-2 py-1 bg-opacity-85 ">
               دیس پرس طلایی
             </div>
