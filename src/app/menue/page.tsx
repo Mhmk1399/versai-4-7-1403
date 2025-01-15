@@ -955,30 +955,30 @@ const Page = () => {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden bg-white/10 backdrop-blur-md rounded-b-xl mt-2"
               >
-                <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-4 grid grid-cols-1 md:grid-cols-2 gap-3 lg:gap-6">
                   {/* Food Icons Grid */}
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-4 lg:grid-cols-2 gap-1 lg:gap-4">
                     {menuDetails[
                       item.title as keyof typeof menuDetails
                     ]?.foods.map((food, foodIndex) => (
                       <motion.button
                         key={foodIndex}
                         whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
                         onClick={() => setSelectedFood(food as FoodItem)}
-                        className={`p-1 rounded-lg flex flex-col items-center justify-center gap-2 ${
+                        className={` p-1 rounded-lg flex group flex-col transition-all duration-300 ease-in-out items-center border border-green/10 justify-center gap-2 ${
                           selectedFood === food
-                            ? "bg-purple-100 border-2 border-purple-500"
-                            : "bg-gray-50"
-                        }`}
+                            ? "bg-green/20 border-2"
+                            : "focus:bg-gold/60 focus:border-none"
+                        } `}
                       >
                         <Image
                           src={food.icon}
                           alt="Food Icon"
                           width={40}
                           height={40}
+                          className="w-5 h-5 lg:w-10 lg:h-10 group-focus:text-white group-focus:font-bold"
                         />
-                        <span className="text-base font-medium text-gray-700">
+                        <span className="lg:text-base group-focus:text-white text-xs font-medium text-gray-700">
                           {food.name}
                         </span>
                       </motion.button>
@@ -994,6 +994,7 @@ const Page = () => {
                           className="w-full mx-auto h-full lg:w-full lg:h-full object-cover"
                           controls
                           autoPlay
+                          loop
                           muted
                         >
                           <source
@@ -1004,10 +1005,10 @@ const Page = () => {
                         <motion.div
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
-                          className="absolute inset-0 bg-black/60 flex items-center justify-center p-6"
+                          className="absolute inset-0 bg-black/60 flex items-center justify-center p-4"
                         >
                           <div className="text-center items-center">
-                            <h3 className="text-xl border-b lg:pb-3 pb-1 border-white lg:text-2xl font-bold text-white mb-4">
+                            <h3 className="text-base border-b lg:pb-3 pb-1 border-white lg:text-2xl font-bold text-white mb-4">
                               {selectedFood.name}
                             </h3>
                             <p className="lg:text-sm text-xs font-medium text-white/90">

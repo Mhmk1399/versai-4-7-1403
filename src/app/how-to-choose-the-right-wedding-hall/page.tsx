@@ -2,8 +2,25 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
 
 const Page = () => {
+  const blogData = {
+    title: "  باغ تالار را   خود  کنیم؟",
+    url: "/how-to-choose-best-garden-hall",
+    images: ["/assets/images/blog12hero.webp"],
+    sections: [
+      {
+        heading: "راهنمای طلایی برای انتخاب بهترین باغ تالار عروسی",
+        content: "وقتی که به انتخاب محل برگزاری عروسی فکر می‌کنیم...",
+        lists: [
+          "فضای بزرگ و دلنشین",
+          "طراحی و دکوراسیون لوکس",
+          "خدمات حرفه‌ای تشریفاتی",
+        ],
+      },
+    ],
+  };
   useEffect(() => {
     document.title = "چگونه تالار عروسی مناسب انتخاب کنیم؟";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,6 +33,8 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
+
       <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
@@ -298,7 +317,7 @@ const Page = () => {
                 <h3 className="font-bold text-2xl my-2">نتیجه‌گیری</h3>
 
                 <span className="p-2">
-                انتخاب تالار عروسی مناسب یکی از مهم‌ترین مراحل در برنامه‌ریزی
+                  انتخاب تالار عروسی مناسب یکی از مهم‌ترین مراحل در برنامه‌ریزی
                   مراسم شما است. شاتو دو ورسای با ارائه تمامی امکانات و خدمات
                   لوکس، فضایی ایده‌آل برای برگزاری مراسم عروسی شما فراهم می‌کند.
                   از دکوراسیون و نورپردازی گرفته تا پذیرایی و خدمات حرفه‌ای، همه
