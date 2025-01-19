@@ -2,8 +2,41 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "Decorations-for-wedding-ceremonies";
+  const blogData = {
+    title: "تزئینات و دکوراسیون برای برگزاری مراسم عروسی",
+    url: "/Decorations-for-wedding-ceremonies",
+    images: ["/assets/images/photo_2024-11-16_14-00-54.webp"],
+    sections: [
+      {
+        heading: "جادوی تزئینات: مراسم عروسی خود را رویایی کنید!",
+        content:
+          "برگزاری مراسم عروسی یکی از خاطره‌انگیزترین لحظات زندگی است، و ما اینجا هستیم تا با دکوراسیون و تزئینات خاص، جشن شما را به یک رویداد فراموش‌نشدنی تبدیل کنیم. از طراحی میزها و گل‌آرایی‌های لوکس گرفته تا نورپردازی و جزئیات جذاب، همه چیز با دقت و سلیقه‌ای بی‌نظیر انجام می‌شود.",
+        lists: [
+          "انتخاب تم و رنگ‌ها",
+          "دکوراسیون میزها و صندلی‌ها",
+          "استفاده از گل‌ها",
+          "نورپردازی",
+          "نکات کلی برای انتخاب دکوراسیون",
+        ],
+      },
+      {
+        heading: "روشنایی عشق: دکوراسیون حرفه‌ای برای عروسی شما",
+        content:
+          "انتخاب تم مناسب برای مراسم عروسی یکی از اولین و مهم‌ترین تصمیم‌هاست. تم شما باید با شخصیت شما و همسرتان هماهنگی داشته باشد. از رنگ‌های کلاسیک مانند سفید و طلا گرفته تا رنگ‌های شاد و پرانرژی، انتخاب‌های زیادی دارید.",
+        lists: [
+          "بررسی فضای موجود",
+          "هماهنگی با تم کلی",
+          "استفاده از جزئیات شخصی",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "تزئینات و دکوراسیون برای برگزاری مراسم عروسی";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +49,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/photo_2024-11-16_14-00-54.webp"
                 width={4000}
@@ -213,6 +249,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

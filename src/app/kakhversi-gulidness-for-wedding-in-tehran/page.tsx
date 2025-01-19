@@ -2,8 +2,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "kakhversi-gulidness-for-wedding-in-tehran";
+  const blogData = {
+    title: "راهنمای انتخاب بهترین تالار تهران",
+    url: "/kakhversi-gulidness-for-wedding-in-tehran",
+    images: ["/assets/images/new-image4-kakhversai.webp"],
+    sections: [
+      {
+        heading: "راهنمای انتخاب بهترین تالار تهران",
+        content:
+          "اگر شما هم درگیر انتخاب تالار و یا باغ تالار برای برگزاری بهترین شب زندگیتون هستید قطعاً این مقاله می‌تونه بهتون کمک زیادی بکنه که نه تنها بتونید یک انتخاب کاملاً مناسب با بودجه‌بندی خودتون پیدا کنید بلکه بتونید مجموعه تشریفاتی برای برگذاری شب عروسیتون انتخاب کنید که استانداردترین خدمات ارائه میده",
+      },
+      {
+        heading: "موقعیت مکانی تالار",
+        content:
+          "اولین موضوعی که باید در نظر داشته باشید برای انتخاب از بین تالارهای تهران منطقه و موقعیت مکانی تالار است...",
+      },
+      {
+        heading: "ظرفیت تالار",
+        content:
+          "تعداد مهمانان کاملا متناسب با سلیقه شماست اما یادتون باشه که انتخاب ظرفیت تالار و سالن های تالار چیزی که مستقیما میتونه راحتی و ارامش مهمانان شما را تحت تاثیر قرار بده...",
+      },
+      {
+        heading: "امکانات و تجهیزات تالار",
+        content:
+          "تفاوت بین بهترین و بدترین تالار ها در تهران در امکانات این تالار هاست...",
+      },
+      {
+        heading: "خدمات پذیرایی و منو",
+        content:
+          "مشیه گفت که مهم ترین بخشی که ارزش عروسی شما را تعیین میکنه خدمات پذیرایی و منو اون تالار هستش...",
+      },
+      {
+        heading: "نتیجه‌گیری",
+        content:
+          "در اخر به طور خلاصه قبل از انتخاب تالار و یا باغ تالار در تهران به نکات زیر توجه کنید...",
+        lists: [
+          "موقعیت مکانی مناسب",
+          "تناسب ظرفیت و امکانات",
+          "تست غذا قبل از قرارداد",
+          "بررسی خدمات پذیرایی",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "راهنمای انتخاب بهترین تالار تهران";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +63,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1" dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/new-image4-kakhversai.webp"
                 width={4000}
@@ -27,7 +77,6 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1 id="contetTitle" className="text-2xl font-bold mx-auto">
                 راهنمای انتخاب بهترین تالار تهران
@@ -46,7 +95,6 @@ const Page = () => {
                 </button>
               </Link>
             </div>
-
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/images.webp"
@@ -56,7 +104,6 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 موقعیت مکانی تالار
@@ -72,7 +119,6 @@ const Page = () => {
                 در مسیر خلوت‌تر و راحت‌تری شما را بدرقه کنند.
               </p>
             </div>
-
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 ظرفیت تالار
@@ -102,7 +148,6 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 امکانات و تجهیزات تالار
@@ -132,7 +177,6 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 خدمات پذیرایی و منو
@@ -146,7 +190,6 @@ const Page = () => {
                 ارائه غذا ها و منو پذیرایی مطمئن بشید
               </p>
             </div>
-
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2
                 id="contetTitle"
@@ -172,6 +215,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

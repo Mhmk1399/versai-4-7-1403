@@ -2,8 +2,43 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "cheap-wedding-with-high-quality";
+  const blogData = {
+    title:
+      "تشریفات عروسی ارزان با کیفیت بالا: نکاتی برای برگزاری مجالس به‌یادماندنی",
+    url: "/cheap-wedding-with-high-quality",
+    images: [
+      "/assets/images/155.webp",
+      "/assets/images/The-English-garden-is-a-photography-location-of-the-Chateau-de-Versailles-hall-garden-inspired-by-the-Palace-of-Versailles.webp",
+      "/assets/images/S__00448.webp",
+      "/assets/images/photo_2024-11-16_14-12-21.webp",
+    ],
+    sections: [
+      {
+        heading: "تشریفات مجالس باکیفیت و قیمت مناسب: چگونه ممکن است؟",
+        content:
+          "وقتی می‌خوای یه مراسم عروسی برگزار کنی، همیشه به این فکر می‌کنی که باید خیلی هزینه کنی تا عروسیت شیک و مجلل باشه...",
+        lists: [
+          "اولویت‌بندی کارهای تشریفاتی",
+          "اجاره وسایل تشریفاتی با صرفه اقتصادی",
+          "انتخاب باغ برای مراسم",
+          "انتخاب یه تیم تشریفاتی با کیفیت و قیمت مناسب",
+          "تزیینات ساده و زیبا",
+          "منوی پذیرایی اقتصادی",
+        ],
+      },
+      {
+        heading: "نتیجه‌گیری",
+        content:
+          "همون‌طور که دیدی، برگزاری یه مراسم عروسی زیبا و به‌یادماندنی با یه بودجه معقول اصلاً دور از دسترس نیست. فقط کافیه اولویت‌ها رو درست تعیین کنی...",
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title =
       "تشریفات عروسی ارزان با کیفیت بالا: نکاتی برای برگزاری مجالس به‌یادماندنی";
@@ -17,9 +52,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/155.webp"
                 width={4000}
@@ -218,6 +256,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

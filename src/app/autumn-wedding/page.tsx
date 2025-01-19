@@ -2,8 +2,42 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "autumn-wedding";
+  const blogData = {
+    title: "برگزاری عروسی پاییزی: ایده‌هایی برای تم و رنگ‌بندی",
+    url: "/autumn-wedding",
+    images: ["/assets/images/photo_2024-11-16_14-00-54.webp"],
+    sections: [
+      {
+        heading:
+          "جادوی پاییز در جشن شما: ایده‌هایی شگفت‌انگیز برای عروسی پاییزی!",
+        content:
+          "پاییز یکی از زیباترین فصل‌ها برای برگزاری مراسم عروسی است. این فصل با رنگ‌های گرم و دلنشین، فرصت‌های بسیاری برای خلق جشنی رویایی فراهم می‌کند.",
+        lists: [
+          "رنگ‌بندی عروسی پاییزی: از طبیعت الهام بگیرید",
+          "ایده‌های خاص برای دکوراسیون پاییزی",
+          "دسته گل و کیک عروسی پاییزی: جزئیات الهام‌بخش",
+          "متن و کارت دعوت عروسی پاییزی: شعر و حس رمانتیک",
+          "میوه‌های پاییزی برای عروسی: زیبایی در سادگی",
+        ],
+      },
+      {
+        heading: "رنگ‌بندی عروسی پاییزی",
+        content:
+          "رنگ‌های پاییز ترکیبی از گرمی و زیبایی طبیعت را به نمایش می‌گذارند. برای عروسی پاییزی، رنگ‌هایی مانند نارنجی، زرد، قهوه‌ای، قرمز، و حتی طلایی می‌توانند حال و هوای خاصی به مراسم ببخشند.",
+      },
+      {
+        heading: "نتیجه‌گیری",
+        content:
+          "عروسی پاییزی فرصتی استثنایی برای خلق فضایی گرم، دلنشین و زیبا است. از رنگ‌های زنده و گرم پاییز گرفته تا دکوراسیون با الهام از طبیعت و میوه‌های فصل، همه می‌توانند به مراسم شما زیبایی و جذابیت بیشتری ببخشند.",
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = " برگزاری عروسی پاییزی: ایده‌هایی برای تم و رنگ‌بندی";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,6 +50,7 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
@@ -305,6 +340,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

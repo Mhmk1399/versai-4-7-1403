@@ -278,7 +278,7 @@ const Page = () => {
                 </h4>
                 <ul>
                   <li className="text-regular mt-3">
-                    <span className="text-black font-bold text-xl font-bold">
+                    <span className="text-black font-bold text-xl">
                       هماهنگی با برنامه‌ریزی مراسم :
                     </span>
                     <br />
@@ -289,7 +289,7 @@ const Page = () => {
                     </span>
                   </li>
                   <li className="text-regular mt-3">
-                    <span className="text-black font-bold text-xl font-bold">
+                    <span className="text-black font-bold text-xl">
                       کیفیت سیستم صوتی :
                     </span>
                     <br />
@@ -300,7 +300,7 @@ const Page = () => {
                     </span>
                   </li>
                   <li className="text-regular mt-3">
-                    <span className="text-black font-bold text-xl font-bold">
+                    <span className="text-black font-bold text-xl">
                       با مهمانان :
                     </span>{" "}
                     <br />

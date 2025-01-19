@@ -2,8 +2,45 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "checking-diffrent-season-to-wedding";
+  const blogData = {
+    title: "بررسی فصل‌های مختلف برای انتخاب تاریخ عروسی",
+    url: "/checking-diffrent-season-to-wedding",
+    images: ["/assets/images/155.webp"],
+    sections: [
+      {
+        heading: "چه فصلی برای عروسی شما جادویی‌تر است؟ انتخاب بهترین تاریخ!",
+        content:
+          "هر فصل ویژگی‌های خاص خود را دارد و بر اساس سلیقه، بودجه و شرایط محیطی، شما می‌توانید بهترین زمان را انتخاب کنید.",
+        lists: [
+          "عروسی در بهار",
+          "عروسی در تابستان",
+          "عروسی در پاییز",
+          "عروسی در زمستان",
+        ],
+      },
+      {
+        heading: "نکاتی برای انتخاب بهترین تاریخ عروسی بر اساس تقویم شخصی",
+        content:
+          "انتخاب تاریخ عروسی تنها به فصل‌ها محدود نمی‌شود. شما باید عواملی دیگر مانند تعطیلات رسمی، مناسبت‌های خاص خانوادگی و حتی شرایط شغلی خود و همسرتان را نیز در نظر بگیرید.",
+      },
+      {
+        heading: "تعیین تاریخ عروسی بر اساس اعتقادات و رسوم فرهنگی",
+        content:
+          "در بسیاری از فرهنگ‌ها و جوامع، انتخاب تاریخ عروسی به عوامل مذهبی و فرهنگی خاصی بستگی دارد.",
+      },
+      {
+        heading: "انتخاب تاریخ بر اساس بودجه و هزینه‌ها",
+        content:
+          "یکی دیگر از عوامل مهم در تعیین تاریخ عروسی، بودجه و هزینه‌های مربوط به آن است.",
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "بررسی فصل‌های مختلف برای انتخاب تاریخ عروسی ";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +53,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/155.webp"
                 width={4000}
@@ -76,13 +116,17 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">مزایا: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        مزایا:{" "}
+                      </strong>
                       هوای معتدل و دلپذیر - شکوفه‌ها و گل‌های طبیعی زیبا برای
                       تزئین - امکان برگزاری مراسم در فضاهای باز
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">معایب:</strong>
+                      <strong className="ml-2 text-black font-bold">
+                        معایب:
+                      </strong>
                       احتمال بارش باران در برخی مناطق - شلوغی تالارها و باغ‌های
                       عروسی
                     </span>
@@ -107,14 +151,18 @@ const Page = () => {
                       است.
                     </p>
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">مزایا: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        مزایا:{" "}
+                      </strong>
                       هوای گرم و مناسب برای مراسم‌های فضای باز - امکان استفاده
                       از دکوراسیون‌های تابستانی جذاب - تعطیلات تابستانی که باعث
                       حضور بیشتر مهمانان می‌شود
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">معایب:</strong>
+                      <strong className="ml-2 text-black font-bold">
+                        معایب:
+                      </strong>
                       گرمای زیاد در برخی مناطق - نیاز به تهویه مناسب در فضاهای
                       بسته
                     </span>
@@ -138,14 +186,18 @@ const Page = () => {
                       رمانتیک و دلنشینی به مراسم شما ببخشد.
                     </p>
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">مزایا: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        مزایا:{" "}
+                      </strong>
                       زیبایی طبیعی برگ‌های پاییزی - هوای خنک و دلپذیر -
                       هزینه‌های کمتر نسبت به فصل‌های پرتقاضا مانند بهار و
                       تابستان
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">معایب:</strong>
+                      <strong className="ml-2 text-black font-bold">
+                        معایب:
+                      </strong>
                       روزهای کوتاه‌تر و نیاز به نورپردازی بیشتر - احتمال بارش
                       باران
                     </span>
@@ -169,13 +221,17 @@ const Page = () => {
                       می‌توانند فضای رویایی و جادویی ایجاد کنند.
                     </p>
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">مزایا: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        مزایا:{" "}
+                      </strong>
                       فضای منحصر به فرد و رویایی - کاهش هزینه‌ها در برخی مکان‌ها
                       و خدمات - امکان استفاده از تم‌های زمستانی مانند برف و یخ
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">معایب:</strong>
+                      <strong className="ml-2 text-black font-bold">
+                        معایب:
+                      </strong>
                       هوای سرد و نیاز به تمهیدات گرمایشی مناسب - سختی رفت‌وآمد
                       مهمانان در مناطق سرد و برفی
                     </span>
@@ -297,6 +353,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

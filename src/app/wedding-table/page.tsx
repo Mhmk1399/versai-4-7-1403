@@ -2,8 +2,43 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "wedding-table";
+  const blogData = {
+    title: "سفره عقد عروسی: تزیینات و نکات کلیدی",
+    url: "/wedding-table",
+    images: ["/assets/images/180.webp"],
+    sections: [
+      {
+        heading: "تزیینات سفره عقد: چگونه مراسم خود را ماندگار کنید؟",
+        content:
+          "سفره عقد عروسی یکی از سنت‌های قدیمی و ریشه‌دار در فرهنگ ایرانی است که نماد عشق، زندگی و برکت در زندگی مشترک به‌شمار می‌آید.",
+        lists: [
+          "قرآن کریم به‌عنوان نماد هدایت و برکت",
+          "آینه و شمعدان نماد روشنایی و گرمای عشق",
+          "نان، پنیر و سبزی نماد برکت و سرسبزی",
+          "تزیین با گل‌های طبیعی",
+          "استفاده از ظروف کریستالی و شیشه‌ای",
+          "چیدمان مدرن و مینیمال",
+        ],
+      },
+      {
+        heading: "سالن عقد مناسب: تاثیر مکان بر زیبایی سفره عقد",
+        content:
+          "یکی از نکات مهم در چیدمان سفره عقد، انتخاب سالن مناسب است. سالن عقد تأثیر مستقیمی بر زیبایی و جذابیت سفره عقد دارد.",
+        lists: [
+          "سالن عقد ترمه با دکوراسیون فاخر",
+          "انتخاب بین فضای باز یا بسته",
+          "نورپردازی و دکوراسیون مناسب",
+          "هماهنگی با تم عروسی",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "سفره عقد عروسی";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +51,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/180.webp"
                 width={4000}
@@ -72,7 +110,9 @@ const Page = () => {
                       مهم‌ترین اجزای سفره عقد اشاره می‌کنیم.
                     </span>
                     <br />
-                    <span className="font-bold text-lg text-black">1 - قرآن کریم: </span>
+                    <span className="font-bold text-lg text-black">
+                      1 - قرآن کریم:{" "}
+                    </span>
                     <p>
                       به‌عنوان نماد هدایت و برکت در زندگی، قرآن کریم همیشه در
                       مرکز سفره عقد قرار می‌گیرد. تزیین قرآن با پارچه‌های زیبا و
@@ -297,6 +337,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

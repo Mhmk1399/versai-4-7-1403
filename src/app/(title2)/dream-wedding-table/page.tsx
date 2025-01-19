@@ -2,8 +2,47 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../../components/schema/blogSchema";
+import CommentBox from "../../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "dream-wedding-table";
+  const blogData = {
+    title: "سفره عقد متفاوت: ایده‌های جالب برای یه چیدمان خاص و تازه",
+    url: "/dream-wedding-table",
+    images: ["/assets/images/garden-bad-1.webp"],
+    sections: [
+      {
+        heading: "سفره عقد چیست؟",
+        content:
+          "سفره عقد، یه سفره نسبتا بزرگ و زیباست که برای مراسمات عقد چیده می‌شه. این سفره عمدتا روی یه میز یا سطحی صاف قرار می‌گیره و پر از عناصر رنگارنگ و نمادین هست که مراسم رو رسمی و جذاب‌تر می‌کنه.",
+      },
+      {
+        heading:
+          "۱۰ ترفند ساده برای طراحی سفره عقد در باغ تالار که چشم‌گیر باشه",
+        content: "سفره عقد شیک و مدرن در باغ تالار",
+        lists: [
+          "انتخاب مکان مناسب",
+          "استفاده کردن از پارچه‌های سبک و رنگی در سفره",
+          "تزیین سفره با گل‌های طبیعی",
+          "اضافه کردن شمع‌های معلق به دیزاین سفره",
+          "استفاده از لوازم دکوری طبیعی",
+          "نورپردازی به اندازه و خلاقانه",
+          "ایجاد یه بخش پذیرایی جداگانه در باغ تالار",
+          "استفاده از میزهای راحت و شیک",
+          "دیزاین خلاقانه با بادبادک‌",
+          "اضافه کردن یادگاری‌های کوچک برای میهمان در سفره",
+        ],
+      },
+      {
+        heading: "انواع سفره عقد",
+        content:
+          "وقتی حرف از سفره عقد می‌شه، اینقدر تنوع وجود داره که می‌تونین بر اساس سلیقه خودت یه سفره خاص و متفاوت رو برای مراسم در باغ تالار بچینی.",
+        lists: ["سفره عقد سنتی", "سفره عقد مدرن", "سفره عقد طبیعی"],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = " ایده‌های جالب برای یه سفره عقد خاص و تازه";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,6 +55,7 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-5 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl rounded-lg">
@@ -393,6 +433,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

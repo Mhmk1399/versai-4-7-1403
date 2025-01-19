@@ -2,8 +2,43 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "Types-of-halls";
+  const blogData = {
+    title: "انواع تالار و باغ تالار برای انتخاب در فصل‌های مختلف سال",
+    url: "/Types-of-halls",
+    images: ["/assets/images/hall-normal-1.webp"],
+    sections: [
+      {
+        heading: "راهنمای کامل انتخاب تالار و باغ تالار بر اساس فصل",
+        content:
+          "برگزاری مراسم در فصول مختلف سال نیازمند انتخاب مکان مناسب است تا تجربه‌ای به یادماندنی برای شما و مهمانانتان ایجاد شود. هر فصل با ویژگی‌های آب و هوایی و زیبایی‌های خاص خود می‌تواند تأثیر زیادی بر نوع تالار یا باغ تالاری که انتخاب می‌کنید داشته باشد.",
+        lists: [
+          "تالارهای بسته در زمستان",
+          "باغ تالارها در بهار",
+          "تالارهای پذیرایی در تابستان",
+          "باغ تالارها در پاییز",
+          "نکات کلی برای انتخاب تالار یا باغ تالار",
+        ],
+      },
+      {
+        heading: "نکات کلی برای انتخاب تالار یا باغ تالار",
+        content:
+          "موقعیت جغرافیایی، تعداد مهمانان و دکوراسیون و امکانات از مهمترین فاکتورهای انتخاب تالار هستند.",
+        lists: [
+          "موقعیت جغرافیایی و دسترسی آسان",
+          "ظرفیت مناسب برای تعداد مهمانان",
+          "دکوراسیون و امکانات کافی",
+          "سیستم تهویه مناسب",
+          "پارکینگ و امکانات رفاهی",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "انواع تالار و باغ تالار برای انتخاب در فصل‌های مختلف سال";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +51,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/hall-normal-1.webp"
                 width={4000}
@@ -238,6 +276,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

@@ -2,8 +2,36 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "best-season-for-wedding";
+  const blogData = {
+    title: "بهترین فصل برگزاری مراسم عروسی و نکات کلیدی برای هر فصل",
+    url: "/best-season-for-wedding",
+    images: ["/assets/images/210.webp"],
+    sections: [
+      {
+        heading:
+          "چه فصلی برای عروسی شما بهترین است؟ بررسی مزایا و معایب هر فصل",
+        content:
+          "هر فصلی از سال ویژگی‌ها و جذابیت‌های خاص خود را برای برگزاری مراسم عروسی دارد. از طبیعت بهاری و زیبایی‌های تابستان گرفته تا رنگ‌های پاییزی و آرامش زمستان، هر فصل می‌تواند مراسمی خاص و به‌یادماندنی برای شما رقم بزند.",
+        lists: [
+          "برگزاری مراسم عروسی در بهار: فصل شکوفه‌ها و طراوت",
+          "تابستان: فصل گرما و انرژی برای عروسی در فضای باز",
+          "پاییز: فصل رنگ‌ها و رمانتیسم برای عروسی",
+          "زمستان: جشن ازدواج در فضایی گرم و دلنشین",
+        ],
+      },
+      {
+        heading: "نتیجه‌گیری",
+        content:
+          "هر فصلی از سال دارای ویژگی‌های منحصر به فردی برای برگزاری مراسم عروسی است. با توجه به شرایط آب و هوایی و زیبایی‌های طبیعی هر فصل، شما می‌توانید بهترین زمان را برای جشن عروسی خود انتخاب کنید.",
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = " بهترین فصل برگزاری مراسم عروسی و نکات کلیدی برای هر فصل";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +44,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/210.webp"
                 width={4000}
@@ -82,7 +113,9 @@ const Page = () => {
                       از گل‌های بهاری مثل رز و لاله می‌تواند زیبایی خاصی به
                       مراسم ببخشد.
                     </p>
-                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">
+                      2 - نکات کلیدی:
+                    </span>
                     <br />
                     <p>
                       ممکن است به دلیل تغییرات جوی، بارندگی‌هایی رخ دهد،
@@ -121,7 +154,9 @@ const Page = () => {
                       تجربه‌ای دل‌پذیر را فراهم می‌کند. نورپردازی‌های خاص در باغ
                       تالار نیز در این فصل می‌تواند به زیبایی مراسم اضافه کند.
                     </p>
-                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">
+                      2 - نکات کلیدی:
+                    </span>
                     <br />
                     <p>
                       برای جلوگیری از گرمای بیش از حد، بهتر است برای مهمانان
@@ -162,7 +197,9 @@ const Page = () => {
                       تزیینات استفاده کنید و فضایی رمانتیک برای مراسم خود ایجاد
                       کنید.
                     </p>
-                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">
+                      2 - نکات کلیدی:
+                    </span>
                     <br />
                     <p>
                       در پاییز هوا ممکن است خنک‌تر باشد، بنابراین برای مراسم در
@@ -195,7 +232,9 @@ const Page = () => {
                       زمستانی مثل شمع‌ها و کریستال‌ها جلوه‌ای لوکس به مراسم
                       می‌دهد.
                     </p>
-                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">
+                      2 - نکات کلیدی:
+                    </span>
                     <br />
                     <p>
                       سرمای هوا ممکن است چالشی باشد، بنابراین حتماً مطمئن شوید
@@ -237,6 +276,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

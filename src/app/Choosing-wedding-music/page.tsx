@@ -2,8 +2,35 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "Choosing-wedding-music";
+  const blogData = {
+    title: "آهنگ عروسی را چطور انتخاب کنیم؟ نکاتی برای یک شب رویایی",
+    url: "/Choosing-wedding-music",
+    images: ["/assets/images/musicfirst.webp"],
+    sections: [
+      {
+        heading: "9 نکته طلایی برای انتخاب بهترین موزیک عروسی",
+        content:
+          "موزیک عروسی باید حال و هوای شادی و عشق را در کنار هم فراهم کند. در این راهنما، روش‌های انتخاب موزیک‌هایی که شب شما را به‌یادماندنی می‌کنند، ارائه می‌دهیم.",
+        lists: [
+          "انتخاب سبک موزیک مناسب",
+          "تناسب موزیک با رقص‌ها",
+          "انتخاب بین موزیک زنده و دی‌جی",
+          "توجه به هزینه‌ها",
+          "آزمایش و تست موزیک‌ها",
+          "توجه به سلیقه مهمانان",
+          "تهیه لیست پخش موزیک",
+          "محل برگزاری موزیک",
+          "لذت بردن از موزیک‌ها",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "نکات مهم برای انتخاب موزیک عروسی";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +43,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/musicfirst.webp"
                 width={4000}
@@ -293,6 +323,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

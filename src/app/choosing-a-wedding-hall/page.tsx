@@ -2,8 +2,46 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "choosing-a-wedding-hall";
+  const blogData = {
+    title: "انتخاب تالار عروسی در شاتو دو ورسای: گام به گام تا بهترین انتخاب",
+    url: "/choosing-a-wedding-hall",
+    images: ["/assets/images/170.webp"],
+    sections: [
+      {
+        heading: "رازهای انتخاب تالار عروسی بی‌نقص در شاتو دو ورسای",
+        content:
+          "انتخاب تالار عروسی یکی از چالش‌های اصلی برای زوج‌هایی است که در حال برنامه‌ریزی بزرگ‌ترین روز زندگی خود هستند. با وجود تنوع بالا در تالارها و باغ تالارها، شاتو دو ورسای از جمله مجموعه‌های تشریفاتی است که با ترکیب بی‌نظیری از فضای لوکس، خدمات حرفه‌ای، و طراحی منحصربه‌فرد، گزینه‌ای ایده‌آل برای برگزاری عروسی‌های رویایی محسوب می‌شود.",
+        lists: [
+          "مشخص کردن بودجه و نیازهای خود",
+          "بازدید از محل و بررسی فضاها",
+          "بررسی خدمات تشریفاتی و کترینگ",
+          "انتخاب تم و دکوراسیون مراسم",
+          "هماهنگی با تیم عکاسی و فیلمبرداری",
+          "بررسی امکانات جانبی تالار",
+          "برنامه‌ریزی دقیق و مدیریت زمان‌بندی",
+        ],
+      },
+      {
+        heading: "امکانات ویژه شاتو دو ورسای",
+        content:
+          "شاتو دو ورسای با ارائه امکانات و خدماتی بی‌نظیر، گزینه‌ای ایده‌آل برای برگزاری مراسمی رویایی و خاطره‌انگیز است.",
+        lists: [
+          "سالن‌های بزرگ و باغ‌های زیبا",
+          "خدمات تشریفاتی حرفه‌ای",
+          "تیم کترینگ با منوهای متنوع",
+          "پارکینگ اختصاصی",
+          "اتاق پرو برای عروس و داماد",
+          "فضای بازی برای کودکان",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "انتخاب تالار عروسی در شاتو دو ورسای";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +54,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/170.webp"
                 width={4000}
@@ -80,7 +121,7 @@ const Page = () => {
                       مراسم‌های مجلل، امکان تنظیم مراسم بر اساس بودجه شما را
                       فراهم می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       سؤالات مهم برای تعیین بودجه:
                     </p>
                     <span>1 - چه تعداد مهمان دارید؟</span>
@@ -117,7 +158,7 @@ const Page = () => {
                       می‌دهد که تمامی گزینه‌ها را از نزدیک مشاهده کنید و متناسب
                       با سلیقه خود بهترین انتخاب را داشته باشید.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       نکات مهم هنگام بازدید:
                     </p>
                     <span>1 - اندازه و ظرفیت سالن‌ها</span>
@@ -150,7 +191,7 @@ const Page = () => {
                       بین‌المللی، تجربه‌ای منحصر به فرد برای مهمانان شما فراهم
                       می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       سؤالات کلیدی برای بررسی خدمات:
                     </p>
                     <span>
@@ -189,7 +230,7 @@ const Page = () => {
                       گل‌ها گرفته تا نورپردازی و چیدمان میزها، همه چیز متناسب با
                       سلیقه شما طراحی خواهد شد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       نکات مهم در انتخاب تم:
                     </p>
                     <span>
@@ -227,7 +268,7 @@ const Page = () => {
                       بهترین شکل ثبت شوند. فضای زیبای باغ‌ها و سالن‌های شاتو،
                       پس‌زمینه‌ای عالی برای عکس‌ها و ویدئوهای شما خواهد بود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های تیم عکاسی حرفه‌ای:
                     </p>
                     <span>1 - آشنایی کامل با فضای شاتو دو ورسای</span>
@@ -267,7 +308,7 @@ const Page = () => {
                       کودکان، تجربه‌ای راحت و بدون دغدغه برای شما و مهمانانتان
                       فراهم می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       امکانات مهم:
                     </p>
                     <span>1 - پارکینگ با ظرفیت بالا برای مهمانان</span>
@@ -297,7 +338,7 @@ const Page = () => {
                       با تیم تشریفات، عکاسی، و کترینگ نیز می‌شود تا مراسم بدون
                       هیچ مشکلی پیش برود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       نکات کلیدی در مدیریت زمان:
                     </p>
                     <span>1 - تعیین زمان دقیق برای ورود و خروج مهمانان</span>
@@ -344,6 +385,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

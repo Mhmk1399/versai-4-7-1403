@@ -2,8 +2,44 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "types-of-wedding-tables";
+  const blogData = {
+    title: "انواع سفره عقد: از سنتی تا مدرن و لاکچری",
+    url: "/types-of-wedding-tables",
+    images: ["/assets/images/240.webp"],
+    sections: [
+      {
+        heading: "راهنمای کامل انتخاب سفره عقد از سبک کلاسیک تا مدرن و مجلل",
+        content:
+          "سفره عقد به‌عنوان یکی از مهم‌ترین بخش‌های مراسم عروسی در فرهنگ ایرانی، جلوه‌ای از عشق، برکت، و پیوندی جاودانه بین عروس و داماد است.",
+        lists: [
+          "سفره عقد سنتی: حفظ اصالت و سنت‌های ایرانی",
+          "سفره عقد مدرن: ترکیب سادگی و شیکی",
+          "سفره عقد لاکچری: شکوه و عظمت در عروسی",
+          "سفره عقد ساده و شیک: زیبایی در سادگی",
+          "سفره عقد آریایی: بازگشت به ریشه‌ها",
+          "عکس و نمونه‌های سفره عقد: از قدیمی تا جدید",
+        ],
+      },
+      {
+        heading: "سفره عقد سنتی",
+        content:
+          "سفره عقد سنتی ایرانی، یکی از قدیمی‌ترین و پرطرفدارترین انواع سفره‌هاست که همچنان در بسیاری از مراسم‌ها استفاده می‌شود.",
+        images: ["/assets/images/241.webp"],
+      },
+      {
+        heading: "سفره عقد مدرن و لاکچری",
+        content:
+          "سفره عقد مدرن در سال‌های اخیر با استقبال زیادی روبه‌رو شده است. این نوع سفره‌ها برخلاف سفره‌های سنتی، از چیدمان‌های ساده و مینیمال بهره می‌برند.",
+        images: ["/assets/images/242.webp", "/assets/images/243.webp"],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "انواع سفره عقد: از سنتی تا مدرن و لاکچری";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +52,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/240.webp"
                 width={4000}
@@ -301,6 +340,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

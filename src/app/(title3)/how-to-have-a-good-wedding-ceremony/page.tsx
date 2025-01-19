@@ -2,8 +2,42 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../../components/schema/blogSchema";
+import CommentBox from "../../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "how-to-have-a-good-wedding-ceremony";
+  const blogData = {
+    title:
+      "چگونه یک مراسم عقد به‌یادماندنی و لوکس برگزار کنیم؟ نکات و ایده‌های خاص",
+    url: "/how-to-have-a-good-wedding-ceremony",
+    images: ["/assets/images/dancestage-good-3.webp"],
+    sections: [
+      {
+        heading: "مراسم عقد لوکس و شیک",
+        content:
+          "مراسم عقد یکی از مهم‌ترین و به‌یادماندنی‌ترین روزهای زندگی هر فرد است. مراسم عقد همون لحظه‌ایه که عشق و تعهد دو نفر رسمی و ثابت می‌شه و با یه «بله» ساده، زندگی مشترکشون رو آغاز می‌کنن...",
+        lists: [
+          "محل عقد رو خیلی شیک انتخاب کن",
+          "لباس عروس و داماد هم که باید خاص باشه!",
+          "سفره عقد لاکچری،که به چشم میهمان ها بیاد!",
+          "موسیقی زنده و پر هیجان",
+          "دکوراسیون خیره‌کننده",
+          "فیلمبرداری و عکاسی حرفه‌ای",
+          "سرویس‌دهی عالی و آنی",
+          "جزئیات خاص و متنوع",
+          "پذیرایی عالی، همه‌چی تمام!",
+          "هدایای شیک برای میهمان",
+        ],
+      },
+      {
+        heading: "خلاصه ای از مراسم عقد",
+        content:
+          "مراسم عقد، یه روز فوق‌العاده ویژه و خاطره‌انگیزه هستش که شروع زندگی مشترک بین یک زوج رو جشن تشکیل میده. این مراسم با همه‌ی زیبایی‌ها و جزئیاتش، مثل سفره عقد رنگارنگ، لباس‌های شیک و مراسم‌های سنتی و کلاسیک، یه حس خاص و خوب دنبالش داره...",
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = " 10 نکته برای داشتن یک مراسم عقد لوکس";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,6 +50,7 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2 bg-gray-5 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
@@ -361,6 +396,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

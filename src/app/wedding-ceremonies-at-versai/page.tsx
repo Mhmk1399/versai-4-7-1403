@@ -2,8 +2,54 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "wedding-ceremonies-at-versai";
+  const blogData = {
+    title: "تشریفات عروسی در شاتو دو ورسای: مراسمی که هرگز فراموش نخواهید کرد",
+    url: "/wedding-ceremonies-at-versai",
+    images: [
+      "/assets/images/138.webp",
+      "/assets/images/131.webp",
+      "/assets/images/132.webp",
+      "/assets/images/133.webp",
+      "/assets/images/134.webp",
+      "/assets/images/135.webp",
+      "/assets/images/136.webp",
+      "/assets/images/137.webp",
+    ],
+    sections: [
+      {
+        heading: "مقدمه",
+        content:
+          "تشریفات عروسی یکی از مهم‌ترین عوامل برای برگزاری یک عروسی به‌یادماندنی و باشکوه است. وقتی صحبت از تشریفات می‌شود، همه به دنبال جزئیات لوکس و خدمات حرفه‌ای هستند تا عروسی‌شان به یک مراسم خاص و متفاوت تبدیل شود.",
+      },
+      {
+        heading: "مدیریت حرفه‌ای تشریفات عروسی در شاتو دو ورسای",
+        content:
+          "یکی از مهم‌ترین عوامل موفقیت در برگزاری یک مراسم عروسی، مدیریت دقیق و حرفه‌ای تشریفات است.",
+        lists: [
+          "هماهنگی تمامی مراحل مراسم با شما و تیم تشریفات",
+          "طراحی و دکوراسیون لوکس",
+          "برنامه‌ریزی دقیق برای جلوگیری از هرگونه مشکلی در روز مراسم",
+          "مدیریت حرفه‌ای زمان و برنامه‌ها در طول مراسم",
+        ],
+      },
+      {
+        heading: "طراحی و دکوراسیون سالن: ایجاد فضایی رویایی برای مراسم شما",
+        content:
+          "یکی از مهم‌ترین بخش‌های تشریفات عروسی، طراحی و دکوراسیون سالن و فضای مراسم است.",
+        lists: [
+          "گل‌آرایی لوکس و حرفه‌ای",
+          "نورپردازی خاص و هماهنگ با تم مراسم",
+          "طراحی میزها و صندلی‌ها بر اساس سلیقه شما",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "تشریفات عروسی در شاتو دو ورسای";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +62,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/138.webp"
                 width={4000}
@@ -80,7 +129,7 @@ const Page = () => {
                       مراسم‌های بزرگ و لوکس، تمامی جزئیات مراسم شما را از لحظه
                       شروع تا پایان به طور دقیق و حرفه‌ای مدیریت می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های مدیریت تشریفات:
                     </p>
                     <span>
@@ -121,7 +170,7 @@ const Page = () => {
                       ایجاد می‌کند. از گل‌آرایی‌های خیره‌کننده تا نورپردازی‌های
                       منحصر به فرد، همه چیز با توجه به سلیقه شما طراحی می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های دکوراسیون:
                     </p>
                     <span>1 - گل‌آرایی لوکس و حرفه‌ای</span>
@@ -152,7 +201,7 @@ const Page = () => {
                       می‌توانید با توجه به سلیقه و بودجه خود، منویی سفارشی
                       انتخاب کنید.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های پذیرایی:
                     </p>
                     <span>1 - منوی متنوع با غذاهای ایرانی و بین‌المللی</span>
@@ -185,7 +234,7 @@ const Page = () => {
                       تبدیل می‌کند. از نورپردازی ویژه گرفته تا موسیقی هماهنگ با
                       لحظه ورود، همه چیز به بهترین شکل انجام می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های تشریفات ورود:
                     </p>
                     <span>1 - نورپردازی خاص برای لحظه ورود</span>
@@ -215,7 +264,7 @@ const Page = () => {
                       می‌کند. شما می‌توانید مطمئن باشید که تمامی لحظات خاص و
                       احساسی شما به‌طور حرفه‌ای و با کیفیت عالی ثبت خواهد شد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های عکاسی و فیلمبرداری:
                     </p>
                     <span>1 - تیم حرفه‌ای عکاسان و فیلمبرداران با تجربه</span>
@@ -230,7 +279,7 @@ const Page = () => {
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 rounded-lg">
                     <Image
                       src="/assets/images/135.webp"
                       width={4000}
@@ -250,7 +299,7 @@ const Page = () => {
                       ببرید. از زمان‌بندی مراسم گرفته تا هماهنگی با سایر تیم‌ها
                       مانند دی‌جی و عکاسان، همه چیز به طور دقیق انجام می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های برنامه‌ریزی:
                     </p>
                     <span>1 - زمان‌بندی دقیق تمامی مراحل مراسم</span>
@@ -283,7 +332,7 @@ const Page = () => {
                       گل‌آرایی‌های زیبا تا هدیه‌های یادبود، همه چیز برای
                       بدرقه‌ای خاطره‌انگیز طراحی می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های تشریفات پایانی:
                     </p>
                     <span>1 - بدرقه مهمانان با تشریفات خاص</span>
@@ -325,6 +374,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

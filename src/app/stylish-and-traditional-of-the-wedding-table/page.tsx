@@ -2,8 +2,40 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "stylish-and-traditional-of-the-wedding-table";
+  const blogData = {
+    title: "چیدمان شیک و سنتی سفره عقد: اصول و ایده‌های خلاقانه",
+    url: "/stylish-and-traditional-of-the-wedding-table",
+    images: ["/assets/images/190.webp"],
+    sections: [
+      {
+        heading: "الهام از سنت برای خلق سفره عقد مدرن و زیبا",
+        content:
+          "سفره عقد یکی از مهم‌ترین اجزای مراسم ازدواج در فرهنگ ایرانی است که علاوه بر زیبایی، نمادی از عشق و برکت در زندگی مشترک به‌شمار می‌رود...",
+        lists: [
+          "انتخاب تم و رنگ‌بندی مناسب برای سفره عقد",
+          "اجزای مهم سفره عقد و نقش آن‌ها در زیبایی چیدمان",
+          "تزیینات خلاقانه برای سفره عقد ساده و خانگی",
+          "هماهنگی سفره عقد با مکان برگزاری مراسم",
+        ],
+      },
+      {
+        heading: "چیدمان سنتی با تم سفید و طلایی",
+        content:
+          "یکی از محبوب‌ترین انتخاب‌ها برای سفره عقد، استفاده از رنگ‌های سفید و طلایی است...",
+        lists: [
+          "تم کریستالی و لاکچری",
+          "ترکیب رنگ‌های طبیعی با تم مدرن",
+          "قرآن و آینه: نماد روشنایی و هدایت",
+          "سبد نان و سبزی: نشانه‌ی برکت و سرسبزی",
+        ],
+      },
+    ],
+  };
   useEffect(() => {
     document.title = "  چیدمان شیک و سنتی سفره عقد";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +48,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/190.webp"
                 width={4000}
@@ -286,6 +321,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

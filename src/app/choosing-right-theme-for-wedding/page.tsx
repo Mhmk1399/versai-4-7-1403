@@ -2,8 +2,41 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "choosing-right-theme-for-wedding";
+  const blogData = {
+    title: "انتخاب تم مناسب برای عروسی در هر فصل",
+    url: "/choosing-right-theme-for-wedding",
+    images: ["/assets/images/171.webp"],
+    sections: [
+      {
+        heading:
+          "انتخاب تم مناسب برای عروسی در هر فصل: راهنمای کامل برای تطبیق تزیینات و دکور با فصل",
+        content:
+          "تم عروسی و دکوراسیون آن، از جمله عواملی هستند که نقش مهمی در جذابیت و زیبایی مراسم شما دارند. هر فصلی از سال ویژگیهای خاص خود را دارد که میتوان از آنها الهام گرفت و تمهای مناسب با رنگها و المانهای طبیعی آن فصل را برای عروسی خود انتخاب کرد.",
+        lists: [
+          "تم های مناسب برای عروسی در فصل بهار: لطافت و تازگی",
+          "تم های مناسب برای عروسی در فصل تابستان: رنگهای زنده و فضای باز",
+          "تم های مناسب برای عروسی در فصل پاییز: رنگهای گرم و طبیعت دلنشین",
+          "تم های مناسب برای عروسی در فصل زمستان: شکوه و لوکس بودن",
+        ],
+      },
+      {
+        heading: "تم های بهاری",
+        content:
+          "بهار فصل تازه شدن طبیعت و شکوفایی گلها است. از رنگهای روشن و شاد گرفته تا گلآراییهای طبیعی، بهار میتواند منبع الهام فوقالعادهای برای تم عروسی باشد.",
+        lists: [
+          "رنگهای پاستلی مثل صورتی، بنفش کمرنگ، و آبی آسمانی",
+          "گلهای بهاری مانند لاله، نرگس و رز",
+          "تمهای گلآرایی طبیعی و رومانتیک",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "انتخاب تم مناسب برای عروسی در هر فصل:";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +49,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/171.webp"
                 width={4000}
@@ -81,7 +117,9 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">ایده های تم: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        ایده های تم:{" "}
+                      </strong>
                       استفاده از تمهای گلآرایی طبیعی و رومانتیک با اUانهای سبز و
                       سفید برای هماهنگی با طبیعت بهاری.
                     </span>
@@ -120,7 +158,9 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">ایدههای تم:</strong>
+                      <strong className="ml-2 text-black font-bold">
+                        ایدههای تم:
+                      </strong>
                       برگزاری مراسم در فضای باز با تمهای ساحلی یا باغی،
                       نورپردازی رنگارنگ، و استفاده از دکوراسیونهای مدرن.
                     </span>
@@ -157,7 +197,9 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">ایدههای تم: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        ایدههای تم:{" "}
+                      </strong>
                       تمهای روستیک با استفاده از چوبی و طبیعی، استفاده از برگهای
                       خشک در تزیین میزها، و تزیینات با پارچههای گرم و مخملی.
                     </span>
@@ -192,7 +234,9 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">ایدههای تم: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        ایدههای تم:{" "}
+                      </strong>
                       تمهای زمستانی با استفاده از کریستالها، نورپردازی مsیم و
                       شمعهای زیبا. همچنین استفاده از تزیینات الهام گرفته از یخ و
                       برف میتواند فضایی خاص و شیک ایجاد کند.
@@ -232,6 +276,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

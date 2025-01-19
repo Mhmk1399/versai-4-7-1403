@@ -2,8 +2,45 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "wedding-ceremonies-versai";
+  const blogData = {
+    title: "تشریفات عروسی در شاتو دو ورسای: مراسمی فراموش‌نشدنی",
+    url: "/wedding-ceremonies-versai",
+    images: ["/assets/images/160.webp"],
+    sections: [
+      {
+        heading: "عروسی باشکوه در قلب شاتو دو ورسای",
+        content:
+          "برگزاری یک مراسم عروسی بی‌نقص، نیازمند دقت و توجه به جزییات است. از دکوراسیون تا سرو غذا و حتی نحوه پذیرایی از مهمانان، همه موارد باید به بهترین شکل ممکن مدیریت شوند...",
+        lists: [
+          "تشریفات لوکس و چیدمان بی‌نظیر",
+          "سرویس‌دهی حرفه‌ای و مهمان‌نوازی",
+          "نورپردازی و صحنه‌سازی رؤیایی",
+          "موسیقی و سرگرمی‌های متنوع",
+          "سفره عقد و سالن‌های اختصاصی",
+          "امکان برگزاری مراسم در فضای باز",
+        ],
+      },
+      {
+        heading: "خدمات تشریفاتی ویژه",
+        content:
+          "تیم تشریفاتی شاتو دو ورسای با کادری مجرب و حرفه‌ای، تمامی مراحل پذیرایی از مهمانان شما را به عهده می‌گیرد...",
+        lists: [
+          "گل‌آرایی‌های خاص و طبیعی",
+          "چیدمان مدرن میز و صندلی",
+          "نورپردازی حرفه‌ای",
+          "موسیقی زنده با بهترین گروه‌ها",
+          "اجرای دی‌جی‌های حرفه‌ای",
+          "برنامه‌های سرگرمی و رقص",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "تشریفات عروسی در ورسای  ";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +53,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/160.webp"
                 width={4000}
@@ -79,7 +119,7 @@ const Page = () => {
                       مهمانان‌تان فراهم می‌کند. این تشریفات شامل گل‌آرایی‌های
                       حرفه‌ای، طراحی میز و صندلی‌های شیک، و نورپردازی مدرن است.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های تشریفات لوکس:
                     </p>
                     <span>1 - گل‌آرایی‌های خاص و طبیعی</span>
@@ -111,7 +151,7 @@ const Page = () => {
                       دسرها و غذاهای با کیفیت، مراسم شما را به سطحی بالاتر از
                       استانداردهای معمول می‌رساند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       سرویس‌های ویژه:
                     </p>
                     <span>1 - نوشیدنی‌ها و دسرهای متنوع</span>
@@ -122,7 +162,7 @@ const Page = () => {
                       3 - سرویس‌دهی به مهمانان با استانداردهای بین‌المللی
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 rounded-lg">
                     <Image
                       src="/assets/images/133.webp"
                       width={2000}
@@ -147,7 +187,7 @@ const Page = () => {
                       گونه‌ای تنظیم شده تا بهترین تجربه را برای شما و
                       مهمانان‌تان رقم بزند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های نورپردازی:
                     </p>
                     <span>1 - نورهای ملایم و گرم برای فضاهای رمانتیک</span>
@@ -179,7 +219,7 @@ const Page = () => {
                       زنده گرفته تا اجرای دی‌جی، هر چیزی که برای شب عروسی شما
                       نیاز است، در اختیار شما قرار می‌گیرد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       برنامه‌های موسیقی و سرگرمی:
                     </p>
                     <span>1 - موسیقی زنده با بهترین گروه‌ها</span>
@@ -210,7 +250,7 @@ const Page = () => {
                       لوکس و محیطی گرم و صمیمی، لحظات خاصی را برای شما و
                       عزیزان‌تان رقم خواهد زد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های سفره عقد:
                     </p>
                     <span>1 - طراحی کلاسیک و مدرن</span>
@@ -246,7 +286,7 @@ const Page = () => {
                       می‌بخشد. این فضا به‌خصوص برای عروس‌هایی که به دنبال
                       تجربه‌ای رمانتیک و متفاوت هستند، بسیار مناسب است.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های فضای باز:
                     </p>
                     <span>1 - محیط طبیعی و دلنشین</span>
@@ -288,6 +328,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

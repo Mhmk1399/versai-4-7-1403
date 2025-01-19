@@ -2,8 +2,48 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "special-moment-for-life";
+  const blogData = {
+    title:
+      "مراسم عقد و بله‌برون در شاتو دو ورسای: لحظاتی خاص برای آغاز زندگی مشترک",
+    url: "/special-moment-for-life",
+    images: [
+      "/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall.webp",
+    ],
+    sections: [
+      {
+        heading: "شاتو دو ورسای؛ جایی که داستان عشق شما آغاز می‌شود",
+        content:
+          "مراسم عقد و بله‌برون یکی از مراحل مهم در مسیر آغاز زندگی مشترک است. این مراسم‌ها نه تنها باید از لحاظ شرعی و سنتی برگزار شوند، بلکه باید به گونه‌ای باشند که خاطره‌ای ماندگار برای عروس و داماد و مهمانان‌شان ایجاد کنند.",
+        lists: [],
+      },
+      {
+        heading: "برگزاری مراسم عقد در سالن‌های لوکس شاتو دو ورسای",
+        content:
+          "مراسم عقد از مهم‌ترین بخش‌های ازدواج است و باید در فضایی مناسب و زیبا برگزار شود. شاتو دو ورسای با سالن‌هایی مجهز و طراحی شیک، فضای دلنشینی را برای برگزاری این مراسم فراهم کرده است.",
+        lists: [
+          "طراحی شیک و مدرن",
+          "نورپردازی مناسب و رمانتیک",
+          "امکانات کامل برای برگزاری مراسم عقد",
+        ],
+      },
+      {
+        heading: "پذیرایی و تشریفات مراسم عقد و بله‌برون",
+        content:
+          "پذیرایی از مهمانان یکی از بخش‌های حیاتی در هر مراسمی است. شاتو دو ورسای با ارائه منوی‌های متنوع شامل انواع نوشیدنی‌ها، دسرها و غذاهای لوکس، مهمانان شما را به بهترین شکل ممکن پذیرایی می‌کند.",
+        lists: [
+          "منوی غذایی لوکس و متنوع",
+          "پذیرایی با دسرهای مخصوص",
+          "تیم حرفه‌ای برای سرویس‌دهی به مهمانان",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title =
       "مراسم عقد و بله‌برون در شاتو دو ورسای: لحظاتی خاص برای آغاز زندگی مشترک";
@@ -17,15 +57,19 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall.webp"
                 width={4000}
                 height={4000}
                 alt="مراسم عقد و بله‌برون در شاتو دو ورسای"
-                className="rounded-lg shadow-lg w-full h-full"
+                className="rounded-lg shadow-lg w-full h-f
+                ull"
               />
             </div>
             <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
@@ -81,7 +125,7 @@ const Page = () => {
                       کلاسیک، ترکیبی از زیبایی و راحتی را به شما و مهمانان‌تان
                       ارائه می‌دهند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های سالن عقد:
                     </p>
                     <span>1 - طراحی شیک و مدرن</span>
@@ -113,7 +157,7 @@ const Page = () => {
                       نورپردازی مناسب، از جمله ویژگی‌های سفره عقد در این مجموعه
                       است.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black ">
                       ویژگی‌های سفره عقد:
                     </p>
                     <span>1 - استفاده از گل‌های طبیعی و تازه</span>
@@ -146,7 +190,7 @@ const Page = () => {
                       مجموعه به گونه‌ای است که محیطی گرم و دوستانه برای دو
                       خانواده ایجاد می‌کند تا این لحظه مهم به یاد ماندنی‌تر شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       ویژگی‌های مراسم بله‌برون:
                     </p>
                     <span>1 - فضای صمیمی و دوستانه برای خانواده‌ها</span>
@@ -177,7 +221,7 @@ const Page = () => {
                       شما و مهمانان‌تان فراهم می‌کند. این نورپردازی‌ها به ویژه
                       در شب، جلوه‌ای خاص به مراسم شما می‌بخشد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black ">
                       ویژگی‌های نورپردازی:
                     </p>
                     <span>1 - نورپردازی گرم و ملایم برای فضای عقد</span>
@@ -208,7 +252,7 @@ const Page = () => {
                       مراحل سرویس‌دهی را با دقت و حرفه‌ای‌گری انجام می‌دهد تا
                       شما و مهمانان‌تان تجربه‌ای بی‌نظیر داشته باشید.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black ">
                       ویژگی‌های پذیرایی:
                     </p>
                     <span>1 - منوی غذایی لوکس و متنوع</span>
@@ -245,7 +289,7 @@ const Page = () => {
                       فضای آرام و دلنشین این مجموعه، محیطی ایده‌آل برای برگزاری
                       مراسم‌های شما فراهم می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       چرا شاتو دو ورسای؟
                     </p>
                     <span>1 - سالن‌های لوکس و مجلل</span>
@@ -278,6 +322,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

@@ -2,8 +2,31 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "reception-wedding-guests";
+  const blogData = {
+    title: "چگونه از مهمانان خود در مراسم عروسی پذیرایی کنیم؟",
+    url: "/reception-wedding-guests",
+    images: ["/assets/images/6.webp"],
+    sections: [
+      {
+        heading: "با این نکات، پذیرایی مراسم عروسی خود را به یادماندنی کنید!",
+        content:
+          "با پذیرایی شایسته از مهمانان عروسی، لحظاتی خاطره‌انگیز بسازید! از منوی جذاب و نوشیدنی‌های خاص تا تزئینات چشم‌نواز و برنامه‌ریزی دقیق، همه چیز برای خلق یک جشن فراموش‌نشدنی مهیاست.",
+        lists: [
+          "انتخاب منوی غذایی متناسب با سلیقه مهمانان",
+          "نوشیدنی‌ها: از آبمیوه‌ها تا نوشیدنی‌های گرم",
+          "میان‌وعده‌های خوشمزه و متنوع",
+          "توجه به نیازهای خاص مهمانان",
+          "نحوه سرو غذا و نوشیدنی",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "چگونه از مهمانان خود در مراسم عروسی پذیرایی کنیم؟";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,6 +39,7 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
@@ -196,6 +220,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

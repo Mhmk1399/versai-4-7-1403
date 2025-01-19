@@ -2,8 +2,36 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "complete-guide-to-the-perfect-ceremony";
+  const blogData = {
+    title:
+      "چگونه بهترین تشریفات عروسی ارزان را پیدا کنیم؟ راهنمای کامل برای مراسم بی‌نقص",
+    url: "/complete-guide-to-the-perfect-ceremony",
+    images: ["/assets/images/155.webp"],
+    sections: [
+      {
+        heading: "چرا تشریفات عروسی ارزان؟",
+        content:
+          "ممکنه فکر کنی که تشریفات ارزان یعنی کیفیت پایین، ولی اینطور نیست. خیلی از خدمات تشریفات با قیمت مناسب هستن که هم کیفیت خوبی دارن و هم قیمت‌شون معقول‌تره. تشریفات مجالس خوب باید بتونه با بودجه تو هماهنگ باشه و همچنان اون حس لوکس و خاص بودن رو بهت بده.",
+        lists: ["مقایسه قیمت‌ها", "تخفیفات فصلی", "مشورت بگیر"],
+      },
+      {
+        heading: "اجاره تشریفات مجالس: چطور بهترین گزینه رو پیدا کنیم؟",
+        content:
+          "یه راه خیلی خوب برای کاهش هزینه‌ها اینه که تشریفات مجالس رو اجاره کنی. اجاره تشریفات مجالس مثل میز و صندلی روستیک می‌تونه هم شیک باشه و هم مقرون‌به‌صرفه.",
+      },
+      {
+        heading: "تشریفات توی باغ یا منزل؟",
+        content:
+          "یکی از بزرگترین تصمیم‌ها، انتخاب مکان برای مراسمه. تشریفات عروسی توی باغ یه حس خیلی لوکس و رویایی می‌ده، ولی تشریفات مجالس در منزل هم می‌تونه گزینه‌ای باشه که هزینه‌ها رو کمتر کنه و حس شخصی‌تری به مراسم بده.",
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "چگونه بهترین تشریفات عروسی ارزان را پیدا کنیم؟ ";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +44,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/155.webp"
                 width={4000}
@@ -95,13 +126,17 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">تخفیفات فصلی: </strong>
+                      <strong className="ml-2 text-black font-bold">
+                        تخفیفات فصلی:{" "}
+                      </strong>
                       بعضی تشریفات‌ها توی فصل‌های خاصی تخفیف دارن، حواست به این
                       تخفیف‌ها باشه تا هزینه‌هات کمتر بشه.
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-black font-bold">مشورت بگیر:</strong>
+                      <strong className="ml-2 text-black font-bold">
+                        مشورت بگیر:
+                      </strong>
                       از کسایی که قبلاً عروسی برگزار کردن یا آشنایی دارن، مشورت
                       بگیر تا بهترین گزینه رو انتخاب کنی.
                     </span>
@@ -204,6 +239,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

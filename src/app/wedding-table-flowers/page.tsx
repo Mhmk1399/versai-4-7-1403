@@ -2,8 +2,32 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "wedding-table-flowers";
+  const blogData = {
+    title: "چگونه گل‌های سفره عقد را با تم عروسی هماهنگ کنیم؟",
+    url: "/wedding-table-flowers",
+    images: ["/assets/images/201.webp"],
+    sections: [
+      {
+        heading: "ترفندهای شگفت‌انگیز برای هماهنگی گل‌های سفره عقد و تم عروسی",
+        content:
+          "گل‌ها یکی از مهم‌ترین عناصر در سفره عقد هستند که علاوه بر زیبایی، حس شادابی و زندگی را به مراسم می‌آورند. انتخاب درست گل‌ها و هماهنگی آن‌ها با تم عروسی می‌تواند تأثیر بسیاری بر فضای کلی مراسم داشته باشد.",
+        lists: [
+          "انتخاب رنگ گل‌ها بر اساس تم عروسی",
+          "انتخاب نوع گل‌ها بر اساس فصل برگزاری مراسم",
+          "استفاده از گل‌های مصنوعی یا طبیعی: مزایا و معایب",
+          "هماهنگی گل‌های سفره عقد با گل‌آرایی سالن",
+          "تزیین گل‌ها با سایر عناصر سفره عقد",
+          "ایده‌هایی برای تزیین گل‌ها در سفره عقد ساده و خانگی",
+          "نگهداری و آماده‌سازی گل‌ها قبل از مراسم",
+        ],
+      },
+    ],
+  };
   useEffect(() => {
     document.title = "  هماهنگی گل های سفره عقد با تم عروسی  ";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +40,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/201.webp"
                 width={4000}
@@ -345,6 +372,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

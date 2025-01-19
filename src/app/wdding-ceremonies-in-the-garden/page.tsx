@@ -2,8 +2,35 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "wdding-ceremonies-in-the-garden";
+  const blogData = {
+    title: "تشریفات مجالس عروسی در باغ: چگونه هزینه‌ها را کاهش دهیم؟",
+    url: "/wdding-ceremonies-in-the-garden",
+    images: ["/assets/images/photo_2024-11-16_14-04-15.webp"],
+    sections: [
+      {
+        heading:
+          "صرفه‌جویی در هزینه‌های عروسی در باغ – راهکارهای ساده و کاربردی",
+        content:
+          "عروسی یکی از مهم‌ترین و به‌یادماندنی‌ترین رویدادهای زندگی هر زوج است. اما برگزاری یک عروسی رویایی در باغ با تشریفات مجالس مناسب، ممکن است هزینه‌های بالایی داشته باشد.",
+        lists: [
+          "انتخاب باغ مناسب با هزینه‌های معقول",
+          "استفاده از تزئینات ساده و جذاب",
+          "اجاره میز و صندلی روستیک",
+          "تشریفات مجالس حرفه‌ای و اقتصادی",
+          "استفاده از خدمات غذا و پذیرایی با کیفیت",
+          "مدیریت تعداد مهمانان",
+          "انتخاب زمان مناسب برای برگزاری عروسی",
+          "انتخاب موسیقی و سرگرمی مناسب",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "تشریفات مجالس عروسی در باغ: چگونه هزینه‌ها را کاهش دهیم؟";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +43,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/photo_2024-11-16_14-04-15.webp"
                 width={4000}
@@ -272,6 +302,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

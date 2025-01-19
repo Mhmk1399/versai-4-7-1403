@@ -2,8 +2,36 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "ten-things-to-consider";
+  const blogData = {
+    title: "۱۰ نکته مهم در زمان رزرو تالار عروسی",
+    url: "/ten-things-to-consider",
+    images: ["/assets/images/photo_2024-11-06_11-07-32.webp"],
+    sections: [
+      {
+        heading: "قبل از رزرو تالار عروسی این ۱۰ نکته مهم را بدانید!",
+        content:
+          "در زمان برنامه‌ریزی عروسی، انتخاب و رزرو تالار مناسب یکی از مهم‌ترین بخش‌های مراسم است که می‌تواند تأثیر زیادی بر تجربه مهمانان و خاطرات زوج‌ها داشته باشد.",
+        lists: [
+          "تعیین بودجه",
+          "بررسی تاریخ‌ها",
+          "جستجوی محل",
+          "گنجایش تالار",
+          "بررسی امکانات",
+          "تخفیف‌ها و پیشنهادات ویژه",
+          "سرویس‌دهی و نظافت",
+          "گواهی‌ها و مجوزها",
+          "بررسی نقد و نظرات",
+          "برقراری ارتباط با مدیریت",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = " ۱۰ نکته مهم در زمان رزرو تالار عروسی";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,9 +44,12 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/photo_2024-11-06_11-07-32.webp"
                 width={4000}
@@ -252,6 +283,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

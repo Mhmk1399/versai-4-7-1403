@@ -2,8 +2,42 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "best-ways-to-rent-ceremonies";
+  const blogData = {
+    title: "بهترین راه‌های اجاره تشریفات مجالس با قیمت مناسب و خدمات ویژه",
+    url: "/best-ways-to-rent-ceremonies",
+    images: ["/assets/images/170.webp"],
+    sections: [
+      {
+        heading:
+          "بهترین راهکارها برای اجاره تشریفات مجالس با خدمات خاص و قیمت مناسب",
+        content:
+          "برگزاری مراسم عروسی یکی از مهم‌ترین رویدادهای زندگی هر زوج است. با این حال، مدیریت هزینه‌های آن می‌تواند چالش‌برانگیز باشد...",
+        lists: [
+          "چگونه بهترین تشریفات مجالس را انتخاب کنیم؟",
+          "بررسی خدمات ویژه تشریفات مجالس",
+          "انتخاب باغ تالار یا تالار",
+          "اجاره میز و صندلی روستیک: اقتصادی و شیک",
+          "برگزاری مجالس در باغ: زیبایی در کنار بودجه‌مندی",
+          "اجاره تشریفات مجالس برای مجالس خانگی",
+          "نکاتی برای کاهش هزینه‌های تشریفات عروسی",
+          "انتخاب بهترین اسم برای تشریفات مجالس",
+          "موسیقی و سرگرمی برای مراسم عروسی",
+          "اجاره سالن عقد و بله برون",
+        ],
+      },
+      {
+        heading: "نتیجه‌گیری: عروسی شیک با تشریفات اقتصادی",
+        content:
+          "با کمی برنامه‌ریزی و انتخاب هوشمندانه، می‌توانید یک عروسی شیک و زیبا با تشریفات مجالس اقتصادی برگزار کنید...",
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title =
       "بهترین راه‌های اجاره تشریفات مجالس با قیمت مناسب و خدمات ویژه";
@@ -17,6 +51,7 @@ const Page = () => {
   }, []);
   return (
     <>
+      <BlogSchema blogData={blogData} />
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
           <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
@@ -323,6 +358,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };
