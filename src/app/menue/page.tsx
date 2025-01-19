@@ -5,6 +5,7 @@ import Image from "next/image";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import { motion } from "framer-motion";
 import { BlogSchema } from "../../../components/schema/blogSchema";
+import { Loader } from "../../../components/(ui)/loader";
 import Banner1 from "../../../public/assets/images/131.webp";
 import Banner2 from "../../../public/assets/images/132.webp";
 import Banner3 from "../../../public/assets/images/133.webp";
@@ -31,54 +32,7 @@ interface FoodItem {
 }
 
 const Page = () => {
-  const blogData = {
-    title: "منوی غذایی و پکیج های پذیرایی شاتو دو ورسای",
-    url: "/menue",
-    images: [
-      "/assets/images/131.webp",
-      "/assets/images/132.webp",
-      "/assets/images/133.webp",
-    ],
-    sections: [
-      {
-        heading: "پکیج های متنوع پذیرایی در تالار شاتو دو ورسای",
-        content:
-          "ما در ورسای سعی کردیم با ارائه کردن هفت پکیج مختلف از غذا ها و میان وعده های متفاوت حداکثر رضایت شما را به دست بیاوریم. تمام منو ها قابل تغییر می باشند و شما می توانید بر اساس سلیقه و بودجه خود بهترین گزینه را انتخاب کنید.",
-        lists: [
-          "پکیج VIP با لوکس‌ترین خدمات",
-          "پکیج طلایی با خدمات ویژه",
-          "پکیج نقره‌ای با خدمات درجه یک",
-          "پکیج برنزی با خدمات استاندارد",
-          "سرویس مجلل با پذیرایی خاص",
-          "سرویس ویژه با پذیرایی منحصر به فرد",
-          "سرویس کلاسیک با پذیرایی اصیل",
-        ],
-      },
-      {
-        heading: "تنوع غذایی و خدمات پذیرایی",
-        content:
-          "در هر پکیج، مجموعه کاملی از خدمات پذیرایی شامل غذای اصلی، پیش غذا، دسر، نوشیدنی و میان وعده ارائه می‌شود. تمامی غذاها با بهترین مواد اولیه و توسط سرآشپزهای مجرب تهیه می‌شوند.",
-        lists: [
-          "غذاهای اصلی متنوع و با کیفیت",
-          "پیش غذاها و سالادهای متنوع",
-          "دسرهای لوکس و خوشمزه",
-          "نوشیدنی‌های گرم و سرد",
-          "میان وعده‌های لذیذ",
-        ],
-      },
-    ],
-  };
-
-  useEffect(() => {
-    document.title = "منوی تالار شاتو دو ورسای";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        " ما در ورسای سعی کردیم با ارائه کردن هفت پکیج مختلف از غذا ها و میان وعده های متفاوت حداکثر رضایت شما را به دست بیاوریم"
-      );
-    }
-  }, []);
+  const [loader, setLoader] = useState(true);
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [gustes, setGustes] = useState("");
@@ -96,6 +50,17 @@ const Page = () => {
   const [message, setMessage] = useState("");
   const [selectedFood, setSelectedFood] = useState<FoodItem>();
   const [expandedBanner, setExpandedBanner] = useState<number | null>(null);
+
+  useEffect(() => {
+    document.title = "منوی تالار شاتو دو ورسای";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content",
+        " ما در ورسای سعی کردیم با ارائه کردن هفت پکیج مختلف از غذا ها و میان وعده های متفاوت حداکثر رضایت شما را به دست بیاوریم"
+      );
+    }
+  }, []);
 
   const Banners = [
     { img: Banner1, title: "پکیج VIP", desc: "لوکس‌ترین خدمات" },
@@ -937,6 +902,56 @@ const Page = () => {
       setMessage("Error submitting form");
     }
   };
+
+  const blogData = {
+    title: "منوی غذایی و پکیج های پذیرایی شاتو دو ورسای",
+    url: "/menue",
+    images: [
+      "/assets/images/131.webp",
+      "/assets/images/132.webp",
+      "/assets/images/133.webp",
+    ],
+    sections: [
+      {
+        heading: "پکیج های متنوع پذیرایی در تالار شاتو دو ورسای",
+        content:
+          "ما در ورسای سعی کردیم با ارائه کردن هفت پکیج مختلف از غذا ها و میان وعده های متفاوت حداکثر رضایت شما را به دست بیاوریم. تمام منو ها قابل تغییر می باشند و شما می توانید بر اساس سلیقه و بودجه خود بهترین گزینه را انتخاب کنید.",
+        lists: [
+          "پکیج VIP با لوکس‌ترین خدمات",
+          "پکیج طلایی با خدمات ویژه",
+          "پکیج نقره‌ای با خدمات درجه یک",
+          "پکیج برنزی با خدمات استاندارد",
+          "سرویس مجلل با پذیرایی خاص",
+          "سرویس ویژه با پذیرایی منحصر به فرد",
+          "سرویس کلاسیک با پذیرایی اصیل",
+        ],
+      },
+      {
+        heading: "تنوع غذایی و خدمات پذیرایی",
+        content:
+          "در هر پکیج، مجموعه کاملی از خدمات پذیرایی شامل غذای اصلی، پیش غذا، دسر، نوشیدنی و میان وعده ارائه می‌شود. تمامی غذاها با بهترین مواد اولیه و توسط سرآشپزهای مجرب تهیه می‌شوند.",
+        lists: [
+          "غذاهای اصلی متنوع و با کیفیت",
+          "پیش غذاها و سالادهای متنوع",
+          "دسرهای لوکس و خوشمزه",
+          "نوشیدنی‌های گرم و سرد",
+          "میان وعده‌های لذیذ",
+        ],
+      },
+    ],
+  };
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 5000);
+  }, []);
+  if (loader) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Loader />
+      </div>
+    );
+  }
 
   return (
     <>
