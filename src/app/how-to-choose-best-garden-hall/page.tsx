@@ -3,8 +3,10 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { BlogSchema } from "../../../components/schema/blogSchema";
+import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "how-to-choose-best-garden-hall"
   const blogData = {
     title: "چگونه بهترین باغ تالار را برای عروسی خود انتخاب کنیم؟",
     url: "/how-to-choose-best-garden-hall",
@@ -35,10 +37,9 @@ const Page = () => {
     <>
       <BlogSchema blogData={blogData} />
 
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/blog12hero.webp"
                 width={4000}
@@ -47,7 +48,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -55,7 +56,7 @@ const Page = () => {
                 راهنمای طلایی برای انتخاب بهترین باغ تالار عروسی
               </h1>
               <p id="contentDiscription" className="text-regular mx-auto mt-2">
-                <span className="h2-blog-header font-bold mb-3 text-2xl">
+                <span className="text-black font-bold mb-3 text-2xl">
                   مقدمه
                 </span>
                 <br />
@@ -70,19 +71,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   چگونه باغ تالار مناسب برای عروسی خود را بدون استرس پیدا کنیم؟
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     چطور باغ تالار ایده‌آل عروسیتان را پیدا کنید؟
                   </span>
 
@@ -99,7 +100,7 @@ const Page = () => {
                       محیطی منحصربه‌فرد و طراحی‌های مدرن، همه این موارد را در
                       اختیار شما قرار می‌دهد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       نکات مهم:
                     </p>
                     <span>1 - فضای بزرگ و دلنشین</span>
@@ -110,7 +111,7 @@ const Page = () => {
                     <br />
                     <span>4 - موقعیت جغرافیایی مناسب</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/blog12.webp"
                       width={2000}
@@ -132,7 +133,7 @@ const Page = () => {
                       که برای این امر در نظر گرفته‌اید، باشد. شاتو دو ورسای
                       تمامی این امکانات را با توجه به نیازهای شما فراهم می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       نکات قابل توجه:
                     </p>
                     <span>1 - زمان‌بندی مناسب برای رزرو</span>
@@ -141,7 +142,7 @@ const Page = () => {
                     <br />
                     <span>3 - بودجه‌بندی بر اساس خدمات ارائه شده</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/bloog12.webp"
                       width={2000}
@@ -163,7 +164,7 @@ const Page = () => {
                       مکان هر آنچه که برای یک عروسی باشکوه نیاز دارید را در
                       اختیار شما می‌گذارد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       امکانات ویژه:
                     </p>
                     <span>1 - نورپردازی حرفه‌ای و مدرن</span>
@@ -172,7 +173,7 @@ const Page = () => {
                     <br />
                     <span>3 - تیم تشریفاتی حرفه‌ای</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/Self-service-fish-soup-in-the-international-menu-of-the-Chateau-de-Versailles-luxury-hall-garden.webp"
                       width={4000}
@@ -193,7 +194,7 @@ const Page = () => {
                       گرفته تا نحوه چیدمان میزها، همه چیز بر اساس خواست شما
                       انجام می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       پیشنهادات:
                     </p>
                     <span>1 - انتخاب گل‌های تازه و زیبا برای تزیین</span>
@@ -202,7 +203,7 @@ const Page = () => {
                     <br />
                     <span>3 - استفاده از تم‌های مختلف برای مراسم</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/food-normal-services.webp"
                       width={4000}
@@ -223,7 +224,7 @@ const Page = () => {
                       جلوه‌ای ویژه به عروسی شما می‌بخشد، بلکه لحظات خاطره‌انگیزی
                       را برای شما و مهمانان‌تان رقم خواهد زد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       مزایای فضای باز:
                     </p>
                     <span>1 - عکاسی زیبا در طبیعت</span>
@@ -233,12 +234,12 @@ const Page = () => {
                     <span>3 - استفاده از نور طبیعی برای خلق لحظات ماندگار</span>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/VAG_2040.webp"
                       width={4000}
@@ -258,7 +259,7 @@ const Page = () => {
                       کرده‌اند، تجربه‌های خود را به اشتراک گذاشته‌اند و از خدمات
                       بی‌نظیر این مجموعه تعریف کرده‌اند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       نظرات عروس‌ها:
                     </p>
                     <span>1 - همه چیز بی‌نقص بود، از تزیینات تا خدمات!</span>
@@ -271,7 +272,7 @@ const Page = () => {
                       3 - فضای باز تالار و گل‌آرایی‌ها فوق‌العاده بود.
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/khadamat3.webp"
                       width={4000}
@@ -294,7 +295,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>
@@ -304,6 +305,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

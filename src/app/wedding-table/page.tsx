@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/180.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -45,19 +44,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   تزیینات سفره عقد: چگونه مراسم خود را ماندگار کنید؟
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     راهنمای جامع چیدمان سفره عقد رویایی{" "}
                   </span>
 
@@ -73,13 +72,13 @@ const Page = () => {
                       مهم‌ترین اجزای سفره عقد اشاره می‌کنیم.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">1 - قرآن کریم: </span>
+                    <span className="font-bold text-lg text-black">1 - قرآن کریم: </span>
                     <p>
                       به‌عنوان نماد هدایت و برکت در زندگی، قرآن کریم همیشه در
                       مرکز سفره عقد قرار می‌گیرد. تزیین قرآن با پارچه‌های زیبا و
                       جواهرات به جذابیت سفره می‌افزاید.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - آینه و شمعدان:
                     </span>
                     <br />
@@ -88,7 +87,7 @@ const Page = () => {
                       شمعدان‌ها نیز به عنوان نمادی از نور و گرمای عشق در سفره
                       قرار می‌گیرند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       3 - نان، پنیر و سبزی:
                     </span>
                     <p>
@@ -96,7 +95,7 @@ const Page = () => {
                       کنار دیگر اجزای سفره قرار داده می‌شوند.
                     </p>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/181.webp"
                       width={2000}
@@ -111,7 +110,7 @@ const Page = () => {
                       ۲. تزیین سفره عقد: ایده‌های خلاقانه و مدرن
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - تزیین با گل‌های طبیعی:{" "}
                     </span>
                     <p>
@@ -120,7 +119,7 @@ const Page = () => {
                       زیبایی بیشتری به سفره بدهد. برای مثال، گل‌های سفید مانند
                       رز و لیلیوم با تم‌های کلاسیک سفید و طلایی هماهنگ هستند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - استفاده از ظروف کریستالی و شیشه‌ای:
                     </span>
                     <br />
@@ -129,7 +128,7 @@ const Page = () => {
                       کریستالی و شیشه‌ای براق به‌همراه نورپردازی مناسب، می‌تواند
                       جلوه‌ای خاص به سفره عقد بدهد.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       3 - چیدمان مدرن و مینیمال:
                     </span>
                     <p>
@@ -138,7 +137,7 @@ const Page = () => {
                     </p>
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/182.webp"
                       width={2000}
@@ -160,7 +159,7 @@ const Page = () => {
                       هماهنگ باشد.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - سالن عقد ترمه:{" "}
                     </span>
                     <p>
@@ -170,7 +169,7 @@ const Page = () => {
                       می‌توان از چیدمان‌های لاکچری و تزیینات مجلل برای سفره عقد
                       استفاده کرد.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - استفاده از فضای باز یا بسته:
                     </span>
                     <br />
@@ -196,7 +195,7 @@ const Page = () => {
                       حنابندان نشان‌دهنده پیوند سنت‌ها و آئین‌های ایرانی است.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - اقلام سفره حنابندان:{" "}
                     </span>
                     <p>
@@ -205,7 +204,7 @@ const Page = () => {
                       هستند. این سفره معمولاً رنگارنگ‌تر از سفره عقد است و
                       تزیینات آن با رنگ‌های شاد و پر انرژی انجام می‌شود.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - تزیین مشترک سفره عقد و حنابندان:
                     </span>
                     <br />
@@ -216,7 +215,7 @@ const Page = () => {
                       می‌شود.
                     </p>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/183.webp"
                       width={4000}
@@ -237,7 +236,7 @@ const Page = () => {
                       مجلل باشد.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - سفره عروس ساده و شیک:{" "}
                     </span>
                     <p>
@@ -246,7 +245,7 @@ const Page = () => {
                       می‌تواند گزینه مناسبی باشد. این نوع سفره‌ها حس لطافت و
                       پاکی را به نمایش می‌گذارند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - سفره عروس لاکچری:
                     </span>
                     <br />
@@ -257,7 +256,7 @@ const Page = () => {
                     </p>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
@@ -288,7 +287,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

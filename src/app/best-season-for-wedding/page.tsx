@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/210.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -46,19 +45,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   چه فصلی برای عروسی شما بهترین است؟ بررسی مزایا و معایب هر فصل
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     عروسی در چه فصلی باشکوه‌تر می‌شود؟
                   </span>
 
@@ -74,7 +73,7 @@ const Page = () => {
                       برای عروسی‌ها فراهم می‌کند.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - مزایا و نکات مهم:
                     </span>
                     <p>
@@ -83,7 +82,7 @@ const Page = () => {
                       از گل‌های بهاری مثل رز و لاله می‌تواند زیبایی خاصی به
                       مراسم ببخشد.
                     </p>
-                    <span className="font-bold text-gold">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
                     <br />
                     <p>
                       ممکن است به دلیل تغییرات جوی، بارندگی‌هایی رخ دهد،
@@ -92,7 +91,7 @@ const Page = () => {
                     </p>
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/spring.webp"
                       width={2000}
@@ -114,7 +113,7 @@ const Page = () => {
                       خاصی دارد.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - مزایا و نکات مهم:
                     </span>
                     <p>
@@ -122,7 +121,7 @@ const Page = () => {
                       تجربه‌ای دل‌پذیر را فراهم می‌کند. نورپردازی‌های خاص در باغ
                       تالار نیز در این فصل می‌تواند به زیبایی مراسم اضافه کند.
                     </p>
-                    <span className="font-bold text-gold">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
                     <br />
                     <p>
                       برای جلوگیری از گرمای بیش از حد، بهتر است برای مهمانان
@@ -132,7 +131,7 @@ const Page = () => {
 
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/170.webp"
                       width={2000}
@@ -154,7 +153,7 @@ const Page = () => {
                       برای مراسم فراهم می‌کند.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - مزایا و نکات مهم:
                     </span>
                     <p>
@@ -163,7 +162,7 @@ const Page = () => {
                       تزیینات استفاده کنید و فضایی رمانتیک برای مراسم خود ایجاد
                       کنید.
                     </p>
-                    <span className="font-bold text-gold">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
                     <br />
                     <p>
                       در پاییز هوا ممکن است خنک‌تر باشد، بنابراین برای مراسم در
@@ -186,7 +185,7 @@ const Page = () => {
                       خاص و رویایی تبدیل کند.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - مزایا و نکات مهم:
                     </span>
                     <p>
@@ -196,7 +195,7 @@ const Page = () => {
                       زمستانی مثل شمع‌ها و کریستال‌ها جلوه‌ای لوکس به مراسم
                       می‌دهد.
                     </p>
-                    <span className="font-bold text-gold">2 - نکات کلیدی:</span>
+                    <span className="font-bold text-lg text-black">2 - نکات کلیدی:</span>
                     <br />
                     <p>
                       سرمای هوا ممکن است چالشی باشد، بنابراین حتماً مطمئن شوید
@@ -205,7 +204,7 @@ const Page = () => {
 
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/winter.webp"
                       width={4000}
@@ -228,7 +227,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

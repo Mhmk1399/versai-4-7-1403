@@ -2,8 +2,53 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BlogSchema } from "../../../../components/schema/blogSchema";
+import CommentBox from "../../../../components/commentBox";
 
 const Page = () => {
+  const blogId = "tehran-wedding-hall";
+  const blogData = {
+    title:
+      "بهترین تالار عروسی در شهر تهران: جشن رویایی خود را اینجا برگزار کنید",
+    url: "/tehran-wedding-hall",
+    images: ["/assets/images/S__00512.webp"],
+    sections: [
+      {
+        heading:
+          "تالار عروسی با دکوراسیون لوکس: رویاهای شما در اینجا واقعی می‌شوند",
+        content:
+          "مراسم عروسی یکی از مهم‌ترین و به‌یادماندنی‌ترین روزهای زندگی هر فرد است. انتخاب یک تالار عروسی مناسب در تهران می‌تواند تأثیر بزرگی بر کیفیت و شکوه این مراسم داشته باشد.",
+        lists: [
+          "دکوراسیون مدرن و شیک",
+          "فضای وسیع و مجلل",
+          "گل‌آرایی حرفه‌ای",
+          "مبلمان راحت و لوکس",
+          "پذیرایی ویژه",
+        ],
+      },
+      {
+        heading: "اجرای موسیقی زنده در تالار عروسی ورسای",
+        content:
+          "تالار عروسی ورسای یکی از لوکس‌ترین و مجلل‌ترین تالارها در ایران است که برای برگزاری مراسم عروسی و رویدادهای ویژه شهر برگزار می‌شود.",
+        lists: [
+          "هماهنگی با برنامه‌ریزی مراسم",
+          "کیفیت سیستم صوتی",
+          "تعامل با مهمانان",
+        ],
+      },
+      {
+        heading: "قیمت تالار عروسی",
+        content: "قیمت تالار عروسی به عوامل زیادی بستگی دارد.",
+        lists: [
+          "تعداد مهمان‌ها",
+          "امکانات و دکوراسیون",
+          "منوی پذیرایی",
+          "زمان برگزاری مراسم",
+        ],
+      },
+    ],
+  };
+
   useEffect(() => {
     document.title = "تالار ورسای انتخابی عالی برای عروسی های فرانسوی";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,10 +61,11 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <BlogSchema blogData={blogData} />
+      <div className=" grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2  rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5  rounded-lg">
               <Image
                 src="/assets/images/S__00512.webp"
                 width={4000}
@@ -28,7 +74,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5  rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -37,7 +83,7 @@ const Page = () => {
                 کنید
               </h1>
               <p id="contentDiscription" className="text-regular mx-auto mt-2">
-                <b className="h2-blog-header">
+                <b className="text-black font-bold">
                   مراسم عروسی یکی از مهم‌ترین و به‌یادماندنی‌ترین روزهای زندگی
                   هر فرد است.
                 </b>
@@ -49,8 +95,8 @@ const Page = () => {
                 بررسی نکات کلیدی برای انتخاب تالار عروسی در تهران و معرفی بهترین
                 تالار می‌پردازیم.
               </p>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   تالار عروسی با دکوراسیون لوکس: رویاهای شما در اینجا واقعی
                   می‌شوند
                 </h2>
@@ -76,7 +122,7 @@ const Page = () => {
                       تبدیل کرده است.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/hall-bad-3.webp"
                       width={4000}
@@ -99,7 +145,7 @@ const Page = () => {
                       مترمربع آماده پذیرایی از جشن های شما عزیزان می باشد.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/S__00448.webp"
                       width={4000}
@@ -121,7 +167,7 @@ const Page = () => {
                       کنیم که جذابیت و شکوه شما را دوچندان بکند.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/garden-good-1.webp"
                       width={4000}
@@ -144,7 +190,7 @@ const Page = () => {
                       احساس راحتی و آرامش را برای مهمانان شما به ارمغان می‌آورد.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/hall-normal-1.webp"
                       width={4000}
@@ -169,12 +215,12 @@ const Page = () => {
                     </span>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه{" "}
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/S__00782.webp"
                       width={4000}
@@ -192,20 +238,20 @@ const Page = () => {
                 </ol>
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>
               </div>
               <hr />
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
                 <h3
                   className="text-2xl font-bold mx-auto h1-blog-header"
                   id="contetTitle"
                 >
                   اجرای موسیقی زنده در تالار عروسی ورسای
                 </h3>
-                <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                   <Image
                     width={4000}
                     height={4000}
@@ -232,7 +278,7 @@ const Page = () => {
                 </h4>
                 <ul>
                   <li className="text-regular mt-3">
-                    <span className="h2-blog-header text-xl font-bold">
+                    <span className="text-black font-bold text-xl font-bold">
                       هماهنگی با برنامه‌ریزی مراسم :
                     </span>
                     <br />
@@ -243,7 +289,7 @@ const Page = () => {
                     </span>
                   </li>
                   <li className="text-regular mt-3">
-                    <span className="h2-blog-header text-xl font-bold">
+                    <span className="text-black font-bold text-xl font-bold">
                       کیفیت سیستم صوتی :
                     </span>
                     <br />
@@ -254,7 +300,7 @@ const Page = () => {
                     </span>
                   </li>
                   <li className="text-regular mt-3">
-                    <span className="h2-blog-header text-xl font-bold">
+                    <span className="text-black font-bold text-xl font-bold">
                       با مهمانان :
                     </span>{" "}
                     <br />
@@ -266,11 +312,11 @@ const Page = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
                 <h2 className="text-2xl font-bold mx-auto h1-blog-header">
                   قیمت تالار عروسی
                 </h2>
-                <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                   <Image
                     width={4000}
                     height={4000}
@@ -357,7 +403,7 @@ const Page = () => {
                   </p>
                 </ul>
                 <Link href="/menue">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn md:py-2  md:px-4 sm:py-1 px-2.5 sm:px-2 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className="bg-green  text-white py-2 hover-btn md:py-2  md:px-4 sm:py-1 px-2.5 sm:px-2 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
                     برای دریافت و استعلام قیمت کلیک کنید.
                   </button>
                 </Link>
@@ -366,6 +412,7 @@ const Page = () => {
           </div>
         </div>
       </div>
+      <CommentBox blogId={blogId} />
     </>
   );
 };

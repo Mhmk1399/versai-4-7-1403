@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/190.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -47,19 +46,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   الهام از سنت برای خلق سفره عقد مدرن و زیبا
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     چگونه یک سفره عقد رؤیایی و اصیل بچینیم؟
                   </span>
 
@@ -77,7 +76,7 @@ const Page = () => {
                       است.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - چیدمان سنتی با تم سفید و طلایی:{" "}
                     </span>
                     <p>
@@ -86,7 +85,7 @@ const Page = () => {
                       مراسم می‌بخشند و همچنین هماهنگی خوبی با بسیاری از سالن‌های
                       عقد نظیر سالن عقد ترمه دارند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - تم کریستالی و لاکچری:
                     </span>
                     <br />
@@ -96,7 +95,7 @@ const Page = () => {
                       نورپردازی مناسب و انتخاب درست ظروف شیشه‌ای و براق، زیبایی
                       و جذابیت خاصی به فضا می‌بخشد.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       3 - ترکیب رنگ‌های طبیعی با تم مدرن:
                     </span>
                     <p>
@@ -106,7 +105,7 @@ const Page = () => {
                       که سفره عقد به‌روز و جذاب به‌نظر برسد.
                     </p>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/191.webp"
                       width={2000}
@@ -129,7 +128,7 @@ const Page = () => {
                       تا بتوانند از اقلام متنوع و زیبا برای تزیین استفاده کنند.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - قرآن و آینه: نماد روشنایی و هدایت:
                     </span>
                     <p>
@@ -138,7 +137,7 @@ const Page = () => {
                       عقد با آینه‌های نقره‌ای و کریستالی می‌تواند ظاهری شیک و
                       مدرن به سفره ببخشد.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - سبد نان و سبزی: نشانه‌ی برکت و سرسبزی:
                     </span>
                     <br />
@@ -147,7 +146,7 @@ const Page = () => {
                       دیده می‌شوند. برای تزیین این بخش می‌توان از گل‌های طبیعی
                       استفاده کرد تا با دیگر بخش‌های سفره هماهنگ باشد.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       3 - تخم‌مرغ: نماد تولد و زندگی جدید:
                     </span>
                     <p>
@@ -158,7 +157,7 @@ const Page = () => {
                     </p>
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/192.webp"
                       width={2000}
@@ -182,7 +181,7 @@ const Page = () => {
                       دوستداران فرهنگ و هنر ایرانی باشد.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - سفره عقد ساده و شیک با استفاده از گل‌های طبیعی:
                     </span>
                     <p>
@@ -190,7 +189,7 @@ const Page = () => {
                       هستند. استفاده از گل‌های سفید مانند رز و لیلیوم می‌تواند
                       به سادگی و شیکی سفره بیفزاید.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - تزیین سفره عقد با عناصر چوبی و بامبو:
                     </span>
                     <br />
@@ -199,7 +198,7 @@ const Page = () => {
                       بامبو استفاده کرد. این عناصر باعث می‌شوند که سفره عقد حس
                       گرما و صمیمیت را به مهمانان منتقل کند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       3 - سفره عقد خانگی با وسایل دست‌ساز:
                     </span>
                     <br />
@@ -225,7 +224,7 @@ const Page = () => {
                       سفره عقد ساده و شیک استفاده شود.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - چیدمان سفره عقد در فضای باز:
                     </span>
                     <p>
@@ -234,7 +233,7 @@ const Page = () => {
                       گیاهان طبیعی که با محیط هماهنگ باشند، به زیبایی هرچه بیشتر
                       مراسم کمک می‌کند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - سفره عقد در سالن‌های مجلل و لاکچری:
                     </span>
                     <br />
@@ -244,7 +243,7 @@ const Page = () => {
                       شیشه‌ای مناسب است. انتخاب ظروف بزرگ و براق همراه با
                       نورپردازی حرفه‌ای، به شکوه مراسم می‌افزاید.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       3 - سفره عقد آریایی در مراسم سنتی:
                     </span>
                     <br />
@@ -254,7 +253,7 @@ const Page = () => {
                       می‌تواند جذابیت ویژه‌ای به مراسم ببخشد.
                     </p>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/183.webp"
                       width={4000}
@@ -277,7 +276,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

@@ -31,7 +31,7 @@ const FormsPage = () => {
         <div className="container mx-auto px-4 py-8">
             <h1 className="text-3xl font-semibold mb-6">لیست مخاطبین</h1>
             <div className="overflow-x-auto">
-                <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
+                <table className="min-w-full   border border-gray-200 rounded-lg shadow-md">
                     <thead>
                         <tr className="bg-gray-100 text-gray-700 uppercase text-sm leading-normal">
                             <th className="py-3 px-6 text-left">نام مشتری</th>

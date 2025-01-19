@@ -902,7 +902,7 @@ const Page = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen bg-white p-8">
+    <div className="flex flex-col justify-center items-center min-h-screen  p-8">
       <div className=" rounded-lg  p-4 flex justify-around items-center flex-wrap gap-4 mx-auto mb-4 text-center text-green">
         <h1 className="text-2xl font-bold  text-green text-center mx-auto ">
           منوی غذا ها و خدمات شاتو دو ورسای
@@ -1036,135 +1036,122 @@ const Page = () => {
         </h1>
       </div>
 
-      <div className="w-auto sm:w-full max-w-3xl bg-white/50 rounded-lg shadow-lg px-8 text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center my-6">
+      <div className="w-auto sm:w-full max-w-5xl bg-white/50 backdrop-blur-md rounded-xl shadow-2xl px-8 text-center">
+        <h2 className="text-xl md:text-3xl font-semibold text-gray-800 text-center my-6">
           درخواست قیمت و رزرو زمان بازدید
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-6 ">
-          {/* Name */}
-          <div className="mt-8">
-            <label className="block text-xl font-bold text-black mb-4">
-              نام و نام خانوادگی
-            </label>
-            <input
-              type="text"
-              value={name}
-              onChange={handleNameChange}
-              className="mt-1 block w-full rounded-md shadow-lg focus:outline-none focus:border-b-2 border-green sm:text-sm py-3 text-end px-2"
-              placeholder="نام خود را وارد کنید"
-            />
+        <form
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
+          {/* Name & Phone Section */}
+          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-2">
+              <label className="block text-base lg:text-xl font-bold text-black">
+                شماره تماس
+              </label>
+              <input
+                type="text"
+                value={phoneNumber}
+                onChange={handlePhoneNumberChange}
+                className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green/50 border-none sm:text-sm py-3 text-end px-4"
+                placeholder="شماره تماس خود را وارد کنید"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="block text-base lg:text-xl font-bold text-black">
+                نام و نام خانوادگی
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={handleNameChange}
+                className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green border-none sm:text-sm py-3 text-end px-4"
+                placeholder="نام خود را وارد کنید"
+              />
+            </div>
           </div>
 
-          {/* Phone Number */}
-          <div>
-            <label className="block text-xl font-bold text-black mb-4">
-              شماره تماس
-            </label>
-            <input
-              type="text"
-              value={phoneNumber}
-              onChange={handlePhoneNumberChange}
-              className="mt-1 block w-full rounded-md shadow-lg focus:outline-none focus:border-b-2 border-green sm:text-sm py-3 text-end px-2"
-              placeholder="شماره تماس خود را وارد کنید"
-            />
+          {/* Guests & Menu Section */}
+          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 border-b border-gray-600 pb-4">
+            <div className="space-y-2">
+              <label className="block text-base lg:text-xl font-bold text-black">
+                تعداد مهمان‌ها
+              </label>
+              <input
+                type="number"
+                value={gustes}
+                onChange={handleGustesChange}
+                className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green/50 border-none sm:text-sm py-3 text-end px-4"
+                placeholder="تعداد مهمان‌ها را وارد کنید"
+              />
+            </div>
+            <div className="space-y-2" dir="rtl">
+              <label className="block text-xl font-bold text-black">منو</label>
+              <select
+                value={menue}
+                onChange={handleMenueChange}
+                className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green/50 border-none sm:text-sm py-3 text-right px-4"
+              >
+                <option value="" disabled>
+                  انتخاب منو
+                </option>
+                <option value="دیس پرس سیلور">دیس پرس سیلور</option>
+                <option value="دیس پرس گلد">دیس پرس گلد</option>
+                <option value="دیس پرس VIP">دیس پرس VIP</option>
+                <option value="سلف سیلور">سلف سیلور</option>
+                <option value="سلف گلد">سلف گلد</option>
+                <option value="سلف VIP">سلف VIP</option>
+              </select>
+            </div>
           </div>
 
-          {/* Guests */}
-          <div>
-            <label className="block text-xl font-bold text-black mb-4">
-              تعداد مهمان‌ها
-            </label>
-            <input
-              type="number"
-              value={gustes}
-              onChange={handleGustesChange}
-              className="mt-1 block w-full rounded-md shadow-lg focus:outline-none focus:border-b-2 border-green sm:text-sm py-3 text-end px-2"
-              placeholder="تعداد مهمان‌ها را وارد کنید"
-            />
-          </div>
-
-          {/* Wedding Date */}
-          <div className="flex flex-col justify-center items-center">
-            <label className="block text-xl font-bold text-black mb-4">
-              تاریخ عروسی
-            </label>
-            <Calendar
-              value={weddingdate}
-              onChange={handleWeddingdateChange}
-              shouldHighlightWeekends
-              locale="fa"
-              calendarClassName="custom-calendar w-full"
-              colorPrimary="#9c27b0"
-              colorPrimaryLight="#f3e5f5"
-            />
-          </div>
-
-          {/* Reserved Date */}
-          <div className="flex flex-col justify-center items-center">
-            <label className="block text-xl font-bold text-black mb-4">
-              تاریخ رزرو بازدید
-            </label>
-            <Calendar
-              value={reserveddate}
-              onChange={handleReserveddateChange}
-              shouldHighlightWeekends
-              locale="fa"
-              calendarClassName="custom-calendar w-full"
-              colorPrimary="#673ab7"
-              colorPrimaryLight="#ede7f6"
-            />
-          </div>
-
-          {/* Menu Selection */}
-          <div dir="rtl">
-            <label className="block text-xl font-bold text-black mb-4">
-              منو
-            </label>
-            <select
-              value={menue}
-              onChange={handleMenueChange}
-              className="mt-1 block w-full rounded-md border-black shadow-lg focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm py-2 text-end px-2"
-            >
-              <option value="" disabled className="text-right">
-                انتخاب منو
-              </option>
-              <option value="دیس پرس سیلور" className="text-right">
-                دیس پرس سیلور
-              </option>
-              <option value="دیس پرس گلد" className="text-right">
-                دیس پرس گلد
-              </option>
-              <option value="دیس پرس VIP" className="text-right">
-                دیس پرس VIP
-              </option>
-              <option value="سلف سیلور" className="text-right">
-                سلف سیلور
-              </option>
-              <option value="سلف گلد" className="text-right">
-                سلف گلد
-              </option>
-              <option value="سلف VIP" className="text-right">
-                سلف VIP
-              </option>
-            </select>
+          {/* Calendars Section */}
+          <div className="md:col-span-2 grid  md:grid-cols-2 items-center justify-center lg:mx-auto gap-12">
+            <div className="space-y-2 ">
+              <label className="block text-base lg:text-xl font-bold text-black">
+                تاریخ عروسی
+              </label>
+              <Calendar
+                value={weddingdate}
+                onChange={handleWeddingdateChange}
+                shouldHighlightWeekends
+                locale="fa"
+                calendarClassName="custom-calendar w-full shadow-lg rounded-lg"
+                colorPrimary="#9c27b0"
+                colorPrimaryLight="#f3e5f5"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="block text-base lg:text-xl font-bold text-black">
+                تاریخ رزرو بازدید
+              </label>
+              <Calendar
+                value={reserveddate}
+                onChange={handleReserveddateChange}
+                shouldHighlightWeekends
+                locale="fa"
+                calendarClassName="custom-calendar w-full shadow-lg rounded-lg"
+                colorPrimary="#673ab7"
+                colorPrimaryLight="#ede7f6"
+              />
+            </div>
           </div>
 
           {/* Submit Button */}
-          <div>
+          <div className="md:col-span-2 mt-6 mb-8">
             <button
               type="submit"
-              className="w-full bg-[#344e41] mb-3 text-white py-3 rounded-md text-lg font-semibold shadow-md hover:shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
+              className="w-full bg-[#344e41] text-white py-3 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out"
             >
               ارسال فرم
             </button>
+            {message && (
+              <p className="text-center mt-4 text-sm font-medium text-green">
+                {message}
+              </p>
+            )}
           </div>
-
-          {/* Message */}
-          {message && (
-            <p className="text-center mt-4 text-sm font-medium text-green pb-3">
-              {message}
-            </p>
-          )}
         </form>
       </div>
     </div>

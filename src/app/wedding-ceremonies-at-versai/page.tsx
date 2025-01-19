@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/138.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -37,7 +36,7 @@ const Page = () => {
                 کرد
               </h1>
               <p id="contentDiscription" className="text-regular mx-auto mt-2">
-                <span className="h2-blog-header font-bold mb-3 text-2xl">
+                <span className="text-black font-bold mb-3 text-2xl">
                   مقدمه
                 </span>
                 <br />
@@ -53,19 +52,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   رویای عروسی شما در شکوه شاتو دو ورسای به واقعیت تبدیل می‌شود
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     ورسای، مکانی خاص برای یک روز خاص
                   </span>
 
@@ -81,7 +80,7 @@ const Page = () => {
                       مراسم‌های بزرگ و لوکس، تمامی جزئیات مراسم شما را از لحظه
                       شروع تا پایان به طور دقیق و حرفه‌ای مدیریت می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های مدیریت تشریفات:
                     </p>
                     <span>
@@ -99,7 +98,7 @@ const Page = () => {
                       4 - مدیریت حرفه‌ای زمان و برنامه‌ها در طول مراسم
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/131.webp"
                       width={2000}
@@ -122,7 +121,7 @@ const Page = () => {
                       ایجاد می‌کند. از گل‌آرایی‌های خیره‌کننده تا نورپردازی‌های
                       منحصر به فرد، همه چیز با توجه به سلیقه شما طراحی می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های دکوراسیون:
                     </p>
                     <span>1 - گل‌آرایی لوکس و حرفه‌ای</span>
@@ -131,7 +130,7 @@ const Page = () => {
                     <br />
                     <span>3 - طراحی میزها و صندلی‌ها بر اساس سلیقه شما</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/132.webp"
                       width={2000}
@@ -153,7 +152,7 @@ const Page = () => {
                       می‌توانید با توجه به سلیقه و بودجه خود، منویی سفارشی
                       انتخاب کنید.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های پذیرایی:
                     </p>
                     <span>1 - منوی متنوع با غذاهای ایرانی و بین‌المللی</span>
@@ -164,7 +163,7 @@ const Page = () => {
                       3 - امکان انتخاب منوی سفارشی بر اساس نیازهای شما
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/133.webp"
                       width={4000}
@@ -186,7 +185,7 @@ const Page = () => {
                       تبدیل می‌کند. از نورپردازی ویژه گرفته تا موسیقی هماهنگ با
                       لحظه ورود، همه چیز به بهترین شکل انجام می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های تشریفات ورود:
                     </p>
                     <span>1 - نورپردازی خاص برای لحظه ورود</span>
@@ -195,7 +194,7 @@ const Page = () => {
                     <br />
                     <span>3 - طراحی و دکوراسیون ویژه برای مسیر ورود</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/134.webp"
                       width={4000}
@@ -216,7 +215,7 @@ const Page = () => {
                       می‌کند. شما می‌توانید مطمئن باشید که تمامی لحظات خاص و
                       احساسی شما به‌طور حرفه‌ای و با کیفیت عالی ثبت خواهد شد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های عکاسی و فیلمبرداری:
                     </p>
                     <span>1 - تیم حرفه‌ای عکاسان و فیلمبرداران با تجربه</span>
@@ -226,12 +225,12 @@ const Page = () => {
                     <span>3 - ثبت تمامی لحظات احساسی و ویژه عروسی</span>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/135.webp"
                       width={4000}
@@ -251,7 +250,7 @@ const Page = () => {
                       ببرید. از زمان‌بندی مراسم گرفته تا هماهنگی با سایر تیم‌ها
                       مانند دی‌جی و عکاسان، همه چیز به طور دقیق انجام می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های برنامه‌ریزی:
                     </p>
                     <span>1 - زمان‌بندی دقیق تمامی مراحل مراسم</span>
@@ -264,7 +263,7 @@ const Page = () => {
                       3 - جلوگیری از هرگونه استرس و نگرانی در روز مراسم
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/136.webp"
                       width={4000}
@@ -284,7 +283,7 @@ const Page = () => {
                       گل‌آرایی‌های زیبا تا هدیه‌های یادبود، همه چیز برای
                       بدرقه‌ای خاطره‌انگیز طراحی می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های تشریفات پایانی:
                     </p>
                     <span>1 - بدرقه مهمانان با تشریفات خاص</span>
@@ -293,7 +292,7 @@ const Page = () => {
                     <br />
                     <span>3 - مدیریت حرفه‌ای پایان مراسم</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/137.webp"
                       width={4000}
@@ -316,7 +315,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

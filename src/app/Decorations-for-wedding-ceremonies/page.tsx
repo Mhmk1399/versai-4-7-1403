@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/photo_2024-11-16_14-00-54.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -36,7 +35,7 @@ const Page = () => {
                 جادوی تزئینات: مراسم عروسی خود را رویایی کنید!{" "}
               </h1>
               <p id="contentDiscription" className="text-regular mx-auto mt-2">
-                <span className="h2-blog-header font-bold mb-3">
+                <span className="text-black font-bold mb-3">
                   برگزاری مراسم عروسی یکی از خاطره‌انگیزترین لحظات زندگی است، و
                   ما اینجا هستیم تا با دکوراسیون و تزئینات خاص، جشن شما را به یک
                   رویداد فراموش‌نشدنی تبدیل کنیم. از طراحی میزها و گل‌آرایی‌های
@@ -47,19 +46,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   تزئینات و دکوراسیون برای برگزاری مراسم عروسی
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     روشنایی عشق: دکوراسیون حرفه‌ای برای عروسی شما{" "}
                   </span>
 
@@ -79,7 +78,7 @@ const Page = () => {
                       مراسم را به شکل ویژه‌ای رقم بزنید.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/photo_2024-11-16_14-04-15.webp"
                       width={2000}
@@ -103,7 +102,7 @@ const Page = () => {
                       یا تزئینات کوچکی روی میز، می‌توانید فضای زیباتری خلق کنید.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/photo_2024-11-16_14-06-27.webp"
                       width={2000}
@@ -127,7 +126,7 @@ const Page = () => {
                       می‌توانید جلوه‌ای خاص به مراسم خود ببخشید.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/photo_2024-11-16_14-12-21.webp"
                       width={4000}
@@ -147,7 +146,7 @@ const Page = () => {
                       شکلی بی‌نظیر تبدیل کنید.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/8.webp"
                       width={4000}
@@ -187,7 +186,7 @@ const Page = () => {
                     <br />
 
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
@@ -204,7 +203,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

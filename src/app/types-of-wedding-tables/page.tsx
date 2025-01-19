@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/240.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -46,19 +45,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   راهنمای کامل انتخاب سفره عقد از سبک کلاسیک تا مدرن و مجلل
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     خاص‌ترین مدل‌های سفره عقد !
                   </span>
 
@@ -75,7 +74,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         سفره عقد سنتی ایرانی با ترمه:
                       </strong>
                       یکی از ویژگی‌های بارز سفره عقد سنتی، استفاده از پارچه‌های
@@ -84,7 +83,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         تزیینات سنتی در منزل:
                       </strong>
                       برخی خانواده‌ها ترجیح می‌دهند که مراسم عقد در خانه برگزار
@@ -92,7 +91,7 @@ const Page = () => {
                       گل‌های طبیعی و استفاده از ظروف مسی یا نقره‌ای از جمله
                       ویژگی‌های این نوع سفره‌هاست.
                     </span>
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/241.webp"
                         width={4000}
@@ -114,7 +113,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         دیزاین مدرن و مینیمال:{" "}
                       </strong>
                       در سفره‌های عقد مدرن از رنگ‌های روشن و ملایم مانند سفید و
@@ -123,7 +122,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         چیدمان سفره عقد مدرن:{" "}
                       </strong>
                       یکی از ویژگی‌های بارز سفره عقد مدرن، نظم و هماهنگی در
@@ -131,7 +130,7 @@ const Page = () => {
                       کنار هم قرار می‌گیرند تا ظاهری تمیز و شیک ایجاد شود.
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/242.webp"
                       width={2000}
@@ -154,7 +153,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         سفره عقد لاکچری در باغ:{" "}
                       </strong>
                       برگزاری مراسم در باغ، امکان چیدمان و تزیین سفره عقد لاکچری
@@ -164,7 +163,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         قیمت سفره عقد لاکچری:{" "}
                       </strong>
                       هزینه‌های مربوط به سفره‌های لاکچری ممکن است بسته به میزان
@@ -173,7 +172,7 @@ const Page = () => {
                       قیمت را افزایش می‌دهند.
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/243.webp"
                       width={4000}
@@ -195,7 +194,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         تزیین سفره عقد ساده و شیک:{" "}
                       </strong>
                       در سفره‌های ساده و شیک، معمولاً از رنگ‌های روشن و ملایم
@@ -205,7 +204,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         چیدمان در منزل:{" "}
                       </strong>
                       بسیاری از زوج‌ها ترجیح می‌دهند که سفره عقد خود را در
@@ -225,7 +224,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         وسایل سفره عقد آریایی:{" "}
                       </strong>
                       در سفره عقد آریایی، اقلامی مانند نان، بادام، عسل و گل‌های
@@ -249,7 +248,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         عکس‌های سفره عقد قدیمی:{" "}
                       </strong>
                       سفره‌های عقد قدیمی با جزئیات خاص و سنتی تزیین می‌شدند.
@@ -259,7 +258,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         نمونه‌های جدید سفره عقد مدرن:{" "}
                       </strong>
                       سفره‌های عقد جدید با بهره‌گیری از ایده‌های مدرن و استفاده
@@ -267,7 +266,7 @@ const Page = () => {
                       به مراسم عروسی داده‌اند.
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/244.webp"
                       width={4000}
@@ -292,7 +291,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

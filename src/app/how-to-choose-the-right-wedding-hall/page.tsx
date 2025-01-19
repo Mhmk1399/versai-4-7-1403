@@ -35,10 +35,9 @@ const Page = () => {
     <>
       <BlogSchema blogData={blogData} />
 
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/VAG_2082.webp"
                 width={4000}
@@ -47,7 +46,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-[60%] h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -56,7 +55,7 @@ const Page = () => {
                 ورسای
               </h1>
               <p id="contentDiscription" className="text-regular mx-auto mt-2">
-                <span className="h2-blog-header font-bold mb-3 text-2xl">
+                <span className="text-black font-bold mb-3 text-2xl">
                   مقدمه
                 </span>
                 <br />
@@ -73,12 +72,12 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   جشن عروسی شاهانه با راهنمایی جامع انتخاب تالار در شاتو دو
                   ورسای
                 </h2>
@@ -86,7 +85,7 @@ const Page = () => {
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     نکاتی برای انتخاب بهترین گزینه در ورسای
                   </span>
 
@@ -103,7 +102,7 @@ const Page = () => {
                       ورسای با داشتن سالن‌های بزرگ و مجلل، قادر به میزبانی از
                       جمعیت‌های مختلف با ظرفیت‌های متفاوت است.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       نکات مهم:
                     </p>
                     <span>
@@ -114,7 +113,7 @@ const Page = () => {
                     <br />
                     <span>3 - ایجاد راحتی برای مهمانان بدون احساس شلوغی</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/salon3.webp"
                       width={2000}
@@ -136,7 +135,7 @@ const Page = () => {
                       و مدرن، فضایی لوکس و رویایی برای عروس و داماد فراهم
                       می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های دکوراسیون:
                     </p>
                     <span>1 - طراحی شیک و هماهنگ با تم عروسی</span>
@@ -147,7 +146,7 @@ const Page = () => {
                       3 - امکان سفارشی‌سازی دکوراسیون بر اساس سلیقه شما
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall (3).webp"
                       width={2000}
@@ -170,7 +169,7 @@ const Page = () => {
                       امکانات مورد نیاز، تجربه‌ای راحت و لذت‌بخش برای شما و
                       مهمانان‌تان فراهم می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های امکانات رفاهی:
                     </p>
                     <span>1 - پارکینگ وسیع و مناسب</span>
@@ -179,7 +178,7 @@ const Page = () => {
                     <br />
                     <span>3 - دسترسی آسان به بخش‌های مختلف تالار</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/Parking-with-a-capacity-of-600-cars-in-the-garden-of-the-Chateau-de-Versailles-luxury-hall (2).webp"
                       width={4000}
@@ -200,7 +199,7 @@ const Page = () => {
                       متنوع، تضمین می‌کند که مهمانان شما بهترین غذاها و دسرها را
                       تجربه کنند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های خدمات پذیرایی:
                     </p>
                     <span>1 - منوی غذایی متنوع و با کیفیت</span>
@@ -209,7 +208,7 @@ const Page = () => {
                     <br />
                     <span>3 - تیم حرفه‌ای برای سرویس‌دهی به مهمانان</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/food4.webp"
                       width={4000}
@@ -230,7 +229,7 @@ const Page = () => {
                       شما و مهمانان‌تان ایجاد می‌کند. نورپردازی مناسب به ویژه در
                       عکس‌برداری و فیلم‌برداری نیز اهمیت ویژه‌ای دارد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های نورپردازی:
                     </p>
                     <span>1 - نورپردازی گرم و ملایم برای فضاهای مختلف</span>
@@ -242,12 +241,12 @@ const Page = () => {
                     <span>3 - هماهنگی نورپردازی با موسیقی و تم مراسم</span>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/Fireworks-next-to-the-dance-stage-from-above-the-garden-of-the-luxury-hall-of-Chateau-de-Versailles.webp"
                       width={4000}
@@ -267,7 +266,7 @@ const Page = () => {
                       است تا بدون دغدغه و در کوتاه‌ترین زمان ممکن به مراسم
                       برسند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های موقعیت مکانی:
                     </p>
                     <span>1 - دسترسی آسان از نقاط مختلف شهر</span>
@@ -276,7 +275,7 @@ const Page = () => {
                     <br />
                     <span>3 - موقعیت جغرافیایی مطلوب و زیبا</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/The-view-of-the-English-garden-at-night-the-most-luxurious-photography-location-of-the-Tehran-Hall-of-Chateau-de-Versailles.webp"
                       width={4000}
@@ -295,7 +294,7 @@ const Page = () => {
                       عالی است. فضای باز این مجموعه به شما امکان می‌دهد که
                       مراسمی خاص و متفاوت در دل طبیعت برگزار کنید.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های فضای باز:
                     </p>
                     <span>1 - باغ‌های زیبا با گل‌آرایی طبیعی</span>
@@ -304,7 +303,7 @@ const Page = () => {
                     <br />
                     <span>3 - نورپردازی و دکوراسیون سفارشی برای فضای باز</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/S__00479.webp"
                       width={4000}
@@ -327,7 +326,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

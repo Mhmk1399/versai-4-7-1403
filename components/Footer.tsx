@@ -12,7 +12,7 @@ import {
 const Footer = () => {
   return (
     <footer
-      className="mx-auto bg-transparent text-gold-90 flex flex-col p-2"
+      className="mx-auto bg-transparent text-gold-90 flex flex-col p-2 mb-12"
       dir="rtl"
     >
       <Link href="/" className="mx-auto text-center">
@@ -25,10 +25,10 @@ const Footer = () => {
         />
       </Link>
       <div className="bg-white/10 rounded-lg px-8 text-center ">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6">
           راه های ارتباطی
         </h2>
-        <p className="text-gray-500 ">
+        <p className="text-gray-500 mb-4 ">
           برای ارتباط با ما می‌توانید از یکی از روش‌های زیر استفاده کنید
         </p>
         <div className="flex justify-center gap-6 my-5">
@@ -71,7 +71,7 @@ const Footer = () => {
       </div>
 
       <div
-        className=" gap-4 mx-auto text-center font-bold text-xl flex flex-row justify-center mb-8 pb-2"
+        className=" gap-4 mx-auto text-center font-bold text-xl flex flex-row justify-center my-6 pb-2"
         dir="rtl"
       >
         <Link href="/galery">

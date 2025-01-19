@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/171.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -45,12 +44,12 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   انتخاب تم مناسب برای عروسی در هر فصل: راهنمای کامل برای تطبیق
                   تزیینات و دکور با فصل
                 </h2>
@@ -58,7 +57,7 @@ const Page = () => {
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     انتخاب تم مناسب برای عروسی{" "}
                   </span>
 
@@ -73,7 +72,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         رنگها و تزیینات پیشنهادی:{" "}
                       </strong>
                       رنگهای پاستلی مثل صورتی، بنفش کمرنگ، و آبی آسمانی. گلهای
@@ -82,11 +81,11 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">ایده های تم: </strong>
+                      <strong className="ml-2 text-black font-bold">ایده های تم: </strong>
                       استفاده از تمهای گلآرایی طبیعی و رومانتیک با اUانهای سبز و
                       سفید برای هماهنگی با طبیعت بهاری.
                     </span>
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/154.webp"
                         width={4000}
@@ -112,7 +111,7 @@ const Page = () => {
 
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         رنگها و تزیینات پیشنهادی:{" "}
                       </strong>
                       رنگهای زنده و شاد مانند زرد، نارنجی، آبی دریا، و سبز
@@ -121,12 +120,12 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">ایدههای تم:</strong>
+                      <strong className="ml-2 text-black font-bold">ایدههای تم:</strong>
                       برگزاری مراسم در فضای باز با تمهای ساحلی یا باغی،
                       نورپردازی رنگارنگ، و استفاده از دکوراسیونهای مدرن.
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/191.webp"
                       width={2000}
@@ -149,7 +148,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         رنگها و تزیینات پیشنهادی:{" "}
                       </strong>
                       نارنجی، قرمز تیره، قهوهای و طsیی برای هماهنگی با طبیعت
@@ -158,12 +157,12 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">ایدههای تم: </strong>
+                      <strong className="ml-2 text-black font-bold">ایدههای تم: </strong>
                       تمهای روستیک با استفاده از چوبی و طبیعی، استفاده از برگهای
                       خشک در تزیین میزها، و تزیینات با پارچههای گرم و مخملی.
                     </span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/bloog12.webp"
                       width={4000}
@@ -185,7 +184,7 @@ const Page = () => {
                     </p>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         رنگها و تزیینات پیشنهادی:{" "}
                       </strong>
                       سفید، نقرهای، و آبی یخی. استفاده از کریستالها و شمعها در
@@ -193,14 +192,14 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">ایدههای تم: </strong>
+                      <strong className="ml-2 text-black font-bold">ایدههای تم: </strong>
                       تمهای زمستانی با استفاده از کریستالها، نورپردازی مsیم و
                       شمعهای زیبا. همچنین استفاده از تزیینات الهام گرفته از یخ و
                       برف میتواند فضایی خاص و شیک ایجاد کند.
                     </span>
                   </li>
 
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/winter.webp"
                       width={4000}
@@ -223,7 +222,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

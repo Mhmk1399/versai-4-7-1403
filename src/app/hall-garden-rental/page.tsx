@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/Green-space-and-night-with-lighting-along-with-the-statue-of-the-photography-location-of-the-garden-of-the-Chateau-de-Versailles-hall-from-a-45-degree-view.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -37,7 +36,7 @@ const Page = () => {
                 خاص شما
               </h1>
               <p id="contentDiscription" className="text-regular mx-auto mt-2">
-                <span className="h2-blog-header font-bold mb-3 text-2xl">
+                <span className="text-black font-bold mb-3 text-2xl">
                   مقدمه
                 </span>
                 <br />
@@ -53,19 +52,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   اجاره باغ تالار در شاتو دو ورسای{" "}
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     ورسای، باغ تالار خاص برای یک روز خاص
                   </span>
 
@@ -83,7 +82,7 @@ const Page = () => {
                       هر گوشه‌ای از آن به عنوان مکانی برای عکس‌برداری و ثبت
                       لحظات به‌یادماندنی عمل کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های باغ:
                     </p>
                     <span>1 - فضای باز و وسیع با طراحی دلنشین</span>
@@ -92,7 +91,7 @@ const Page = () => {
                     <br />
                     <span>3 - چشم‌اندازهای منحصر به فرد برای عکس‌برداری</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/151.webp"
                       width={2000}
@@ -116,7 +115,7 @@ const Page = () => {
                       طراحی شده است که بتوانید همزمان از فضای باز باغ و امکانات
                       لوکس سالن‌های مجاور استفاده کنید.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       امکانات باغ تالار:
                     </p>
                     <span>1 - نورپردازی حرفه‌ای و هماهنگ با مراسم</span>
@@ -125,7 +124,7 @@ const Page = () => {
                     <br />
                     <span>3 - کترینگ و پذیرایی با منوی لوکس</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/152.webp"
                       width={2000}
@@ -148,7 +147,7 @@ const Page = () => {
                       وسیع، امکان چیدمان و دکوراسیون به سبک‌های مختلف را فراهم
                       می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       مراسم‌های قابل برگزاری در باغ تالار:
                     </p>
                     <span>1 - مراسم عقد و بله‌برون</span>
@@ -157,7 +156,7 @@ const Page = () => {
                     <br />
                     <span>3 - رویدادهای خاص خانوادگی و دوستانه</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/153.webp"
                       width={4000}
@@ -180,7 +179,7 @@ const Page = () => {
                       تا نورپردازی و گل‌آرایی، همه چیز به طور دقیق و با توجه به
                       جزئیات طراحی می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های دکوراسیون سفارشی:
                     </p>
                     <span>1 - امکان انتخاب تم و رنگ‌بندی مخصوص</span>
@@ -189,7 +188,7 @@ const Page = () => {
                     <br />
                     <span>3 - چیدمان صندلی‌ها و میزها متناسب با سلیقه شما</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/154.webp"
                       width={4000}
@@ -212,7 +211,7 @@ const Page = () => {
                       بهترین تصاویر را ثبت کنند و لحظات شما را به بهترین شکل به
                       تصویر بکشند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       ویژگی‌های فضای عکاسی:
                     </p>
                     <span>1 - مناظر طبیعی زیبا برای عکاسی</span>
@@ -222,12 +221,12 @@ const Page = () => {
                     <span>3 - فضای باز و شیک برای فیلمبرداری از مراسم</span>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/155.webp"
                       width={4000}
@@ -249,7 +248,7 @@ const Page = () => {
                       رزرو و برنامه‌ریزی مراسم، کمک خواهند کرد تا تجربه‌ای
                       لذت‌بخش و بدون استرس داشته باشید.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-gold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
                       مراحل اجاره باغ تالار:
                     </p>
                     <span>1 - بازدید از باغ و سالن‌ها</span>
@@ -258,7 +257,7 @@ const Page = () => {
                     <br />
                     <span>3 - هماهنگی برای دکوراسیون و خدمات</span>
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/156.webp"
                       width={4000}
@@ -281,7 +280,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

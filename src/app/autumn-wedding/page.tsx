@@ -16,10 +16,11 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/photo_2024-11-16_14-00-54.webp"
                 width={4000}
@@ -28,7 +29,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -47,12 +48,12 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   جادوی پاییز در جشن شما: ایده‌هایی شگفت‌انگیز برای عروسی
                   پاییزی!
                 </h2>
@@ -60,7 +61,7 @@ const Page = () => {
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     عشق در هوای پاییز
                   </span>
 
@@ -78,14 +79,16 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         رنگ‌های اصلی پیشنهادی:
                       </strong>
                       قهوه‌ای شکلاتی، قرمز تیره، نارنجی گرم، طلایی براق.
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">رنگ‌های مکمل:</strong>
+                      <strong className="ml-2 text-black font-bold">
+                        رنگ‌های مکمل:
+                      </strong>
                       سبز زمردی، بژ، خاکستری ملایم، سفید یخی.{" "}
                     </span>
                     <br />
@@ -99,7 +102,7 @@ const Page = () => {
                     </p>
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/170.webp"
                       width={2000}
@@ -122,7 +125,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         تزیینات با برگ‌های پاییزی:{" "}
                       </strong>
                       استفاده از برگ‌های طلایی و قرمز بر روی میزها یا در طراحی
@@ -130,7 +133,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         شمع‌ها و نورپردازی ملایم:
                       </strong>
                       شمع‌های بزرگ در کنار میزها یا راهروها برای ایجاد حس گرم و
@@ -138,7 +141,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         المان‌های طبیعی:{" "}
                       </strong>
                       استفاده از کدوهای تزئینی، گل‌های خشک و شاخه‌های طبیعی در
@@ -146,7 +149,7 @@ const Page = () => {
                     </span>
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/View-of-table-and-chair-arrangement-in-the-garden-hall-of-Chateau-de-Versailles-luxury-hall.webp"
                       width={2000}
@@ -169,7 +172,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         دسته گل عروسی پاییزی:{" "}
                       </strong>
                       گل‌هایی مانند گل داوودی، رز قرمز، گل آفتابگردان و حتی
@@ -179,7 +182,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         کیک عروسی پاییزی:
                       </strong>
                       کیک‌های پاییزی معمولاً با رنگ‌های گرم و تزیینات طبیعی
@@ -203,7 +206,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         متن پیشنهادی کارت عروسی پاییزی:{" "}
                       </strong>
                       پاییز آمد و با خود شور و شوقی تازه آورد، ما شما را به جشن
@@ -211,7 +214,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         شعر کارت عروسی پاییزی:{" "}
                       </strong>
                       در دل پاییز، عشق ما چون برگ‌های طلایی شکوفاست. بیایید و در
@@ -228,7 +231,7 @@ const Page = () => {
 
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/Luxurious-hall-and-garden-hall-of-Chateau-de-Versailles5.webp"
                       width={4000}
@@ -250,7 +253,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         میوه‌های مناسب برای عروسی پاییزی:{" "}
                       </strong>
                       سیب‌های قرمز، انار، انگور، انجیر و گلابی. این میوه‌ها
@@ -259,7 +262,7 @@ const Page = () => {
                     </span>
                     <br />
                     <span className="mb-3 text-base">
-                      <strong className="ml-2 text-gold">
+                      <strong className="ml-2 text-black font-bold">
                         ایده‌های تزیینی با میوه‌ها:{" "}
                       </strong>
                       قرار دادن سبدهای میوه پاییزی در میان میزهای مهمانان،
@@ -292,7 +295,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

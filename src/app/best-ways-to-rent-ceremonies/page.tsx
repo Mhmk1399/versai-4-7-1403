@@ -17,10 +17,11 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/170.webp"
                 width={4000}
@@ -29,7 +30,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -48,12 +49,12 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   بهترین راهکارها برای اجاره تشریفات مجالس با خدمات خاص و قیمت
                   مناسب
                 </h2>
@@ -62,13 +63,13 @@ const Page = () => {
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     تشریفات مجالس ارزان و باکیفیت:{" "}
                   </span>
 
                   <li className="text-regular  mt-3 ">
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       1. چگونه بهترین تشریفات مجالس را انتخاب کنیم؟
                     </span>
 
@@ -95,7 +96,7 @@ const Page = () => {
                       به شما در انتخاب کمک می‌کنند.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       2. بررسی خدمات ویژه تشریفات مجالس
                     </span>
 
@@ -108,7 +109,7 @@ const Page = () => {
                       تشریفات مجالس این خدمات را با قیمت مناسب ارائه می‌دهند.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       3. انتخاب باغ تالار یا تالار
                     </span>
 
@@ -135,7 +136,7 @@ const Page = () => {
                       کنید.
                     </p>
                     <br />
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/The-green-space-of-the-photography-location-from-the-45-degree-view-of-the-garden-of-the-Chateau-de-Versailles-hall-ezgif.com-jpg-to-webp-converter.webp"
                         width={4000}
@@ -146,7 +147,7 @@ const Page = () => {
                     </div>
                     <br />
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       4. اجاره میز و صندلی روستیک: اقتصادی و شیک
                     </span>
                     <p>
@@ -158,7 +159,7 @@ const Page = () => {
                       هزینه‌های خود را مدیریت کنید.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       5. برگزاری مجالس در باغ: زیبایی در کنار بودجه‌مندی
                     </span>
 
@@ -179,7 +180,7 @@ const Page = () => {
                       کاهش دهید.
                     </p>
                     <br />
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/photo_2024-11-06_11-07-32.webp"
                         width={4000}
@@ -190,7 +191,7 @@ const Page = () => {
                     </div>
                     <br />
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       6. اجاره تشریفات مجالس برای مجالس خانگی
                     </span>
 
@@ -203,7 +204,7 @@ const Page = () => {
                       کوچک‌تر و صمیمی‌تر عالی است.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       7. نکاتی برای کاهش هزینه‌های تشریفات عروسی
                     </span>
 
@@ -243,7 +244,7 @@ const Page = () => {
                       </li>
                     </ul>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       8. انتخاب بهترین اسم برای تشریفات مجالس
                     </span>
 
@@ -257,7 +258,7 @@ const Page = () => {
                       کنید.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       9. موسیقی و سرگرمی برای مراسم عروسی
                     </span>
 
@@ -269,7 +270,7 @@ const Page = () => {
                       لیست‌های موسیقی از پیش ضبط‌شده هم گزینه‌ای مناسب است.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       10. اجاره سالن عقد و بله برون
                     </span>
 
@@ -283,7 +284,7 @@ const Page = () => {
                     <br />
                     <br />
 
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/The-fountain-of-the-photography-location-of-the-Chateau-de-Versailles-hall-garden-is-inspired-by-the-Versailles-palace-and-the-English-village.webp"
                         width={4000}
@@ -298,7 +299,7 @@ const Page = () => {
                 <br />
                 <br />
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

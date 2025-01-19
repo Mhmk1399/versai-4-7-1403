@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1" dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1" dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/new-image4-kakhversai.webp"
                 width={4000}
@@ -29,7 +28,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1 id="contetTitle" className="text-2xl font-bold mx-auto">
                 راهنمای انتخاب بهترین تالار تهران
               </h1>
@@ -48,7 +47,7 @@ const Page = () => {
               </Link>
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/images.webp"
                 width={4000}
@@ -58,7 +57,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 موقعیت مکانی تالار
               </h2>
@@ -74,7 +73,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 ظرفیت تالار
               </h2>
@@ -94,7 +93,7 @@ const Page = () => {
                 </button>
               </Link>
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/new-image5-kakhversai.webp"
                 width={4000}
@@ -104,7 +103,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 امکانات و تجهیزات تالار
               </h2>
@@ -124,7 +123,7 @@ const Page = () => {
                 </button>
               </Link>
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/Self-service-turkey-with-pineapple-in-the-international-menu-of-the-Chateau-de-Versailles-luxury-hall-garden_optimizednew.webp"
                 width={4000}
@@ -134,7 +133,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 خدمات پذیرایی و منو
               </h2>
@@ -148,7 +147,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-gray-50 rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2
                 id="contetTitle"
                 className="text-2xl font-bold mx-auto text-green-600"

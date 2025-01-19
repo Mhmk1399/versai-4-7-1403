@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/201.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -45,19 +44,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   ترفندهای شگفت‌انگیز برای هماهنگی گل‌های سفره عقد و تم عروسی
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     راز هماهنگی گل‌های سفره عقد با تم عروسی!
                   </span>
 
@@ -73,7 +72,7 @@ const Page = () => {
                       همخوانی داشته باشند.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - رنگ‌های کلاسیک و شیک:
                     </span>
                     <p>
@@ -82,7 +81,7 @@ const Page = () => {
                       همواره نمادی از خلوص و شکوه بوده‌اند و به زیبایی سفره عقد
                       شما می‌افزایند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - ترکیب رنگ‌های روشن برای تم‌های مدرن:
                     </span>
                     <br />
@@ -94,7 +93,7 @@ const Page = () => {
                     </p>
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/200.webp"
                       width={2000}
@@ -116,7 +115,7 @@ const Page = () => {
                       ایجاد کنند.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - گل‌های بهاری:
                     </span>
                     <p>
@@ -124,7 +123,7 @@ const Page = () => {
                       رز بسیار پرطرفدار هستند. این گل‌ها با رنگ‌های روشن خود به
                       سفره عقد حسی از تازگی و سرزندگی می‌بخشند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - گل‌های تابستانی و پاییزی:
                     </span>
                     <br />
@@ -137,7 +136,7 @@ const Page = () => {
 
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/202.webp"
                       width={2000}
@@ -158,7 +157,7 @@ const Page = () => {
                       مزایا و معایب خاص خود هستند.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - گل‌های طبیعی:
                     </span>
                     <p>
@@ -166,7 +165,7 @@ const Page = () => {
                       دلپذیر شود. اما این گل‌ها به دلیل حساسیت به دما و زمان
                       کوتاه عمر، ممکن است هزینه‌برتر و نگهداری‌شان دشوارتر باشد.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - گل‌های مصنوعی:
                     </span>
                     <br />
@@ -192,7 +191,7 @@ const Page = () => {
                       نشان‌دهنده دقت در طراحی مراسم است.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - هماهنگی با دسته‌گل عروس:
                     </span>
                     <p>
@@ -200,7 +199,7 @@ const Page = () => {
                       ترکیب رنگی را در گل‌های سفره عقد نیز استفاده کرد تا
                       هماهنگی بصری بیشتری ایجاد شود.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - هماهنگی با دکوراسیون سالن:
                     </span>
                     <br />
@@ -212,7 +211,7 @@ const Page = () => {
 
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/183.webp"
                       width={4000}
@@ -232,7 +231,7 @@ const Page = () => {
                       می‌تواند جذابیت بیشتری به چیدمان ببخشد.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - ترکیب گل‌ها با شمع‌ها و آینه‌ها:
                     </span>
                     <p>
@@ -240,7 +239,7 @@ const Page = () => {
                       نقره‌ای می‌تواند فضایی رمانتیک و زیبا در سفره عقد ایجاد
                       کند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - گل‌آرایی سفره عقد کریستال:
                     </span>
                     <br />
@@ -265,7 +264,7 @@ const Page = () => {
                       مراسم ببخشد.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - گل‌آرایی ساده با گلدان‌های کوچک:
                     </span>
                     <p>
@@ -273,7 +272,7 @@ const Page = () => {
                       گلدان‌های کوچک با گل‌های سفید و صورتی می‌تواند فضای سفره
                       عقد را بسیار دوست‌داشتنی کند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - تزئین خانگی با گل‌های باغچه‌ای:
                     </span>
                     <br />
@@ -297,14 +296,14 @@ const Page = () => {
                       از مراسم آن‌ها را آماده و در سفره عقد قرار دهید.
                     </span>
                     <br />
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       1 - نگهداری گل‌ها در روز قبل از مراسم:
                     </span>
                     <p>
                       بهتر است گل‌های طبیعی را یک روز قبل از مراسم تهیه کنید و
                       آن‌ها را در آب خنک قرار دهید تا طراوت خود را حفظ کنند.
                     </p>
-                    <span className="font-bold text-gold">
+                    <span className="font-bold text-lg text-black">
                       2 - تزئین نهایی گل‌ها در روز مراسم:
                     </span>
                     <br />
@@ -315,7 +314,7 @@ const Page = () => {
 
                     <br />
                   </li>
-                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto flex flex-col items-center my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/203.webp"
                       width={2000}
@@ -336,7 +335,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

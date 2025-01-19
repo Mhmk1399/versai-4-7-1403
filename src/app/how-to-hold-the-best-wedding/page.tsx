@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1" dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1" dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/new-image-kakhversai.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1 id="contetTitle" className="text-2xl font-bold mx-auto">
                 چطور یک عروسی لاکچری و به‌صرفه داشته باشیم؟
               </h1>
@@ -47,7 +46,7 @@ const Page = () => {
               </Link>
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/new-image2-kakhversai.webp"
                 width={4000}
@@ -57,7 +56,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 انتخاب خدمات به تناسب توان مالی
               </h2>
@@ -78,7 +77,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 منوهای مختلف پذیرایی
               </h2>
@@ -96,7 +95,7 @@ const Page = () => {
                 </button>
               </Link>
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/new-image8-kakhversai.webp"
                 width={4000}
@@ -106,7 +105,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 دیزاین به‌صرفه و لاکچری
               </h2>
@@ -123,7 +122,7 @@ const Page = () => {
                 </button>
               </Link>
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/Music-group-of-the-most-luxurious-garden-of-Tehran-Chateau-de-Versailles-hall (9).webp"
                 width={4000}
@@ -133,7 +132,7 @@ const Page = () => {
               />
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2 id="contetTitle" className="text-2xl font-bold mx-auto">
                 اهمیت شب عروسی به عنوان یک شب تکرارنشدنی
               </h2>
@@ -146,7 +145,7 @@ const Page = () => {
               </p>
             </div>
 
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-gray-50 rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h2
                 id="contetTitle"
                 className="text-2xl font-bold mx-auto text-green-600"

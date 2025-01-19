@@ -16,10 +16,9 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/photo_2024-11-16_14-04-15.webp"
                 width={4000}
@@ -28,7 +27,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -46,19 +45,19 @@ const Page = () => {
               </p>
 
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl font-bold mx-auto text-black ">
                   صرفه‌جویی در هزینه‌های عروسی در باغ – راهکارهای ساده و کاربردی
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     برنامه‌ریزی اقتصادی برای مراسم عروسی{" "}
                   </span>
 
@@ -76,7 +75,7 @@ const Page = () => {
                       جواب قطعاً مثبت است.
                     </span>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       1. انتخاب باغ مناسب با هزینه‌های معقول
                     </span>
 
@@ -102,7 +101,7 @@ const Page = () => {
                       گزینه را انتخاب کنید.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       2. استفاده از تزئینات ساده و جذابّ
                     </span>
 
@@ -115,7 +114,7 @@ const Page = () => {
                       چشمگیری کاهش دهد.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       3. اجاره میز و صندلی روستیک
                     </span>
 
@@ -127,7 +126,7 @@ const Page = () => {
                       می‌دهند که می‌توانید به‌راحتی از آنها استفاده کنید.
                     </p>
                     <br />
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/191.webp"
                         width={4000}
@@ -138,7 +137,7 @@ const Page = () => {
                     </div>
                     <br />
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       4. تشریفات مجالس حرفه‌ای و اقتصادی
                     </span>
                     <p>
@@ -164,7 +163,7 @@ const Page = () => {
                       می‌توانند شما را در این انتخاب یاری کنند.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       5. استفاده از خدمات غذا و پذیرایی با کیفیت
                     </span>
 
@@ -176,7 +175,7 @@ const Page = () => {
                       کاهش هزینه‌ها باشد.
                     </p>
                     <br />
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/192.webp"
                         width={4000}
@@ -187,7 +186,7 @@ const Page = () => {
                     </div>
                     <br />
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       6. مدیریت تعداد مهمانان
                     </span>
 
@@ -199,7 +198,7 @@ const Page = () => {
                       مهمانان خود را به عزیزترین افراد محدود کنید.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       7. انتخاب زمان مناسب برای برگزاری عروسی
                     </span>
 
@@ -212,7 +211,7 @@ const Page = () => {
                       بگیرید، می‌توانید از تخفیف‌های ویژه بهره‌مند شوید.
                     </p>
                     <br />
-                    <span className="p-2 font-bold mt-5 text-gold">
+                    <span className="p-2 font-bold mt-5 text-black">
                       8. انتخاب موسیقی و سرگرمی مناسب
                     </span>
 
@@ -222,7 +221,7 @@ const Page = () => {
                       مناسب و حتی استفاده از لیست‌های پخش از پیش ضبط‌شده، فضایی
                       شاد و دلپذیر برای مهمانان خود ایجاد کنید.
                     </p>
-                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                    <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
                         src="/assets/images/Music-group-of-the-most-luxurious-garden-of-Tehran-Chateau-de-Versailles-hall (5).webp"
                         width={4000}
@@ -239,7 +238,7 @@ const Page = () => {
                 <br />
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>

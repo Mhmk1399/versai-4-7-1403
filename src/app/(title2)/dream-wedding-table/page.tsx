@@ -16,10 +16,10 @@ const Page = () => {
   }, []);
   return (
     <>
-      <div className="bg-white grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
-        <div className="px-4 mx-auto py-2 bg-gray-50 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+      <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
+        <div className="px-4 mx-auto py-2 bg-gray-5 rounded-lg my-2 width-full grid grid-cols-1 gap-4">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl rounded-lg">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5  rounded-lg">
               <Image
                 src="/assets/images/garden-bad-1.webp"
                 width={4000}
@@ -28,7 +28,7 @@ const Page = () => {
                 className="rounded-lg shadow-lg w-full h-full"
               />
             </div>
-            <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+            <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
               <h1
                 className="text-2xl font-bold mx-auto h1-blog-header"
                 id="contetTitle"
@@ -36,7 +36,7 @@ const Page = () => {
                 سفره عقد متفاوت: ایده‌های جالب برای یه چیدمان خاص و تازه
               </h1>
               <p id="contentDiscription" className="text-regular mx-auto mt-2">
-                <span className="h2-blog-header font-bold mb-3">
+                <span className="text-black font-bold mb-3">
                   سفره عقد یه قسمت خیلی مهم و جدا نشدنی از مراسم عقده که با
                   طراحی و ذیزاین مناسب، می‌تونه مراسم رو به یه تجربه فوق‌العاده
                   تبدیل کنه.
@@ -71,19 +71,19 @@ const Page = () => {
                 باحال داریم که می‌تونه به سفره عقدت یه جلوه خاص و جذاب بده:
               </span>
               <Link href="/menue">
-                <button className="bg-gradient-to-l mb-6 from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                   رزرو سالن عقد شاتو دو ورسای
                 </button>
               </Link>
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white  rounded-lg text-center">
-                <h2 className="text-1xl font-bold mx-auto h2-blog-header ">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5    rounded-lg text-center">
+                <h2 className="text-1xl  mx-auto text-black font-bold ">
                   ۱۰ ترفند ساده برای طراحی سفره عقد در باغ تالار که چشم‌گیر باشه
                 </h2>
                 <ol
                   id="contentDiscription"
                   className="text-regular mx-auto text-gray-700 mt-5 "
                 >
-                  <span className="font-extrabold h-14 bg-gradient-to-r from-amber-500 px-3 py-1  to-Cyan-950 rounded-full">
+                  <span className="font-extrabold h-14  px-3 py-1  rounded-full">
                     سفره عقد شیک و مدرن در باغ تالار
                   </span>
 
@@ -100,7 +100,7 @@ const Page = () => {
                       هم زیر نور آفتاب زیاد آسیب نبینه.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/S__00395.webp"
                       width={4000}
@@ -122,7 +122,7 @@ const Page = () => {
                       کنین که با فضای سبز باغ هماهنگی داشته باشن.
                     </span>
                   </li>
-                  {/* <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  {/* <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                   <Image
                     src="/assets/images/S__00448.webp"
                     width={4000}
@@ -143,7 +143,7 @@ const Page = () => {
                       پر از زیبایی و هم چنین بوی خوبی می‌شه.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/garden-bad-2.webp"
                       width={4000}
@@ -165,7 +165,7 @@ const Page = () => {
                       هوای خاص و دل نشینی می‌ده.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/S__00430.webp"
                       width={4000}
@@ -192,12 +192,12 @@ const Page = () => {
                     </span>
                     <br />
                     <Link href="/menue">
-                      <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                      <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                         مشاهده منو مجموعه شاتو دو ورسای
                       </button>
                     </Link>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/S__00393.webp"
                       width={4000}
@@ -218,7 +218,7 @@ const Page = () => {
                       باز زیبایی ویژه‌ای بده.
                     </span>
                   </li>
-                  {/* <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  {/* <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                   <Image
                     src="/assets/images/hall-normal-1.webp"
                     width={4000}
@@ -239,7 +239,7 @@ const Page = () => {
                       رو شیرین تر کنه.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/S__00844.webp"
                       width={4000}
@@ -260,7 +260,7 @@ const Page = () => {
                       کنین که مهمونا بتونن دور هم نشسته و از مراسم شما لذت ببرن.
                     </span>
                   </li>
-                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                     <Image
                       src="/assets/images/garden-normal-1.webp"
                       width={4000}
@@ -281,7 +281,7 @@ const Page = () => {
                       سفره عقد رنگی و شاداب بشه.
                     </span>
                   </li>
-                  {/* <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                  {/* <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                   <Image
                     src="/assets/images/hall-normal-1.webp"
                     width={4000}
@@ -312,13 +312,13 @@ const Page = () => {
                 </ol>
 
                 <Link href="https://tour.panoee.net/Versay/65df91a47a73f2e85a4da72b">
-                  <button className="bg-gradient-to-l from-green to-black text-white hover-btn py-2 px-8 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 mb-2 text-xl">
+                  <button className=" mb-6 bg-green  text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
                     میتوانید برای دیدن فضای سه بعدی مجموعه کلیک کنید.
                   </button>
                 </Link>
               </div>
               <hr />
-              <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg text-center">
+              <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg text-center">
                 <h2 className="text-2xl font-bold mx-auto h1-blog-header my-3">
                   انواع سفره عقد
                 </h2>
@@ -330,7 +330,7 @@ const Page = () => {
                   حالا اینجا چند نوع از این سفره‌های جذاب رو بررسی میکنیم:
                 </p>
                 <ul>
-                  <li className="font-bold text-lg h2-blog-header">
+                  <li className="font-bold text-lg text-black">
                     1. سفره عقد سنتی
                   </li>
                   <p className="my-3">
@@ -340,7 +340,7 @@ const Page = () => {
                     با دقت و زیبایی چیده می‌شه و فضای گرم و صمیمی رو ایجاد
                     می‌کنه.
                   </p>
-                  <li className="font-bold text-lg h2-blog-header">
+                  <li className="font-bold text-lg text-black">
                     2. سفره عقد مدرن
                   </li>
                   <p className="my-3">
@@ -349,7 +349,7 @@ const Page = () => {
                     تزیینات زیاد، از رنگ‌های ساده و هماهنگ و وسایل مینیمال مثل
                     ظروف شیشه‌ای یا فلزی استفاده می‌شه.
                   </p>
-                  <li className="font-bold text-lg h2-blog-header">
+                  <li className="font-bold text-lg text-black">
                     3. سفره عقد طبیعی
                   </li>
                   <p className="my-3">
@@ -359,7 +359,7 @@ const Page = () => {
                     رودخونه‌ای و شمع‌های روشن معطر استفاده می‌شه.
                   </p>
                 </ul>
-                <div className="mx-auto width-auto my-2 px-1.5 py-1.5 bg-white rounded-lg">
+                <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                   <Image
                     src="/assets/images/garden-good-1.webp"
                     width={4000}
@@ -383,7 +383,7 @@ const Page = () => {
                 </p>
                 <span>
                   <Link href="/">
-                    <span className="text-xl h2-blog-header hover:text-blue-500">
+                    <span className="text-xl text-black font-bold hover:text-blue-500">
                       شاتو دو ورسای
                     </span>
                   </Link>
