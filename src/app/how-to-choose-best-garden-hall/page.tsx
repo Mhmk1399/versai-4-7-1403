@@ -6,7 +6,7 @@ import { BlogSchema } from "../../../components/schema/blogSchema";
 import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
-  const blogId = "how-to-choose-best-garden-hall"
+  const blogId = "how-to-choose-best-garden-hall";
   const blogData = {
     title: "چگونه بهترین باغ تالار را برای عروسی خود انتخاب کنیم؟",
     url: "/how-to-choose-best-garden-hall",
@@ -39,7 +39,9 @@ const Page = () => {
 
       <div className="  grid mx-auto grid-cols-1 h-auto p-4 " dir="rtl">
         <div className="px-4 mx-auto py-2   rounded-lg my-2 width-full grid grid-cols-1 gap-4">
-          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">           <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
+          <div className="col-span-2 mx-auto width-auto my-2 max-w-5xl  rounded-lg">
+            {" "}
+            <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
               <Image
                 src="/assets/images/blog12hero.webp"
                 width={4000}
@@ -100,7 +102,7 @@ const Page = () => {
                       محیطی منحصربه‌فرد و طراحی‌های مدرن، همه این موارد را در
                       اختیار شما قرار می‌دهد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       نکات مهم:
                     </p>
                     <span>1 - فضای بزرگ و دلنشین</span>
@@ -133,7 +135,7 @@ const Page = () => {
                       که برای این امر در نظر گرفته‌اید، باشد. شاتو دو ورسای
                       تمامی این امکانات را با توجه به نیازهای شما فراهم می‌کند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       نکات قابل توجه:
                     </p>
                     <span>1 - زمان‌بندی مناسب برای رزرو</span>
@@ -164,7 +166,7 @@ const Page = () => {
                       مکان هر آنچه که برای یک عروسی باشکوه نیاز دارید را در
                       اختیار شما می‌گذارد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       امکانات ویژه:
                     </p>
                     <span>1 - نورپردازی حرفه‌ای و مدرن</span>
@@ -194,7 +196,7 @@ const Page = () => {
                       گرفته تا نحوه چیدمان میزها، همه چیز بر اساس خواست شما
                       انجام می‌شود.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       پیشنهادات:
                     </p>
                     <span>1 - انتخاب گل‌های تازه و زیبا برای تزیین</span>
@@ -224,7 +226,7 @@ const Page = () => {
                       جلوه‌ای ویژه به عروسی شما می‌بخشد، بلکه لحظات خاطره‌انگیزی
                       را برای شما و مهمانان‌تان رقم خواهد زد.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       مزایای فضای باز:
                     </p>
                     <span>1 - عکاسی زیبا در طبیعت</span>
@@ -259,7 +261,7 @@ const Page = () => {
                       کرده‌اند، تجربه‌های خود را به اشتراک گذاشته‌اند و از خدمات
                       بی‌نظیر این مجموعه تعریف کرده‌اند.
                     </span>
-                    <p className="font-bold my-3 text-lg ml-2 text-black font-bold">
+                    <p className="font-bold my-3 text-lg ml-2 text-black">
                       نظرات عروس‌ها:
                     </p>
                     <span>1 - همه چیز بی‌نقص بود، از تزیینات تا خدمات!</span>
