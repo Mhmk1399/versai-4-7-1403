@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/logo.webp";
 import { motion, AnimatePresence } from "framer-motion";
-import { ImageIcon, Info, Flower, UtensilsCrossed } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
