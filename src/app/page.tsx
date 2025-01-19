@@ -5,7 +5,6 @@ import { sectionsData, optionsData } from "../../lib/data";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-
 import { useEffect } from "react";
 import { Loader } from "../../components/(ui)/loader";
 
@@ -16,7 +15,6 @@ interface ImageData {
 }
 
 const Page = () => {
-  
   const handleButtonClick = () => {
     window.location.href = "/galery";
   };
@@ -40,21 +38,20 @@ const Page = () => {
   }, []); // Re-run when category changes
   console.log(image);
 
-  
   useEffect(() => {
-   setTimeout(() => {
+    setTimeout(() => {
       setLoader(false);
     }, 5000);
   }, []);
   if (loader) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <Loader/>
+        <Loader />
       </div>
     );
   }
   return (
-    <div className="bg-white/10">
+    <div className="bg-white/10 max-w-7xl mx-auto py-8">
       {/* Hero Section */}
       <div className="container mx-auto p-4 ">
         <div className="relative w-full h-screen px-4" id="home">
@@ -94,7 +91,7 @@ const Page = () => {
               <h1 className="text-2xl md:text-5xl font-bold border-b-2 pb-3 border-gold text-white mb-2">
                 مجموعه تشریفاتی شاتو دو ورسای
               </h1>
-              <p  className="text-white/80 text-xs md:text-lg my-2">
+              <p className="text-white/80 text-xs md:text-lg my-2">
                 رویای یک شب فرانسوی در تهران
               </p>
               <motion.button
@@ -148,7 +145,7 @@ const Page = () => {
                     />
                   )}
                   <div className="mt-6 flex flex-col justify-center items-center">
-                    <h3 className="text-xl font-bold text-gold mb-2" dir="rtl">
+                    <h3 className="text-xl font-bold text-black mb-2" dir="rtl">
                       {section.title}
                     </h3>
                     <p className="text-gray-700 text-sm sm:text-base mb-4">
@@ -170,7 +167,7 @@ const Page = () => {
       </section>
 
       {/* Wedding Night Section */}
-      <div className="relative flex flex-col lg:flex-row rounded-lg overflow-hidden min-h-full mt-12 lg:ml-12">
+      <div className="relative flex flex-col lg:flex-row  overflow-hidden min-h-full mt-12 lg:ml-12">
         {/* Background Image with Overlap */}
         <div className="relative w-full lg:w-1/2">
           <motion.div whileHover={{ x: -40 }} transition={{ duration: 0.5 }}>
@@ -179,14 +176,14 @@ const Page = () => {
               alt="Wedding Night"
               width={1000}
               height={500}
-              className="rounded-2xl object-cover h-full w-full lg:ml-2 transition-transform duration-300"
+              className=" object-cover h-full w-full lg:ml-2 transition-all duration-300"
             />
           </motion.div>
         </div>
 
         {/* Text Box with Background Overlay */}
         <div className="relative lg:ml-[-50px] mt-2 lg:mt-0 bg-white/10 bg-opacity-30 backdrop-blur-md flex flex-col justify-center items-center text-center p-8 lg:p-10 rounded-2xl lg:z-10 lg:w-1/2">
-          <h3 className="text-3xl md:text-4xl font-semibold text-gold">
+          <h3 className="text-3xl md:text-4xl font-semibold text-black">
             شب عروسی
           </h3>
           <p className="py-6 text-black text-lg md:text-xl mb-4">
@@ -204,18 +201,27 @@ const Page = () => {
       {/* Options Section */}
       <section className="py-10" id="options">
         <div className="container mx-auto px-4">
-          <h2 className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center ">
-            ویژگی‌های برجسته شاتو دو ورسای
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <motion.h2
+            className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-12 text-center"
+            initial={{ opacity: 0, y: -30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            امکانات و خدمات لاکچری و مدرن شاتو دو ورسای
+          </motion.h2>
+          <div className="flex overflow-x-auto snap-x snap-mandatory pb-6 hide-scrollbar">
             {optionsData.map((option, i) => {
               const matchingImage2 = image.find(
                 (img) => img.category === option.category
               );
               return (
-                <div
+                <motion.div
                   key={i}
-                  className="bg-white/10 rounded-lg height-box p-8 sm:px-4 overflow-hidden grid grid-rows-1 justify-center text-center"
+                  className="flex-shrink-0 snap-center w-[85vw] md:w-[45vw] lg:w-[30vw] bg-white/10 rounded-lg p-4 sm:p-6"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  whileHover={{ scale: 1.05 }}
                 >
                   {matchingImage2 && (
                     <Image
@@ -234,13 +240,13 @@ const Page = () => {
                       {option.description}
                     </p>
                     <button
-                      className="bg-gold hover:bg-green text-white font-bold py-2 px-4 rounded"
+                      className="bg-green hover:bg-gold text-white font-bold py-2 px-4 rounded"
                       onClick={handleButtonClick}
                     >
                       مشاهده بیشتر
                     </button>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -248,7 +254,7 @@ const Page = () => {
       </section>
 
       {/* Contact Information Section */}
-      <div className="bg-transparent rounded-lg p-8 text-center my-4">
+      <div className="bg-transparent rounded-lg p-8 -mt-10 text-center">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           موقعیت مکانی و دسترسی آسان
         </h2>
@@ -269,7 +275,6 @@ const Page = () => {
       </div>
 
       {/* Contact Methods Section */}
-     
     </div>
   );
 };

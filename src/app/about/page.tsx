@@ -18,10 +18,10 @@ const Page = () => {
 
   return (
     <div>
-      <section className="py-10 bg-[#e8e8e5]" id="aboutus">
+      <section className="py-10" id="aboutus">
         <div className="container mx-auto px-4">
           <motion.h1
-            className="text-3xl font-bold text-[#c8a876] text-center mx-auto mb-8"
+            className="text-3xl font-bold text-green text-center mx-auto mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -79,7 +79,7 @@ const Page = () => {
               </p>
               <Link
                 href="tel:+989123314145"
-                className="inline-block px-6 py-3 bg-[#c8a876] text-white font-bold rounded-full hover:bg-[#c09858] transition duration-200 text-center mx-auto"
+                className="inline-block px-6 py-3 bg-green text-white font-bold rounded-md hover:bg-[#c09858] transition duration-200 text-center mx-auto"
               >
                 برای دیافت انتقادات و پیشتهادات در خدمت شما هستیم
               </Link>

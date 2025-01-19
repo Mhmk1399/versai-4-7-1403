@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next/types";
 import "./globals.css";
 import NavBar from "../../components/NavaBar";
@@ -6,7 +5,7 @@ import Footer from "../../components/Footer";
 import Link from "next/link";
 import { EdgeStoreProvider } from "../../lib/edgestore";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const dynamic = "force-dynamic";
 
@@ -88,15 +87,15 @@ export default function RootLayout({
         {/* Bottom buttons */}
         <div className="fixed bottom-2 right-5 flex flex-row space-y-4">
           <Link href="/menue">
-            <button className="bg-gradient-to-l hover:bg-green bg-white/10  backdrop-blur-xl text-gold py-2 font-bold px-6 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+            <button className="bg-gradient-to-l hover:bg-green border-2 border-gold bg-green/50  backdrop-blur-xl text-white py-2 font-bold px-6 mx-auto rounded-md shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
               درخواست قیمت
             </button>
           </Link>
         </div>
         <div className="fixed bottom-2 left-5 flex flex-row space-y-4">
           <Link href="tel:+989123314145" id="call-buttom-fixed-botom">
-            <button className="bg-gradient-to-l hover:bg-green bg-white/10  backdrop-blur-xl text-gold py-2 font-bold px-6 mx-auto rounded-full shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
-              تماس با شاتو دو ورسای
+            <button className="bg-gradient-to-l hover:bg-green border-2 border-gold bg-green/50  backdrop-blur-xl text-white py-2 font-bold px-6 mx-auto rounded-md shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105">
+              تماس با مدیریت
             </button>
           </Link>
         </div>

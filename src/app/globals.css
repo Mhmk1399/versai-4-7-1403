@@ -130,19 +130,19 @@ a {
 .li-border-color {
   border-bottom: solid 2px #d2b338;
 }
-.h2-blog-header{
-  color:#d2b338 ;
+.h2-blog-header {
+  color: #d2b338;
 }
-.hover-btn:hover{
-  color:#d2b338 ;
+.hover-btn:hover {
+  color: #d2b338;
 }
-.ul-color .li-price{
+.ul-color .li-price {
   color: #108280;
 }
-.ul-color .bold-price{
-  color:#d2b338  ;
+.ul-color .bold-price {
+  color: #d2b338;
 }
-.height-box{
+.height-box {
   height: 545px;
 }
 /* loader css */
@@ -168,5 +168,15 @@ a {
   border-radius: 50%;
   background: conic-gradient(from 0deg, #ffffff00, #ffffff80, #ffffff00);
   animation: spin 3s linear infinite, glow 2s ease-in-out infinite;
+}
+/* hide scroll bar in Gallery */
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 

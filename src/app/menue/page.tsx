@@ -1030,22 +1030,22 @@ const Page = () => {
         </div>
       </div>
 
-      <div className=" py-4 px-12 flex justify-around items-center flex-wrap shadow-gold/50 gap-4 mx-auto mb-8 text-center text-green">
+      <div className=" py-4 px-12 flex justify-around items-center flex-wrap  gap-4 mx-auto mb-8 text-center text-green">
         <h1 className="text-2xl font-bold text-green text-center mx-auto ">
           your satisfaction guaranteed
         </h1>
       </div>
 
-      <div className="w-auto sm:w-full max-w-5xl bg-white/50 backdrop-blur-md rounded-xl shadow-2xl px-8 text-center">
+      <div className="w-auto sm:w-full max-w-5xl px-8 text-center">
         <h2 className="text-xl md:text-3xl font-semibold text-gray-800 text-center my-6">
           درخواست قیمت و رزرو زمان بازدید
         </h2>
         <form
           onSubmit={handleSubmit}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="flex lg:flex-row flex-col gap-4 justify-center items-center"
         >
           {/* Name & Phone Section */}
-          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col gap-6">
             <div className="space-y-2">
               <label className="block text-base lg:text-xl font-bold text-black">
                 شماره تماس
@@ -1070,44 +1070,58 @@ const Page = () => {
                 placeholder="نام خود را وارد کنید"
               />
             </div>
-          </div>
+            {/* Guests & Menu Section */}
 
-          {/* Guests & Menu Section */}
-          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 border-b border-gray-600 pb-4">
-            <div className="space-y-2">
-              <label className="block text-base lg:text-xl font-bold text-black">
-                تعداد مهمان‌ها
-              </label>
-              <input
-                type="number"
-                value={gustes}
-                onChange={handleGustesChange}
-                className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green/50 border-none sm:text-sm py-3 text-end px-4"
-                placeholder="تعداد مهمان‌ها را وارد کنید"
-              />
+            <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 border-b border-gray-600 pb-4">
+              <div className="space-y-2">
+                <label className="block text-base lg:text-xl font-bold text-black">
+                  تعداد مهمان‌ها
+                </label>
+                <input
+                  type="number"
+                  value={gustes}
+                  onChange={handleGustesChange}
+                  className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green/50 border-none sm:text-sm py-3 text-end px-4"
+                  placeholder="تعداد مهمان‌ها را وارد کنید"
+                />
+              </div>
+              <div className="space-y-2" dir="rtl">
+                <label className="block text-xl font-bold text-black">
+                  منو
+                </label>
+                <select
+                  value={menue}
+                  onChange={handleMenueChange}
+                  className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green/50 border-none sm:text-sm py-3 text-right px-4"
+                >
+                  <option value="" disabled>
+                    انتخاب منو
+                  </option>
+                  <option value="دیس پرس سیلور">دیس پرس سیلور</option>
+                  <option value="دیس پرس گلد">دیس پرس گلد</option>
+                  <option value="دیس پرس VIP">دیس پرس VIP</option>
+                  <option value="سلف سیلور">سلف سیلور</option>
+                  <option value="سلف گلد">سلف گلد</option>
+                  <option value="سلف VIP">سلف VIP</option>
+                </select>
+              </div>
             </div>
-            <div className="space-y-2" dir="rtl">
-              <label className="block text-xl font-bold text-black">منو</label>
-              <select
-                value={menue}
-                onChange={handleMenueChange}
-                className="w-full rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-green/50 border-none sm:text-sm py-3 text-right px-4"
+            <div className="md:col-span-2 ">
+              <button
+                type="submit"
+                className="w-full hidden lg:block bg-[#344e41] text-white py-3 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out"
               >
-                <option value="" disabled>
-                  انتخاب منو
-                </option>
-                <option value="دیس پرس سیلور">دیس پرس سیلور</option>
-                <option value="دیس پرس گلد">دیس پرس گلد</option>
-                <option value="دیس پرس VIP">دیس پرس VIP</option>
-                <option value="سلف سیلور">سلف سیلور</option>
-                <option value="سلف گلد">سلف گلد</option>
-                <option value="سلف VIP">سلف VIP</option>
-              </select>
+                ارسال فرم
+              </button>
+              {message && (
+                <p className="text-center hidden lg:block mt-4 text-sm font-medium text-red-400">
+                  لطفا تمام فیلدها را پر کنید
+                </p>
+              )}
             </div>
           </div>
-
           {/* Calendars Section */}
-          <div className="md:col-span-2 grid  md:grid-cols-2 items-center justify-center lg:mx-auto gap-12">
+          <div className=" flex lg:flex-row flex-col lg:mx-auto gap-2">
             <div className="space-y-2 ">
               <label className="block text-base lg:text-xl font-bold text-black">
                 تاریخ عروسی
@@ -1117,7 +1131,7 @@ const Page = () => {
                 onChange={handleWeddingdateChange}
                 shouldHighlightWeekends
                 locale="fa"
-                calendarClassName="custom-calendar w-full shadow-lg rounded-lg"
+                calendarClassName="custom-calendar w-full shadow-lg rounded-lg "
                 colorPrimary="#9c27b0"
                 colorPrimaryLight="#f3e5f5"
               />
@@ -1137,22 +1151,19 @@ const Page = () => {
               />
             </div>
           </div>
-
-          {/* Submit Button */}
-          <div className="md:col-span-2 mt-6 mb-8">
-            <button
-              type="submit"
-              className="w-full bg-[#344e41] text-white py-3 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out"
-            >
-              ارسال فرم
-            </button>
-            {message && (
-              <p className="text-center mt-4 text-sm font-medium text-green">
-                {message}
-              </p>
-            )}
-          </div>
+          {message && (
+            <p className="text-center block lg:hidden mt-4 text-sm font-medium text-red-400">
+              لطفا تمام فیلدها را پر کنید
+            </p>
+          )}
         </form>
+        {/* Submit Button */}
+        <button
+          type="submit"
+          className="w-full my-4 block lg:hidden bg-[#344e41] text-white py-3 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out"
+        >
+          ارسال فرم
+        </button>
       </div>
     </div>
   );
