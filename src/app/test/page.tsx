@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/logo.webp";
+import Logo from "../../../public/logo.webp";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
