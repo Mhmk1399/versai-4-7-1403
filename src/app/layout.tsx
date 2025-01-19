@@ -1,6 +1,6 @@
 import type { Metadata } from "next/types";
 import "./globals.css";
-import NavBar from "../../components/NavaBar";
+import NavBar from "../../components/header";
 import Footer from "../../components/Footer";
 import Link from "next/link";
 import { EdgeStoreProvider } from "../../lib/edgestore";

@@ -94,7 +94,7 @@ export default function CommentBox({ blogId }: CommentBoxProps) {
         whileHover={{ scale: 1.01 }}
       >
         <div className="flex justify-between mb-2">
-          <div className="flex items-center gap-2">
+          <div className="flex flex-row items-center justify-around gap-12">
             <span className="font-bold text-blue-600">{comment.userName}</span>
             {comment.parentId && (
               <div className="flex items-center text-sm text-gray-500">
@@ -114,10 +114,10 @@ export default function CommentBox({ blogId }: CommentBoxProps) {
                 <span>در پاسخ به</span>
               </div>
             )}
+            <span className="text-gray-600 text-sm text-left mr-auto">
+              {new Date(comment.createdAt).toLocaleDateString("fa-IR")}
+            </span>
           </div>
-          <span className="text-gray-600 text-sm">
-            {new Date(comment.createdAt).toLocaleDateString("fa-IR")}
-          </span>
         </div>
         <p className="leading-relaxed text-gray-800">{comment.content}</p>
 

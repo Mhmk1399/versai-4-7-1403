@@ -51,7 +51,7 @@ const Page = () => {
     );
   }
   return (
-    <div className="bg-white/10 max-w-7xl mx-auto py-8">
+    <div className="bg-white/10 max-w-7xl mx-auto pb-8">
       {/* Hero Section */}
       <div className="container mx-auto p-4 ">
         <div className="relative w-full h-screen px-4" id="home">
