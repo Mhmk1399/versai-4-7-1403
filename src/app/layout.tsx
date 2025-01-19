@@ -7,6 +7,7 @@ import { EdgeStoreProvider } from "../../lib/edgestore";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+
 export const dynamic = "force-dynamic";
 
 // Define metadata with proper Google, Yahoo, and Yandex verification tags
