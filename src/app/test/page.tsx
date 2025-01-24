@@ -5,7 +5,7 @@ import Image from "next/image";
 import Logo from "../../../public/logo.webp";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Navbar = () => {
+const NavbarTest = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -123,4 +123,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarTest;
