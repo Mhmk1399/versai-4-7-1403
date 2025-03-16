@@ -6,10 +6,10 @@ import { BlogSchema } from "../../../components/schema/blogSchema";
 import CommentBox from "../../../components/commentBox";
 
 const Page = () => {
-  const blogId = "how-to-make-an-agreement-with-hall";
+  const blogId = "how-to-reserve-a-hall-day";
   const blogData = {
     title: "چگونه با تالار قرار داد ببندیم ؟",
-    url: "/how-to-make-an-agreement-with-hall",
+    url: "/how-to-reserve-a-hall-day",
     images: [
       "/assets/images/dancestage-good-3.webp",
       "/assets/images/blog346.webp",
@@ -328,10 +328,10 @@ const Page = () => {
                     </p>
                     <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
-                        src="/assets/images/blog346.webp"
+                        src="/assets/images/138.webp"
                         width={4000}
                         height={4000}
-                        alt="قرارداد تالاز"
+                        alt="شاتو دو ورسای"
                         className="rounded-lg shadow-lg w-full h-full"
                       />
                     </div>
@@ -468,7 +468,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto width-auto my-2 px-1.5 py-1.5   rounded-lg">
                       <Image
-                        src="/assets/images/blog343.webp"
+                        src="/assets/images/192.webp"
                         width={4000}
                         height={4000}
                         alt="درج تاریخ و شماره قرارداد"
@@ -759,11 +759,10 @@ const Page = () => {
                   </p>
                   <div className="mx-auto width-auto my-2 px-1.5 py-1.5 rounded-lg">
                     <Image
-                      src="/assets/images/blog344.webp"
+                      src="/assets/images/View-of-the-table-and-chair-arrangement-of-the-columnless-garden-hall-of-the-Chateau-de-Versailles-luxury-hall.webp"
                       width={4000}
-                      
                       height={4000}
-                      alt="  عکس عروسی مختلط"
+                      alt="شاتودو ورسای"
                       className="rounded-lg shadow-lg w-full h-full"
                     />
                   </div>
