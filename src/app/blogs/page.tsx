@@ -121,9 +121,9 @@ const handleButtonClick38 = () => {
 const handleButtonClick39 = () => {
   window.location.href = "/how-to-reserve-a-hall-day";
 };
-// const handleButtonClick40 = () => {
-//   window.location.href = "/why-is-chooding-a-hall-in-tehran-important";
-// };
+ const handleButtonClick40 = () => {
+   window.location.href = "/why-is-chooding-a-hall-in-tehran-important";
+ };
 // const handleButtonClick41 = () => {
 //   window.location.href = "/renting-the-most-economical-hall-in-tehran";
 // };
