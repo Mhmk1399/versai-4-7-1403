@@ -124,9 +124,9 @@ const handleButtonClick39 = () => {
 const handleButtonClick40 = () => {
   window.location.href = "/why-is-chooding-a-hall-in-tehran-important";
 };
-// const handleButtonClick41 = () => {
-//   window.location.href = "/renting-the-most-economical-hall-in-tehran";
-// };
+const handleButtonClick41 = () => {
+  window.location.href = "/renting-the-most-economical-hall-in-tehran";
+};
 // const handleButtonClick42 = () => {
 //   window.location.href = "/ten-tips-when-booking-a-wedding-hall";
 // };
@@ -2406,7 +2406,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        {/* <div
+        <div
           className="p-1 flex flex-wrap items-center justify-center"
           onClick={handleButtonClick41}
         >
@@ -2461,7 +2461,7 @@ const Page = () => {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* <div
           className="p-1 flex flex-wrap items-center justify-center"
           onClick={handleButtonClick42}
