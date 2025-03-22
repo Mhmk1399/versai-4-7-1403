@@ -127,9 +127,9 @@ const handleButtonClick40 = () => {
 const handleButtonClick41 = () => {
   window.location.href = "/renting-the-most-economical-hall-in-tehran";
 };
-// const handleButtonClick42 = () => {
-//   window.location.href = "/ten-tips-when-booking-a-wedding-hall";
-// };
+const handleButtonClick42 = () => {
+  window.location.href = "/ten-tips-when-booking-a-wedding-hall";
+};
 
 const Page = () => {
   const blogData = {
@@ -167,7 +167,6 @@ const Page = () => {
     <>
       <BlogSchema blogData={blogData} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4 my-8">
-        {/* راهنمای  انتخاب بهترین تالار در تهران */}
 
         <div
           className="p-1 flex flex-col items-center justify-center"
@@ -226,7 +225,6 @@ const Page = () => {
           </div>
         </div>
 
-        {/* چطور یک عروسی لاکچری و به‌صرفه داشته باشیم؟*/}
 
         <div
           className="p-1 flex flex-wrap items-center justify-center"
@@ -2462,7 +2460,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        {/* <div
+        <div
           className="p-1 flex flex-wrap items-center justify-center"
           onClick={handleButtonClick42}
         >
@@ -2512,11 +2510,12 @@ const Page = () => {
               <span className="block opacity-75 -mb-1"></span>
               <div className="flex justify-center">
                 <span className="block text-xs ">
-10  نکته هنگام رزرو تالار عروسی                </span>
+                  10 نکته هنگام رزرو تالار عروسی{" "}
+                </span>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );
