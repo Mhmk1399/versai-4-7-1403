@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 // "use server" is for server actions (functions that run on the server)
 
 export const GalleryMeta: Metadata = {
-  title: "گالری شاتو دو ورسای",
+  title: " تصاویر ورسای | گالری تصاویر شاتو دو ورسای",
   description:
-    "شما در این دو سالن به ظرفیت 1200 نفر میتوانید تمام دیزاین های روز دنیا را پیاده سازی کنید و بدون دقدقه به فکر پرشکوه برگذار شدن مراسم بهترین شب زنندگی خودتون باشید",
+    "شما در این دو سالن به ظرفیت 1200 نفر میتوانید تمام دیزاین های روز دنیا را پیاده سازی کنید ",
 };
 
 export const HomeMeta: Metadata = {

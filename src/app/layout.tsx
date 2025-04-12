@@ -59,20 +59,11 @@ export default function RootLayout({
           content="-2YgenFOh4xq185ypA7qdCTwnq6t2EFX8nh2qC9QpDQ"
         />
 
-        {/* Remove the static canonical link - we'll use the dynamic one */}
-        {/* <link rel="canonical" href="https://kakhversai/" /> */}
-
         <link
           rel="icon"
           href="/assets/images/faviicon.png"
           type="image/x-icon"
         />
-
-        {/* <title>{metadata.title?.toString() || ""}</title>
-        <meta
-          name="description"
-          content={metadata.description?.toString() || ""}
-        /> */}
       </head>
       <body>
         {/* Add the CanonicalUrl component to handle dynamic canonical URLs */}
