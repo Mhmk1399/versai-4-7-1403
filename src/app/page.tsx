@@ -2,10 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { sectionsData, optionsData } from "../../lib/data";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-import { useEffect } from "react";
 import { Loader } from "../../components/(ui)/loader";
 
 interface ImageData {
@@ -64,8 +62,7 @@ const Page = () => {
           >
             <Image
               className=" w-full h-full rounded-2xl object-cover hidden md:block"
-              alt="Hero image"
-              loading="lazy"
+              alt="Hero image Desktop"
               src="/assets/images/bloog12.webp"
               width={4000}
               height={500}
@@ -73,7 +70,6 @@ const Page = () => {
             <Image
               className=" w-full h-full rounded-2xl object-cover md:hidden block"
               alt="Hero image"
-              loading="lazy"
               src="/assets/images/heroPhone.webp"
               width={4000}
               height={500}

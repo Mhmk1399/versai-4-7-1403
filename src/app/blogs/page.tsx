@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { useEffect } from "react";
 import { BlogSchema } from "../../../components/schema/blogSchema";
 
 const handleButtonClick = () => {
@@ -153,16 +152,6 @@ const Page = () => {
     ],
   };
 
-  useEffect(() => {
-    document.title = "وبلاگ شاتو دو ورسای";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "باغ تالار شاتو دو ورسای با الهام از شکوه و زیبایی کاخ ورسای فرانسه طراحی شده است."
-      );
-    }
-  }, []);
   return (
     <>
       <BlogSchema blogData={blogData} />

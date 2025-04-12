@@ -51,17 +51,6 @@ const Page = () => {
   const [selectedFood, setSelectedFood] = useState<FoodItem>();
   const [expandedBanner, setExpandedBanner] = useState<number | null>(null);
 
-  useEffect(() => {
-    document.title = "منوی تالار شاتو دو ورسای";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        " ما در ورسای سعی کردیم با ارائه کردن هفت پکیج مختلف از غذا ها و میان وعده های متفاوت حداکثر رضایت شما را به دست بیاوریم"
-      );
-    }
-  }, []);
-
   const Banners = [
     { img: Banner1, title: "پکیج VIP", desc: "لوکس‌ترین خدمات" },
     { img: Banner2, title: "پکیج طلایی", desc: "خدمات ویژه" },

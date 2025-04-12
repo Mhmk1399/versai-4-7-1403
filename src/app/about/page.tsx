@@ -41,16 +41,7 @@ const Page = () => {
     ],
   };
 
-  useEffect(() => {
-    document.title = "درباره ما";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "باغ تالار ورسای در جنوب غرب تهران یکی از لوکس‌ترین و مجلل‌ترین باغ تالارهای تهران به شمار می آید."
-      );
-    }
-  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
