@@ -35,7 +35,6 @@ const Page = () => {
   }, []); // Re-run when category changes
   console.log(image);
 
-
   return (
     <div className="bg-white/10 max-w-7xl mx-auto pb-8">
       {/* Hero Section */}
