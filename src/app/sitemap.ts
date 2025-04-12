@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
      {
-      url: 'https://kakhversai.ir/galery',
+      url: 'https://kakhversai.ir/gallery',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,

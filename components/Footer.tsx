@@ -74,7 +74,7 @@ const Footer = () => {
         className=" gap-4 mx-auto text-center font-bold text-xl flex flex-row justify-center my-6 pb-2"
         dir="rtl"
       >
-        <Link href="/galery">
+        <Link href="/gallery">
           <div>تصاویر</div>
         </Link>
         <Link href="/blogs">

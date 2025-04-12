@@ -130,7 +130,7 @@ const handleButtonClick42 = () => {
   window.location.href = "/ten-tips-when-booking-a-wedding-hall";
 };
 
-const Page = () => {
+const BlogPage = () => {
   const blogData = {
     title: "وبلاگ شاتو دو ورسای | مقالات تخصصی درباره برگزاری مراسم عروسی",
     url: "/blogs",
@@ -151,7 +151,6 @@ const Page = () => {
       },
     ],
   };
-
 
   return (
     <>
@@ -198,7 +197,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -255,7 +254,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -311,7 +310,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -368,7 +367,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -425,7 +424,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -481,7 +480,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -537,7 +536,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -593,7 +592,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -649,7 +648,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -705,7 +704,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -761,7 +760,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -817,7 +816,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -873,7 +872,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -929,7 +928,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -985,7 +984,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1041,7 +1040,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1097,7 +1096,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1153,7 +1152,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1207,7 +1206,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1263,7 +1262,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1319,7 +1318,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1375,7 +1374,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1429,7 +1428,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1483,7 +1482,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1537,7 +1536,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1593,7 +1592,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1649,7 +1648,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1705,7 +1704,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1761,7 +1760,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1817,7 +1816,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1873,7 +1872,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1929,7 +1928,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -1985,7 +1984,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2041,7 +2040,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2097,7 +2096,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2153,7 +2152,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2209,7 +2208,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2265,7 +2264,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2321,7 +2320,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2377,7 +2376,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2433,7 +2432,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2489,7 +2488,7 @@ const Page = () => {
               <Image
                 className="relative w-40"
                 src="/logo.webp"
-                alt=""
+                alt="blog"
                 width={4000}
                 height={4000}
               />
@@ -2509,4 +2508,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default BlogPage;

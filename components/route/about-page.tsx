@@ -41,16 +41,7 @@ const AboutPage = () => {
     ],
   };
 
-  useEffect(() => {
-    document.title = "درباره ما";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "باغ تالار ورسای در جنوب غرب تهران یکی از لوکس‌ترین و مجلل‌ترین باغ تالارهای تهران به شمار می آید."
-      );
-    }
-  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
@@ -76,7 +67,7 @@ const AboutPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              Your Satisfaction Guarantee
+              همه چیز در باره ی مجموعه تشریفاتی کاخ ورسای
             </motion.h1>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <motion.div
@@ -86,7 +77,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <h2 className="text-3xl font-bold text-black p-2 text-center mx-auto mb-8">
-                  همه چیز در باره ی مجموعه تشریفاتی کاخ ورسای
+                  Your Satisfaction Guarantee
                 </h2>
 
                 <p
@@ -142,7 +133,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <Image
-                  alt="Exterior-view-of-the-garden-of-the-luxury-hall-of-Chateau-de-Versailles"
+                  alt="about-page"
                   src="/assets/images/aboutpage.jpg"
                   width={4000}
                   height={4000}

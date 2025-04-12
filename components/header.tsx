@@ -11,7 +11,7 @@ const Navbar = () => {
   const navItems = [
     {
       title: "تصاویر و ویدیو ها",
-      href: "/galery",
+      href: "/gallery",
     },
     {
       title: "درباره ما",
