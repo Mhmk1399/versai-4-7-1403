@@ -15,11 +15,10 @@ const Page = () => {
   const handleButtonClick = () => {
     window.location.href = "/galery";
   };
-  const handleButtonClick2 = () => {
-    window.location.href = "/menue";
-  };
+  // const handleButtonClick2 = () => {
+  //   window.location.href = "/menue";
+  // };
   const [image, setImage] = useState<ImageData[]>([]);
-  const [loader, setLoader] = useState(true);
   useEffect(() => {
     async function fetchImages() {
       try {
@@ -33,7 +32,6 @@ const Page = () => {
 
     fetchImages();
   }, []); // Re-run when category changes
-  console.log(image);
 
   return (
     <div className="bg-white/10 max-w-7xl mx-auto pb-8">
