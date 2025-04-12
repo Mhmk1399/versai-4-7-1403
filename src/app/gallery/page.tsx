@@ -27,6 +27,10 @@ const Gallery = () => {
   return (
     <>
       <div className="p-5 sm:p-8 mt-4">
+        <h1 className="text-2xl font-bold my-8 text-green text-center mx-auto">
+          گالری تصاویر شاتو دو ورسای
+        </h1>
+
         {categories.map((category, categoryIndex) => (
           <div key={category} className="mb-8">
             <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4">

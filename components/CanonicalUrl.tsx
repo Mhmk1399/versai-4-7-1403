@@ -19,7 +19,6 @@ export default function CanonicalUrl() {
     const baseUrl = "https://kakhversai.com"; 
     link.setAttribute("href", `${baseUrl}${pathname}`);
   }, [pathname]);
-  console.log("Canonical URL set to:", pathname);
 
   return null;
 }

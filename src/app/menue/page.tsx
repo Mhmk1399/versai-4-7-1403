@@ -947,7 +947,7 @@ const Page = () => {
       <BlogSchema blogData={blogData} />
       <div className="flex flex-col justify-center items-center min-h-screen  p-8">
         <div className=" rounded-lg  p-4 flex justify-around items-center flex-wrap gap-4 mx-auto mb-4 text-center text-green">
-          <h1 className="text-2xl font-bold  text-green text-center mx-auto ">
+          <h1 className="text-2xl font-bold text-green text-center mx-auto ">
             منوی غذا ها و خدمات شاتو دو ورسای
           </h1>
           <p>
