@@ -167,7 +167,6 @@ const Page = () => {
     <>
       <BlogSchema blogData={blogData} />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4 my-8">
-
         <div
           className="p-1 flex flex-col items-center justify-center"
           onClick={handleButtonClick}
@@ -224,7 +223,6 @@ const Page = () => {
             </div>
           </div>
         </div>
-
 
         <div
           className="p-1 flex flex-wrap items-center justify-center"

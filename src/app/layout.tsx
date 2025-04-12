@@ -6,7 +6,8 @@ import Link from "next/link";
 import { EdgeStoreProvider } from "../../lib/edgestore";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import Script from "next/script";
+import CanonicalUrl from "../../components/CanonicalUrl";
 
 export const dynamic = "force-dynamic";
 
@@ -57,7 +58,10 @@ export default function RootLayout({
           name="google-site-verification"
           content="-2YgenFOh4xq185ypA7qdCTwnq6t2EFX8nh2qC9QpDQ"
         />
-        <link rel="canonical" href="https://kakhversai/" />
+
+        {/* Remove the static canonical link - we'll use the dynamic one */}
+        {/* <link rel="canonical" href="https://kakhversai/" /> */}
+
         <link
           rel="icon"
           href="/assets/images/faviicon.png"
@@ -71,6 +75,9 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Add the CanonicalUrl component to handle dynamic canonical URLs */}
+        <CanonicalUrl />
+
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
@@ -80,6 +87,20 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
+        {/* Load GTM with next/script */}
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P2D3326Q');
+          `,
+          }}
+        />
         {/* {/* End Google Tag Manager (noscript) */}
 
         <NavBar />
