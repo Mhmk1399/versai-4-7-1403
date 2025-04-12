@@ -4,7 +4,6 @@ import Link from "next/link";
 import { sectionsData, optionsData } from "../../lib/data";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Loader } from "../../components/(ui)/loader";
 
 interface ImageData {
   type: "bad" | "normal" | "good";
@@ -36,18 +35,7 @@ const Page = () => {
   }, []); // Re-run when category changes
   console.log(image);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 5000);
-  }, []);
-  if (loader) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader />
-      </div>
-    );
-  }
+
   return (
     <div className="bg-white/10 max-w-7xl mx-auto pb-8">
       {/* Hero Section */}

@@ -1,14 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BlogSchema } from "../../../components/schema/blogSchema";
-import { Loader } from "../../../components/(ui)/loader";
 
 const Page = () => {
-  const [loader, setLoader] = useState(true);
-
   const blogData = {
     title: "درباره مجموعه تشریفاتی کاخ ورسای - لوکس‌ترین باغ تالار تهران",
     url: "/about",
@@ -40,19 +36,6 @@ const Page = () => {
       },
     ],
   };
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 5000);
-  }, []);
-  if (loader) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader />
-      </div>
-    );
-  }
 
   return (
     <>

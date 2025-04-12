@@ -1,11 +1,10 @@
 "use client";
-import { useState, FormEvent, useEffect } from "react";
+import { useState, FormEvent } from "react";
 import { Calendar } from "react-modern-calendar-datepicker";
 import Image from "next/image";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import { motion } from "framer-motion";
 import { BlogSchema } from "../../../components/schema/blogSchema";
-import { Loader } from "../../../components/(ui)/loader";
 import Banner1 from "../../../public/assets/images/131.webp";
 import Banner2 from "../../../public/assets/images/132.webp";
 import Banner3 from "../../../public/assets/images/133.webp";
@@ -32,7 +31,6 @@ interface FoodItem {
 }
 
 const Page = () => {
-  const [loader, setLoader] = useState(true);
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [gustes, setGustes] = useState("");
@@ -929,18 +927,7 @@ const Page = () => {
       },
     ],
   };
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 5000);
-  }, []);
-  if (loader) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader />
-      </div>
-    );
-  }
+
 
   return (
     <>

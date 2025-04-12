@@ -1,28 +1,11 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import Data from "../../../lib/gallery";
-import { Loader } from "../../../components/(ui)/loader";
 
 const Gallery = () => {
-  const [loader, setLoader] = useState(true);
 
   // Group images by category
   const categories = Array.from(new Set(Data.map((item) => item.category)));
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoader(false);
-    }, 5000);
-  }, []);
-  if (loader) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader />
-      </div>
-    );
-  }
 
   return (
     <>
