@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     yandex: "yandex-verification-code",
     yahoo: "yahoo-verification-code",
   },
-  title: "شاتو دو ورسای: بروزترین و لاکچری‌ترین باغ تالار در تهران",
-  description:
-    "شاتو دو ورسای | لاکچری‌ترین باغ تالار تهران | ظرفیت: 1300 نفر | منوی بین‌المللی | دسترسی بیست دقیقه‌ای از تهران | استیج رقص روی آب | برای مشاهده و رزرو کلیک کنید",
+  // title: "شاتو دو ورسای: بروزترین و لاکچری‌ترین باغ تالار در تهران",
+  // description:
+  //   "شاتو دو ورسای | لاکچری‌ترین باغ تالار تهران | ظرفیت: 1300 نفر | دسترسی بیست دقیقه‌ای از تهران | استیج رقص روی آب |",
 };
 
 export default function RootLayout({
@@ -68,11 +68,11 @@ export default function RootLayout({
           type="image/x-icon"
         />
 
-        <title>{metadata.title?.toString() || ""}</title>
+        {/* <title>{metadata.title?.toString() || ""}</title>
         <meta
           name="description"
           content={metadata.description?.toString() || ""}
-        />
+        /> */}
       </head>
       <body>
         {/* Add the CanonicalUrl component to handle dynamic canonical URLs */}
