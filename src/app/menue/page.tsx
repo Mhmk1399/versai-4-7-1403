@@ -928,7 +928,6 @@ const Page = () => {
     ],
   };
 
-
   return (
     <>
       <BlogSchema blogData={blogData} />
