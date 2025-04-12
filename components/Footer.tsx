@@ -32,15 +32,15 @@ const Footer = () => {
           برای ارتباط با ما می‌توانید از یکی از روش‌های زیر استفاده کنید
         </p>
         <div className="flex justify-center gap-6 my-5">
-          <a
+          <Link
             id="call-butom-icon"
             href="tel:+989123314145"
             className="text-gray-600 hover:text-gold"
             aria-label="Call us"
           >
             <FaPhoneAlt size={24} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.instagram.com/chateau.de.versailles?igsh=dWh1ajNsdnQ1ajF2"
             className="text-gray-600 hover:text-pink-500"
             target="_blank"
@@ -48,8 +48,8 @@ const Footer = () => {
             aria-label="Instagram"
           >
             <FaInstagram size={24} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://t.me/ALIASHEGHHOSEINI"
             className="text-gray-600 hover:text-blue-400"
             target="_blank"
@@ -57,8 +57,8 @@ const Footer = () => {
             aria-label="Telegram"
           >
             <FaTelegramPlane size={24} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://wa.me/+989123381070"
             className="text-gray-600 hover:text-lime-500"
             target="_blank"
@@ -66,7 +66,7 @@ const Footer = () => {
             aria-label="WhatsApp"
           >
             <FaWhatsapp size={24} />
-          </a>
+          </Link>
         </div>
       </div>
 
