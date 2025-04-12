@@ -2,8 +2,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Data from "../../../lib/gallery";
-import { Loader } from "../../../components/(ui)/loader";
+import Data from "../../lib/gallery";
+import { Loader } from "../../components/(ui)/loader";
 
 const Gallery = () => {
   const [loader, setLoader] = useState(true);
