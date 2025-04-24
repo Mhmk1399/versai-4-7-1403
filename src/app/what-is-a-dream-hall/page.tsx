@@ -504,7 +504,7 @@ const Page = () => {
               </div>
               <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5   rounded-lg">
                 <Image
-                  src="/assets/images/photo_2024-11-16_14-00-54.webp.webp"
+                  src="/assets/images/photo_2024-11-16_14-00-54.webp"
                   width={4000}
                   height={4000}
                   alt="تالار رویایی"
