@@ -1,4 +1,4 @@
-// components/Footer.js
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/logo.webp"; // Create a new CSS module for the footer
@@ -8,11 +8,12 @@ import {
   FaTelegramPlane,
   FaWhatsapp,
 } from "react-icons/fa";
+import Signature from "./signature";
 
 const Footer = () => {
   return (
     <footer
-      className="mx-auto bg-transparent text-gold-90 flex flex-col p-2 mb-12"
+      className="mx-auto bg-transparent text-gold-90 flex flex-col p-2 mb-12 md:mb-2"
       dir="rtl"
     >
       <Link href="/" className="mx-auto text-center">
@@ -69,7 +70,6 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-
       <div
         className=" gap-4 mx-auto text-center font-bold text-xl flex flex-row justify-center my-6 pb-2"
         dir="rtl"
@@ -87,6 +87,13 @@ const Footer = () => {
           <div>منوی غذا و خدمات</div>
         </Link>
       </div>
+      <Signature
+        spinDuration={5} // Faster spin (5 seconds per rotation)
+        isSpinning={true} // Enable spinning
+        textColor="#000"
+        logoWidth={20}
+        logoHeight={20}
+      />{" "}
     </footer>
   );
 };
