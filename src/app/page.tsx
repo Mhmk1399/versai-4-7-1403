@@ -13,7 +13,7 @@ interface ImageData {
 
 const Page = () => {
   const handleButtonClick = () => {
-    window.location.href = "/galery";
+    window.location.href = "/gallery";
   };
   // const handleButtonClick2 = () => {
   //   window.location.href = "/menue";
