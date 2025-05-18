@@ -5,8 +5,8 @@ const FormSchema = new mongoose.Schema(
     name: { type: String, required: true },
     phoneNumber: { type: String, required: true },
     gustes: { type: String, required: true },
-    weddingdate: { type: Date, required: true },
-    reserveddate: { type: Date, required: true },
+    weddingdate: { type: Date },
+    reserveddate: { type: Date },
     menue: { type: String, required: true },
   },
   { timestamps: true }

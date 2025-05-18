@@ -1,6 +1,6 @@
 "use client";
 import { useState, FormEvent } from "react";
-import { Calendar } from "react-modern-calendar-datepicker";
+// import { Calendar } from "react-modern-calendar-datepicker";
 import Image from "next/image";
 import "react-modern-calendar-datepicker/lib/DatePicker.css";
 import { motion } from "framer-motion";
@@ -840,38 +840,22 @@ const Page = () => {
     setMenue(event.currentTarget.value);
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>
+  ) => {
     e.preventDefault();
-    if (
-      !name ||
-      !phoneNumber ||
-      !gustes ||
-      !weddingdate ||
-      !reserveddate ||
-      !menue
-    ) {
+    if (!name || !phoneNumber || !gustes || !menue) {
       setMessage("Please fill in all fields");
       return;
     }
-
-    const weddingDateObject = new Date(
-      weddingdate!.year,
-      weddingdate!.month - 1,
-      weddingdate!.day
-    );
-    const reservedDateObject = new Date(
-      reserveddate!.year,
-      reserveddate!.month - 1,
-      reserveddate!.day
-    );
 
     const formData = new FormData();
     formData.append("name", name);
     formData.append("phoneNumber", phoneNumber);
     formData.append("gustes", gustes);
-    formData.append("weddingDate", weddingDateObject.toISOString());
-    formData.append("reservedDate", reservedDateObject.toISOString());
     formData.append("menue", menue);
+
+    console.log(FormData, "mamad");
 
     try {
       const response = await fetch("/api/forms", {
@@ -1149,46 +1133,16 @@ const Page = () => {
                 )}
               </div>
             </div>
-            {/* Calendars Section */}
-            <div className=" flex lg:flex-row flex-col lg:mx-auto gap-2">
-              <div className="space-y-2 ">
-                <label className="block text-base lg:text-xl font-bold text-black">
-                  تاریخ عروسی
-                </label>
-                <Calendar
-                  value={weddingdate}
-                  onChange={handleWeddingdateChange}
-                  shouldHighlightWeekends
-                  locale="fa"
-                  calendarClassName="custom-calendar w-full shadow-lg rounded-lg "
-                  colorPrimary="#9c27b0"
-                  colorPrimaryLight="#f3e5f5"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="block text-base lg:text-xl font-bold text-black">
-                  تاریخ رزرو بازدید
-                </label>
-                <Calendar
-                  value={reserveddate}
-                  onChange={handleReserveddateChange}
-                  shouldHighlightWeekends
-                  locale="fa"
-                  calendarClassName="custom-calendar w-full shadow-lg rounded-lg"
-                  colorPrimary="#673ab7"
-                  colorPrimaryLight="#ede7f6"
-                />
-              </div>
-            </div>
+
             {message && (
-              <p className="text-center block lg:hidden mt-4 text-sm font-medium text-red-400">
-                لطفا تمام فیلدها را پر کنید
+              <p className="text-center block lg:hidden mt-4 text-sm font-medium text-green-400">
+                با موقثیت ثبت شد
               </p>
             )}
           </form>
           {/* Submit Button */}
           <button
-            type="submit"
+            onClick={handleSubmit}
             className="w-full my-4 block lg:hidden bg-[#344e41] text-white py-3 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 ease-in-out"
           >
             ارسال فرم
