@@ -188,7 +188,7 @@ const handleButtonClick59 = () => {
 };
 
 const handleButtonClick60 = () => {
-  window.location.href = "/how-to-plan-a-luxury-wedding";
+  window.location.href = "/9_ways_to_make_your_wedding_better";
 };
 
 
