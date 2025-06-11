@@ -250,15 +250,6 @@ const Page = () => {
                     </Link>
                   </div>
 
-                  <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 rounded-lg">
-                    <Image
-                      src="/assets/images/autumn.webp"
-                      width={4000}
-                      height={4000}
-                      alt="wedding-planning-guide"
-                      className="rounded-lg shadow-lg h-full"
-                    />
-                  </div>
 
                   {/* بخش ۴ */}
                   <div className="bg-gray-50 p-5 rounded-lg shadow-md">
