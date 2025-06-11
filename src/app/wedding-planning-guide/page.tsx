@@ -252,7 +252,7 @@ const Page = () => {
 
                   <div className="mx-auto flex flex-col justify-center items-center my-2 px-1.5 py-1.5 rounded-lg">
                     <Image
-                      src="/assets/images/191.webp"
+                      src="/assets/images/autumn.webp"
                       width={4000}
                       height={4000}
                       alt="wedding-planning-guide"
