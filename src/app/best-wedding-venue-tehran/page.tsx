@@ -341,7 +341,6 @@ const Page = () => {
                       <p>
                         شماره: 09123314145<br />
                         وبسایت: <Link href="https://www.kakhversai.ir/" className="text-blue-700">www.kakhversai.ir</Link><br />
-                        آدرس: احمدآباد مستوفی، نزدیک اتوبان آزادگان
                       </p>
                     </div>
                     <p className="text-center font-bold mt-4">
