@@ -147,11 +147,14 @@ const Page = () => {
                 از رقص‌های کردی تا مراسم بندری، هر منطقه ایران سبک عروسی خاص خودش رو داره. شاتو دو ورسای با استیج رقص روی آب و باغ‌های رویایی، بهترین انتخاب برای هر نوع مراسمیه.
               </p>
 
-              <Link href="https://www.kakhversai.ir/">
-                <button className="mb-6 bg-green-600 text-white hover:bg-green-700 py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
-                  رزرو شاتو دو ورسای
+
+
+              <Link href="/menue">
+                <button className="mb-6 bg-green text-white hover-btn py-2 px-8 mx-auto rounded-md hover:shadow-2xl transition-transform transform hover:scale-105 mt-8 text-xl">
+                  رزرو تالار ورسای
                 </button>
               </Link>
+
 
               <div className="mx-auto width-auto my-8 px-4 py-6 bg-white rounded-lg shadow-md">
                 <h3 className="text-2xl font-bold text-center mb-6">
