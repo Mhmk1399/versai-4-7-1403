@@ -4213,7 +4213,7 @@ const Page = () => {
               <span className="block opacity-75 -mb-1"></span>
               <div className="flex justify-center">
                 <span className="block text-xs ">
-رازهای یک مراسم عقد مجلل و رویایی در تالار شاتو دو ورسای
+رازهای یک مراسم عقد مجلل و رویایی در ورسای
                 </span>
               </div>
             </div>
