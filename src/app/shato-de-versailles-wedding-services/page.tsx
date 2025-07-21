@@ -8,7 +8,7 @@ import CommentBox from "../../../components/commentBox";
 const Page = () => {
   const blogId = "shato-de-versailles-wedding-services";
   const blogData = {
-    title: "معرفی تمام تشریفات مراسم‌های ازدواج ایرانی: جشنی به‌یادماندنی با شاتو دو ورسای!",
+    title: "جشنی به‌یادماندنی با شاتو دو ورسای",
     url: "/shato-de-versailles-wedding-services",
     images: [
       "/assets/images/182.webp",

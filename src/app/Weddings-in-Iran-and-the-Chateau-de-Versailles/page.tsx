@@ -8,7 +8,7 @@ import CommentBox from "../../../components/commentBox";
 const Page = () => {
   const blogId = "shato-de-versailles-wedding-services";
   const blogData = {
-    title: "مراسم عروسی تو ایران؛ از سنت‌های باحال تا کاخ لاکچری شاتو دو ورسای!",
+    title: "از سنت‌های باحال تا کاخ لاکچری شاتو دو ورسای",
     url: "/Weddings-in-Iran-and-the-Chateau-de-Versailles",
     images: [
       "/assets/images/153.webp",
