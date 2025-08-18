@@ -141,7 +141,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
                       <Image
-                        src="/assets/images/192.webp"
+                        src="/assets/images/bloog12.webp"
                         width={4000}
                         height={4000}
                         alt="iranian-wedding-ceremonies"
@@ -161,7 +161,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
                       <Image
-                        src="/assets/images/View-of-the-table-and-chair-arrangement-of-the-columnless-garden-hall-of-the-Chateau-de-Versailles-luxury-hall.webp"
+                        src="/assets/images/wedding.webp"
                         width={4000}
                         height={4000}
                         alt="iranian-wedding-ceremonies"
@@ -192,7 +192,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
                       <Image
-                        src="/assets/images/food44.webp"
+                        src="/assets/images/VAG_2040.webp"
                         width={4000}
                         height={4000}
                         alt="iranian-wedding-ceremonies"
