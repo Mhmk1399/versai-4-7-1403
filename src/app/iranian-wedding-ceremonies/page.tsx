@@ -84,7 +84,7 @@ const Page = () => {
           <div className="col-span-1 mx-auto my-4 max-w-5xl rounded-lg bg-white shadow-lg">
             <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
               <Image
-                src="/assets/images/240.webp"
+                src="/assets/images/Dance-stage-on-the-water-from-above-the-garden-of-the-luxury-hall-of-Chateau-de-Versailles_75_6_optimizednew.webp"
                 width={4000}
                 height={4000}
                 alt="iranian-wedding-ceremonies"
@@ -161,7 +161,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
                       <Image
-                        src="/assets/images/242.webp"
+                        src="/assets/images/Dance-stage-on-the-water-from-the-top-view-of-45-degrees-of-the-luxury-hall-of-Chateau-de-Versailles_75_7_optimizednew.webp"
                         width={4000}
                         height={4000}
                         alt="iranian-wedding-ceremonies"
@@ -192,7 +192,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
                       <Image
-                        src="/assets/images/243.webp"
+                        src="/assets/images/Dance-stage-on-the-water-garden-of-the-luxury-hall-of-Chateau-de-Versailles_76_5_optimizednew.webp"
                         width={4000}
                         height={4000}
                         alt="iranian-wedding-ceremonies"
