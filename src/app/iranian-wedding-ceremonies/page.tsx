@@ -161,7 +161,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
                       <Image
-                        src="/assets/images/wedding.webp"
+                        src="/assets/images/tashrifat2.webp"
                         width={4000}
                         height={4000}
                         alt="iranian-wedding-ceremonies"
@@ -192,7 +192,7 @@ const Page = () => {
                     </p>
                     <div className="mx-auto flex flex-col justify-center items-center my-4 px-2 py-2 rounded-lg">
                       <Image
-                        src="/assets/images/VAG_2040.webp"
+                        src="/assets/images/tashrifat3.webp"
                         width={4000}
                         height={4000}
                         alt="iranian-wedding-ceremonies"
